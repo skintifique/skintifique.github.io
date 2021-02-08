@@ -1,7 +1,256 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width-device-width, initial-scale=1">
+<style>
+df-messenger {
+   --df-messenger-bot-message: rgba(45,133,154,1);
+   --df-messenger-button-titlebar-color: rgba(45,133,154,1);
+   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-font-color: white;
+   --df-messenger-send-icon: #878fac;
+   --df-messenger-user-message: rgb(117, 147, 71);
+   --df-messenger-minimized-chat-close-icon-color :rgba(45,133,154,1);
+   --df-messenger-chat-background-color :rgba(45,133,154,1);
+  }
+
+.img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  min-width: 50px;
+}
+
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<df-messenger
+  chat-title= "How may I help you?"
+  expand
+></df-messenger>
+
+<input hidden id="default_prom" value="sk"></input>
+<input hidden id="available_themes_for_default_prom" value="default,maternity,allergy,psoriasis,eczema"></input>
+<input hidden id="newsletter_url" value="https://www.skintifique.me/welcome-offer/"></input>
+<input hidden id="chatIcon" value="https://www.skintifique.me/wp-content/uploads/2020/02/Marie_Andrade.jpg"></input>
+<input hidden id="languageCode" value="en"></input>
+
+
+<div id="skintyIntro">
+<h2>Welcome to SkinTy's</h2>
+<p>
+SkinTy is a digital assistant available to help you 24/7.
+<br><br>
+You may ask SkinTy any skin related question, in writing or through voice control if your device allows.
+<br><br>
+To exit a dialog with SkinTy, say "EXIT" or "EX".
+<br><br>
+When SkinTy is unused for over 15 minutes, it moves its attention away; when you resume the conversation, say "I am back" or reload the page. 
+<br><br>
+SkinTy is still in development and learning. We welcome feedback and suggestions for improvements: <a href="mailto:skinty@skintifique.com">feedback</a>.
+</p>
+<br><br>
+<img class="img" id="img_query_img" src="img" /img>
+<p>To come back easily, bookmark this page in your browser</p>
+<p id="nwsl_text">...and <a id="nwsl_url" href="url" target="_blank">subscribe to our Newsletter</a> to be informed of new features and promotions.</p>
+<em><p id="ackn_text">DO NOT REMOVE NOR MODIFY THIS ELEMENT</p></em>
+<br>
+Enjoy!
+</div>
+
+
+<script>
+/* NEED TO CHECK WHERE THE GSTATIC SCRIPT NEED TO BE, EG TOP OF BODY? */
+/* Some global variables are included in the scripts below. In particular: */
+/*   image_query_page (url of the image that shows when user uses a queryb parameter and on SkinTy info) */
+/*   df-messenger agentId and default intent */
+/*   allowed promoters for the default_prom (should be only default_prom, except for SK, for demos) */
+/*   Skintifique acknowledgment, to show at bottom of SkinTy introduction text */
+/*   possible themeb, beyond the current list */
+</script>
+
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<script>
+let image_query_page = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYA2n-s-Pn6rtQz-3aLUgj8s1XxhahIv0ZPA&usqp=CAU" ;
+let newsletter_url = document.getElementById("newsletter_url").value ;
+if (newsletter_url === "none") {
+let nwsl_text = document.getElementById("nwsl_text") ;
+nwsl_text.style.display = "none" ;
+} else if (newsletter_url) {
+document.getElementById("nwsl_url").href = newsletter_url ;
+}
+document.getElementById("img_query_img").src = image_query_page ;
+</script>
+
+<script>
+let ackn_text = document.getElementById("ackn_text") ;
+if (ackn_text) {
+let ackn2 = "SkinTy is powered by Skintifique - Effective, safe and clean skincare for your health and well-being." ;
+document.getElementById("ackn_text").innerHTML = ackn2 ;
+} else {
+document.getElementById("skintyIntro").innerHTML = "Please bear with us, there is an unknown problem on this page. You should use the genuine SkinTy on Skintifique website: https://www.skintifique.me/skinty " ;
+}
+</script>
+
+<script>
+function with_query () {
+let agentId = "c7e74905-9f16-46e9-9231-bbca98ad967e" ;
+let languageCode = document.getElementById("languageCode").value ;
+let chatIcon = document.getElementById("chatIcon").value ;
+let promb = document.getElementById("default_prom").value ;
+let intent = "welcome_sk_query";
+let expand ;
+const dfMessenger = document.querySelector("df-messenger");
+dfMessenger.getAttribute("agent-id");
+dfMessenger.setAttribute("agent-id",agentId);
+dfMessenger.getAttribute("language-code");
+dfMessenger.setAttribute("language-code",languageCode);
+dfMessenger.getAttribute("chat-icon");
+dfMessenger.setAttribute("chat-icon",chatIcon);
+dfMessenger.getAttribute("intent");
+dfMessenger.setAttribute("intent",intent);
+dfMessenger.getAttribute("expand");
+dfMessenger.setAttribute("expand","expand");
+window.customElements.define("df-messenger", dfMessenger);
+}
+</script>
+
+<script async>
+let url02 = location.href ;
+let url02Params = (new URL(document.location)).searchParams ;
+let queryb2 = url02Params.get("queryb") ;
+if (queryb2) {
+let imageURL = image_query_page ;
+const dfMessenger2 = document.querySelector("df-messenger");
+dfMessenger2.addEventListener("df-messenger-loaded", function (event) {
+let welcomeIntro = "Hello, I am SkinTy, your 24/7 digital assistant."
+let welcomeIntro2 = "Please click below to confirm your question. Or say SUGGESTION to see frequent ones" ;
+const payloadImage = [
+  {
+        "rawUrl": imageURL,
+        "accessibilityText": "Visitor search image",
+        "type": "image"
+      }];
+const payload1 = [
+  {
+        "options": [
+          {
+            "text": queryb2
+          }
+        ],
+        "type": "chips"
+      }];
+dfMessenger2.renderCustomCard(payloadImage);
+dfMessenger2.renderCustomText(welcomeIntro) ;
+dfMessenger2.renderCustomText(welcomeIntro2) ;
+dfMessenger2.renderCustomCard(payload1);
+});
+}
+</script>
+
+
+<script>
+function no_query () {
+let agentId = "c7e74905-9f16-46e9-9231-bbca98ad967e" ;
+let languageCode = document.getElementById("languageCode").value ;
+let chatIcon = document.getElementById("chatIcon").value ;
+let intent ;
+let expand ;
+const dfMessenger = document.querySelector("df-messenger");
+let url0 = window.location.href ;
+let url1 = document.referrer ;
+let url = url0.concat(url1) ;
+let url0Params = (new URL(document.location)).searchParams ;
+let promb = url0Params.get("promb") ;
+let themeb = url0Params.get("themeb") ;
+let formatb = url0Params.get("formatb") ;
+let showb = url0Params.get("showb") ;
+let introb = url0Params.get("introb") ;
+let default_prom = document.getElementById("default_prom").value ;
+let promoters ;
+if (default_prom == "sk") {
+promoters = "sk,anna_demo,myshop_demo" ;
+} else {
+promoters = default_prom ;
+}
+let available_themes = document.getElementById("available_themes_for_default_prom").value ;
+let prom_promb = promoters.search(promb) ;
+let prom_themeb = available_themes.search(themeb) ;
+if (!(promb)){
+    updated_promb = default_prom ;
+} else if (prom_promb > -1) {
+    updated_promb = promb ;
+} else {
+    updated_promb = "promoterError" ;
+}
+if (updated_promb == "promoterError") {
+    intent = "welcome_promoterError_default" ;
+} else if (updated_promb == default_prom) {
+if (themeb) {
+    if (prom_themeb > -1) {
+        intent = "welcome_" + updated_promb + "_" + themeb ;
+    } else {
+        intent = "welcome_" + updated_promb + "_default" ;
+    }
+} else if (updated_promb != "sk") {
+    intent = "welcome_" + updated_promb + "_default" ;
+} else if (url.includes("eczema")) {
+    intent = "welcome_sk_eczema" ;
+} else if (url.includes("dermatit")) {
+    intent = "welcome_sk_eczema" ;
+} else if (url.includes("psoriasis")) {
+    intent = "welcome_sk_psoriasis" ;
+} else if (url.includes("allergy")) {
+    intent = "welcome_sk_allergy" ;
+} else if (url.includes("maternity")) {
+    intent = "welcome_sk_maternity" ;
+} else if (url.includes("pregnan")) {
+    intent = "welcome_sk_maternity" ;
+} else if (url.includes("acne")) {
+    intent = "welcome_sk_acne" ;
+} else {
+    intent = "welcome_sk_default" ; 
+}
+} else if (updated_promb != default_prom) {
+   intent = "welcome_" + updated_promb + "_default" ;
+} 
+dfMessenger.getAttribute("agent-id");
+dfMessenger.setAttribute("agent-id",agentId);
+dfMessenger.getAttribute("language-code");
+dfMessenger.setAttribute("language-code",languageCode);
+dfMessenger.getAttribute("chat-icon");
+dfMessenger.setAttribute("chat-icon",chatIcon);
+dfMessenger.getAttribute("intent");
+dfMessenger.setAttribute("intent",intent);
+if (formatb == "close") {
+    dfMessenger.removeAttribute("expand") ;
+    } else if (formatb == "open") {
+    dfMessenger.setAttribute("expand","expand");
+    } 
+if (showb == "hide") {
+    dfMessenger.setAttribute("hidden","hidden");
+    } else if (showb == "show") {
+    dfMessenger.removeAttribute("hidden");
+    }
+window.customElements.define("df-messenger", dfMessenger);
+}
+</script>
+
+<script>
+let url = window.location.href ;
+let urlParams = (new URL(document.location)).searchParams ;
+let queryb = urlParams.get("queryb") ;
+if (queryb) {
+with_query () ;
+} else {
+no_query () ;
+}
+</script>
+
+</body>
+
+
 </body>
 </html>
