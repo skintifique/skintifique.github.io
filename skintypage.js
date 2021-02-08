@@ -127,25 +127,9 @@ if (themeb) {
     } else {
         intent = "welcome_" + updated_promb + "_default" ;
     }
-} else if (updated_promb != "sk") {
-    intent = "welcome_" + updated_promb + "_default" ;
-} else if (url.includes("eczema")) {
-    intent = "welcome_sk_eczema" ;
-} else if (url.includes("dermatit")) {
-    intent = "welcome_sk_eczema" ;
-} else if (url.includes("psoriasis")) {
-    intent = "welcome_sk_psoriasis" ;
-} else if (url.includes("allergy")) {
-    intent = "welcome_sk_allergy" ;
-} else if (url.includes("maternity")) {
-    intent = "welcome_sk_maternity" ;
-} else if (url.includes("pregnan")) {
-    intent = "welcome_sk_maternity" ;
-} else if (url.includes("acne")) {
-    intent = "welcome_sk_acne" ;
 } else {
-    intent = "welcome_sk_default" ; 
-}
+    intent = "welcome_" + updated_promb + "_default" ;
+} 
 } else if (updated_promb != default_prom) {
    intent = "welcome_" + updated_promb + "_default" ;
 } 
