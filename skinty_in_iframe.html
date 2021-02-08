@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!-- This is the the SkinTy iframe page with the most flexibility / most parameters to set on deployment -->
+
 <html>
 <head>
 <meta name="viewport" content="width-device-width, initial-scale=1">
@@ -46,14 +48,15 @@
 </style>
 </head>
 <body>
+<!--The values in the input elements below define the default characteristics of the SkinTy display; all these parameters except url_priority will be transfered to the SkinTy page in the iframe-->
 <input hidden id="promb" value="sk"></input>  
 <input hidden id="themeb" value=""></input>
 <input hidden id="formatb" value="open"></input>
 <input hidden id="showb" value="show"></input>
 <input hidden id="queryb" value=""></input>   
-<input hidden id="url_priority" value="first"></input>   
-<p hidden>//Note:url_priority may be first, last or never //</p>
-  
+<input hidden id="url_priority" value="first"></input>
+<!-- url_priority specifies whether values in url paramters take precedence or not over the input values in the elements above. It may be set to first, last or never-->
+
 <div id="divSkintyFrame" class="divSkintyForIframe30">
 <iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
 
