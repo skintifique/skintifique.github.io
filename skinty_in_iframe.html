@@ -67,6 +67,7 @@ let showb = document.getElementById("showb").value ;
 let queryb = document.getElementById("queryb").value ; 
 let url_priority = document.getElementById("url_priority").value ;
 let target_url ;
+    document.getElementById("dev").innerHTML = "poairu" ;
 if (url_priority === "never") {
 never () ;
 } else if (url_priority == "first") {
@@ -81,7 +82,6 @@ last () ;
 <script> 
 function never () {
 target_url = "https://skintifique.github.io/index.html" + "?promb=" + promb  + "&queryb=" + queryb + "&themeb=" + themeb + "&formatb=" + formatb + "&showb=" + showb ;
-  document.getElementById("dev").innerHTML = "poairu" ;
 document.getElementById("skintyframe").src = target_url ;  
 } 
 </script>
