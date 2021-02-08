@@ -1,5 +1,4 @@
-/* NEED TO CHECK WHERE THE GSTATIC SCRIPT NEED TO BE, EG TOP OF BODY? */
-/* NEED TO REMOVE THE URL READS AS THIS PAGE SHOULD BE ONLY PILOTED WITH URL PARAMETERS */
+/*USE THIS FILE FOR THE DEFAULT SKINTY PAGE*/
 /* Some global variables are included in the scripts below. In particular: */
 /*   image_query_page (url of the image that shows when user uses a queryb parameter and on SkinTy info) */
 /*   df-messenger agentId and default intent */
