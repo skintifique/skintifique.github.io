@@ -51,24 +51,87 @@
 <input hidden id="formatb" value="open"></input>
 <input hidden id="showb" value="show"></input>
 <input hidden id="queryb" value=""></input>   
-<input hidden id="url_priority" value="first/last/never"></input>   
-  
+<input hidden id="url_priority" value="first"></input>   
+//url_priority may be first, last or never //  
   
 <div id="divSkintyFrame" class="divSkintyForIframe30">
 <iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
-<script>  
+
+  
+<script>
+let promb = document.getElementById("promb").value ;
+let themeb = document.getElementById("themeb").value ; 
+let formatb = document.getElementById("formatb").value ; 
+let showb = document.getElementById("showb").value ; 
+let queryb = document.getElementById("queryb").value ; 
+let url_priority = document.getElementById("url_priority").value ;
+let target_url ;
+if (url_priority == "never") {
+never () ;
+} else if (url_priority == "first") {
+first () ;
+} else if (url_priority == "last")
+last ();
+} else {
+last () ;
+}
+</script>
+
+<script> 
+function never () {
+target_url = "https://skintifique.github.io/index.html" + "?promb=" + promb  + "&queryb=" + queryb + "&themeb=" + themeb + "&formatb=" + formatb + "&showb=" + showb ;
+document.getElementById("skintyframe").src = target_url ;  
+} 
+</script>
+
+<script>
+function first () {
 let url = window.location.href ;
 let urlParams = (new URL(document.location)).searchParams ;
-let promb = urlParams.get("promb") ;
-if (promb) {promb2 = promb;} else {promb2 = "sk";}
-let queryb = urlParams.get("queryb") ;
-if (queryb) {queryb2 = queryb;} else {queryb2 = "";}
-let themeb = urlParams.get("themeb") ;
-let formatb = urlParams.get("formatb") ;
+let promb2 = urlParams.get("promb") ; 
+let promb3 ;
+if (promb2) {promb3 = promb2;} else {promb3 = promb;}
+let queryb3 ;
+let queryb2 = urlParams.get("queryb") ;
+if (queryb2) {queryb3 = queryb2;} else {queryb3 = queryb;}
+let themeb3 ;
+let themeb2 = urlParams.get("themeb") ;
+if (themeb2) {themeb3 = themeb2;} else {themeb3 = themeb;}  
+let formatb3 ;
+let formatb2 = urlParams.get("formatb") ;
+if (formatb2) {formatb3 = formatb2;} else {formatb3 = formatb;}    
+let showb3 ;
 let showb = urlParams.get("showb") ;
-let target_url = "https://skintifique.github.io/index.html" + "?promb=" + promb2  + "&queryb=" + queryb2 + "&themeb=" + themeb + "&formatb=" + formatb + "&showb=" + showb ;
+if (showb2) {showb3 = showb2;} else {showb3 = showb;}     
+target_url = "https://skintifique.github.io/index.html" + "?promb=" + promb3  + "&queryb=" + queryb3 + "&themeb=" + themeb3 + "&formatb=" + formatb3 + "&showb=" + showb3 ;
 document.getElementById("skintyframe").src = target_url ;
-</script>
+}
+</script>  
+
+<script>
+function last () {
+let url = window.location.href ;
+let urlParams = (new URL(document.location)).searchParams ;
+let promb2 = urlParams.get("promb") ; 
+let promb3 ;
+if (promb) {promb3 = promb;} else {promb3 = promb2;}
+let queryb3 ;
+let queryb2 = urlParams.get("queryb") ;
+if (queryb) {queryb3 = queryb;} else {queryb3 = queryb2;}
+let themeb3 ;
+let themeb2 = urlParams.get("themeb") ;
+if (themeb) {themeb3 = themeb;} else {themeb3 = themeb2;}  
+let formatb3 ;
+let formatb2 = urlParams.get("formatb") ;
+if (formatb) {formatb3 = formatb;} else {formatb3 = formatb2;}    
+let showb3 ;
+let showb = urlParams.get("showb") ;
+if (showb) {showb3 = showb;} else {showb3 = showb2;}     
+target_url = "https://skintifique.github.io/index.html" + "?promb=" + promb3  + "&queryb=" + queryb3 + "&themeb=" + themeb3 + "&formatb=" + formatb3 + "&showb=" + showb3 ;
+document.getElementById("skintyframe").src = target_url ;
+}
+</script>   
+
 <script>
 let windowwidth = window.innerWidth;
 if (windowwidth < 500) {
