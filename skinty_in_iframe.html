@@ -46,9 +46,17 @@
 </style>
 </head>
 <body>
+<input hidden id="promb" value="sk"></input>  
+<input hidden id="themeb" value=""></input>
+<input hidden id="formatb" value="open"></input>
+<input hidden id="showb" value="show"></input>
+<input hidden id="queryb" value=""></input>   
+<input hidden id="url_priority" value="first/last/never"></input>   
+  
+  
 <div id="divSkintyFrame" class="divSkintyForIframe30">
 <iframe id="skintyframe" src="" width="100%" height="700px" style="border:none;"></iframe>
-<script>
+<script>  
 let url = window.location.href ;
 let urlParams = (new URL(document.location)).searchParams ;
 let promb = urlParams.get("promb") ;
