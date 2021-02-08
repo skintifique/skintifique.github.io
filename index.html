@@ -62,6 +62,7 @@ Enjoy!
 
 <script>
 /* NEED TO CHECK WHERE THE GSTATIC SCRIPT NEED TO BE, EG TOP OF BODY? */
+/* NEED TO REMOVE THE URL READS AS THIS PAGE SHOULD BE ONLY PILOTED WITH URL PARAMETERS */
 /* Some global variables are included in the scripts below. In particular: */
 /*   image_query_page (url of the image that shows when user uses a queryb parameter and on SkinTy info) */
 /*   df-messenger agentId and default intent */
@@ -100,7 +101,7 @@ let agentId = "c7e74905-9f16-46e9-9231-bbca98ad967e" ;
 let languageCode = document.getElementById("languageCode").value ;
 let chatIcon = document.getElementById("chatIcon").value ;
 let promb = document.getElementById("default_prom").value ;
-let intent = "welcome_sk_query";
+let intent = "welcome_" + promb + "_query";
 let expand ;
 const dfMessenger = document.querySelector("df-messenger");
 dfMessenger.getAttribute("agent-id");
