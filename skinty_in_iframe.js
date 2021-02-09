@@ -1,6 +1,6 @@
 
 <!-- This is the js file for SkinTy iframe page with the most flexibility / most parameters to set on deployment -->
-<!-- The values in the input elements are defined in the corresponding index file -->
+<!-- The values in the input elements are defined in the corresponding html file -->
 
  
 function priority_never () {
