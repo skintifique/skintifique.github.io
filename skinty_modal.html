@@ -6,8 +6,17 @@
 <link rel="stylesheet" href="https://skintifique.github.io/skinty_modal.css">
 </head>
 <body>
+<!-- inputs to provide when deploying the file -->  
+<input id="display_floatingBtn" value="yes"></input>
+<!-- end -->  
 
-
+<!-- example of a button triggering opening of SkinTy modal page, starting on a specific theme -->  
+<a id="ModalTheme_1" class="" onclick=onclick="openSkintyModal(this)" value="allergy">When you click me, SkinTy will show up and start on the allergy page</a>
+<!-- example of a button triggering opening of SkinTy modal page, starting with a specific query -->    
+<p>lorem ipsum...<a id="ModalQuery_1" class="" onclick=onclick="openSkintyModal(this)" value="Which ingredients should be avoided in skincare products?"><u>Skintifique products contain no ingredients that should be avoided in skincare products</u></a>...lorem ipsum</p> 
+<!-- end example buttons -->  
+  
+  
 <button id="ModalTheme" class="modalBtn, float" onclick="openSkintyModal(this)" value="">
 <img class= "img.displayed" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYA2n-s-Pn6rtQz-3aLUgj8s1XxhahIv0ZPA&usqp=CAU"  width="30px" height="30px" />
 </button>
