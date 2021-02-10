@@ -20,7 +20,7 @@ document.getElementById("img_query_img").src = image_query_page ;
 
 let ackn_text = document.getElementById("ackn_text") ;
 if (ackn_text) {
-let ackn2 = "SkinTy is powered by Skintifique - Effective, safe and clean skincare for your health and well-being." ;
+let ackn2 = "SkinTy is powered with &hearts; by Skintifique - Effective, safe and clean skincare for your health and well-being." ;
 document.getElementById("ackn_text").innerHTML = ackn2 ;
 } else {
 document.getElementById("skintyIntro").innerHTML = "Please bear with us, there is an unknown problem on this page. You should use the genuine SkinTy on Skintifique website: https://www.skintifique.me/skinty " ;
