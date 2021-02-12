@@ -51,7 +51,6 @@ let end_available2 = document.getElementById("end_available2").value ;
 let date = new Date();
 let time = date.getTime () ;
 let today = date.getDay();
-document.getElementById("dev1").innerHTML = end_available1 ;
 if ((today != "6") && (today != "0")) {
   if ((time > start_available1) && (time < end_available1)) || ((time > start_available2) && (time < end_available2)) {
     availability = "available" ;
