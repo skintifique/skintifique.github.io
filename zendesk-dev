@@ -1,0 +1,51 @@
+<center>
+  <h1>Chat with a live agent</h1>
+  <div id="available">
+  <p>Click the button at the bottom right to chat with a live person.</p>
+  <br>
+  <br>
+  <p>Please bear with us if we cannot answer right away. Leave your contact info through the widget or <a href="https://skintifique.github.io/call_us.html" target="_self">by phone ✆</a>, or <a href="mailto:skinty@skintifique.com" target="_blank">send us a mail</a> and we'll call back shortly.</p>
+  <br>
+  <br>
+  <p>Have a great day!</p>
+</center>
+</div>
+
+<div id="not_available">
+  <p>Sorry, our team is not available at the moment.</p>
+  <br>
+  <br>
+  <p>Please leave us your contact info when you click the Help button below, or contact us <a href="https://skintifique.github.io/call_us.html" target="_self">by phone ✆</a>, or <a href="mailto:skinty@skintifique.com" target="_blank">send us a mail</a> and we'll call back shortly.</p>
+  <br>
+  <br>
+  <p>Looking forward to it!</p>
+</center>
+</div>
+
+<!-- set parameters specifying when service team is available -->
+<!-- weekdays -->
+<input hidden id="start_available" type="time" value="8:00"></input>
+<input hidden id="end_available" type="time" value="8:00"></input>
+<!-- weekend -->
+<input hidden id="saturday" value="no"></input>
+<input hidden id="saturday_start" type="time" value="8:00"></input>
+<input hidden id="saturday_end" type="time" value="no"></input>
+<input hidden id="sunday" value="8:00"></input>
+<input hidden id="sunday_start" type="time" value="8:00"></input>
+<input hidden id="sunday_end" type="time" value="no"></input>
+<!-- end -->
+
+<script>
+let date = new Date();
+let today = d.getDay();
+document.getElementById("dev1").innerHTML = today ;
+</script>
+
+<div>
+<!-- Start of skintifique Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=a11224ff-78c1-49da-8419-1a8006595ef5"> </script>
+  <script type="text/javascript">
+  zE('webWidget', 'setLocale', 'en_us', 'open');
+</script>
+<!-- End of skintifique Zendesk Widget script -->
+</div>
