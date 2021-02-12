@@ -1,13 +1,111 @@
 <center>
   <h1>Chat with a live agent</h1>
+  </center>
+  <div id="available">
+    <center>
   <p>Click the button at the bottom right to chat with a live person.</p>
   <br>
   <br>
   <p>Please bear with us if we cannot answer right away. Leave your contact info through the widget or <a href="https://skintifique.github.io/call_us.html" target="_self">by phone ✆</a>, or <a href="mailto:skinty@skintifique.com" target="_blank">send us a mail</a> and we'll call back shortly.</p>
   <br>
   <br>
-  <p>Have a great day!</p>
+  <p>Have a great day!☀️</p>
 </center>
+</div>
+
+<div id="not_available">
+  <center>
+  <p>Sorry, our team is not available at the moment.</p>
+  <br>
+  <br>
+  <p>Please leave your contact info when you click the Help button below, or contact us <a href="https://skintifique.github.io/call_us.html" target="_self">by phone ✆</a>, or <a href="mailto:skinty@skintifique.com" target="_blank">send us a mail</a> and we'll call back shortly.</p>
+  <br>
+  <br>
+  <p>Looking forward to it! 😍</p>
+</center>
+</div>
+
+<!-- set parameters specifying when service team is available. all times values must be in UTC time -->
+<!-- weekdays -->
+<input hidden id="start_available1" type="time" value="09:00"></input>
+<input hidden id="end_available1" type="time" value="12:00"></input>
+<input hidden id="start_available2" type="time" value="13:00"></input>
+<input hidden id="end_available2" type="time" value="17:00"></input>
+<!-- weekend -->
+<input hidden id="saturday" value="no"></input>
+<input hidden id="saturday_start" type="time" value="09:00"></input>
+<input hidden id="saturday_end" type="time" value="17:00"></input>
+<input hidden id="sunday" value="no"></input>
+<input hidden id="sunday_start" type="time" value="09:00"></input>
+<input hidden id="sunday_end" type="time" value="17:00"></input>
+<!-- end -->
+
+<script>
+let availability ;
+let start_available1 = document.getElementById("start_available1").value ;
+let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
+let hour_start1 = dateUTC_start1.getUTCHours();
+let end_available1 = document.getElementById("end_available1").value ;
+let dateUTC_end1 = new Date("2021-01-01T" + end_available1 + "Z") ;
+let hour_end1 = dateUTC_end1.getUTCHours();
+let start_available2 = document.getElementById("start_available2").value ;
+let dateUTC_start2 = new Date("2021-01-01T" + start_available2 + "Z") ;
+let hour_start2 = dateUTC_start2.getUTCHours();
+let end_available2 = document.getElementById("end_available2").value ;
+let dateUTC_end2 = new Date("2021-01-01T" + end_available2 + "Z") ;
+let hour_end2 = dateUTC_end2.getUTCHours() ;
+let date = new Date();
+let todayD = date.getUTCDay();
+let today = todayD ;
+let hour = date.getUTCHours();
+if ((today != "6") && (today != "0")) {
+  if ((hour >= hour_start2) && (hour <= hour_end2)) {
+    availability = "available" ;
+    } else {
+    availability = "not_available" ;
+    }
+  }
+  if (today == "6") {
+  let saturday = document.getElementById("saturday").value ;
+  let saturday_start = document.getElementById("saturday_start").value ;
+  let dateUTC_sat_start = new Date("2021-01-01T" + saturday_start + "Z") ;
+  let hour_sat_start = dateUTC_sat_start.getUTCHours();
+  let saturday_end = document.getElementById("saturday_end").value ;
+  let dateUTC_sat_end = new Date("2021-01-01T" + saturday_end + "Z") ;
+  let hour_sat_end = dateUTC_sat_end.getUTCHours();  
+  if (saturday == "no") {
+  availability = "not_available" ;
+  } else if ((hour >= hour_sat_start) && (hour <= hour_sat_end)) {
+  availability = "available" ; 
+  } else {
+  availability = "not_available" ;
+  } 
+   } 
+  if (today == "0") {
+  let sunday = document.getElementById("sunday").value ;
+  let sunday_start = document.getElementById("sunday_start").value ;
+  let dateUTC_sun_start = new Date("2021-01-01T" + sunday + "Z") ;
+  let hour_sun_start = dateUTC_sun_start.getUTCHours();
+  let sunday_end = document.getElementById("sunday_end").value ;
+  let dateUTC_sun_end = new Date("2021-01-01T" + sunday_end + "Z") ;
+  let hour_sun_end = dateUTC_sun_end.getUTCHours();  
+  if (sunday == "no") {
+  availability = "not_available" ;
+  } else if ((hour >= hour_sun_start) && (hour <= hour_sun_end)) {
+  availability = "available" ; 
+  } else {
+  availability = "not_available" ;
+  } 
+  } 
+ if (availability == "available") {
+  document.getElementById("available").style.display = "block" ;
+  document.getElementById("not_available").style.display = "none" ;
+  } else {
+  document.getElementById("available").style.display = "none" ;
+  document.getElementById("not_available").style.display = "block" ;
+  } 
+</script> 
+
 
 <div>
 <!-- Start of skintifique Zendesk Widget script -->
