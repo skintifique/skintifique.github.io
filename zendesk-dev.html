@@ -52,6 +52,7 @@ let date = new Date();
 let time = date.getTime () ;
 let today = date.getDay();
 if ((today != "6") && (today != "0")) {
+  document.getElementById("dev1").innerHTML = "poaure" ;
   if ((time > start_available1) && (time < end_available1)) || ((time > start_available2) && (time < end_available2)) {
     availability = "available" ;
      } else {
@@ -60,7 +61,6 @@ if ((today != "6") && (today != "0")) {
    } else {
    availability = "tbc"
   }
-document.getElementById("dev1").innerHTML = availability ;
   
   </script>
 let saturday = document.getElementById("saturday").value ;
