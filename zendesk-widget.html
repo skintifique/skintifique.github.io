@@ -59,7 +59,7 @@ let todayD = date.getUTCDay();
 let today = todayD ;
 let hour = date.getUTCHours();
 if ((today != "6") && (today != "0")) {
-  if ((hour >= hour_start2) && (hour <= hour_end2)) {
+  if ((hour >= hour_start2) && (hour < hour_end2)) {
     availability = "available" ;
     } else {
     availability = "not_available" ;
@@ -75,7 +75,7 @@ if ((today != "6") && (today != "0")) {
   let hour_sat_end = dateUTC_sat_end.getUTCHours();  
   if (saturday == "no") {
   availability = "not_available" ;
-  } else if ((hour >= hour_sat_start) && (hour <= hour_sat_end)) {
+  } else if ((hour >= hour_sat_start) && (hour < hour_sat_end)) {
   availability = "available" ; 
   } else {
   availability = "not_available" ;
@@ -91,7 +91,7 @@ if ((today != "6") && (today != "0")) {
   let hour_sun_end = dateUTC_sun_end.getUTCHours();  
   if (sunday == "no") {
   availability = "not_available" ;
-  } else if ((hour >= hour_sun_start) && (hour <= hour_sun_end)) {
+  } else if ((hour >= hour_sun_start) && (hour < hour_sun_end)) {
   availability = "available" ; 
   } else {
   availability = "not_available" ;
