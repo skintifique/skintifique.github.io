@@ -25,7 +25,7 @@
 </center>
 </div>
 
-<!-- set parameters specifying when service team is available -->
+<!-- set parameters specifying when service team is available. all times values must be in UTC -->
 <!-- weekdays -->
 <input hidden id="start_available1" type="time" value="10:00"></input>
 <input hidden id="end_available1" type="time" value="13:30"></input>
@@ -49,20 +49,27 @@ let end_available1 = document.getElementById("end_available1").value ;
 let start_available2 = document.getElementById("start_available2").value ;
 let end_available2 = document.getElementById("end_available2").value ;
 let date = new Date();
-let time = date.getTime () ;
-let today = date.getDay();
+let today = date.getUTCDay();
+let hour = date.getUTCHours();
+let minute = date.getUTCMinutes();
+
+document.getElementById("dev1").innerHTML = start_available1 ;
+
+    </script>
 if ((today != "6") && (today != "0")) {
-  document.getElementById("dev1").innerHTML = "poaure" ;
   if ((time > start_available1) && (time < end_available1)) || ((time > start_available2) && (time < end_available2)) {
+    document.getElementById("dev1").innerHTML = "poaure" ;
+    }
+     
+    
     availability = "available" ;
      } else {
     availability = "not_available" ;
      }
    } else {
    availability = "tbc"
-  }
-  
-  </script>
+   
+
 let saturday = document.getElementById("saturday").value ;
   if ((today == "6") {
       if (saturday == "no")) {
