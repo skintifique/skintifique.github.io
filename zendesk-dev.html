@@ -27,8 +27,10 @@
 
 <!-- set parameters specifying when service team is available -->
 <!-- weekdays -->
-<input hidden id="start_available" type="time" value="8:00"></input>
-<input hidden id="end_available" type="time" value="8:00"></input>
+<input hidden id="start_available1" type="time" value="10:00"></input>
+<input hidden id="end_available1" type="time" value="13:00"></input>
+<input hidden id="start_available2" type="time" value="14:00"></input>
+<input hidden id="end_available2" type="time" value="18:00"></input>
 <!-- weekend -->
 <input hidden id="saturday" value="no"></input>
 <input hidden id="saturday_start" type="time" value="8:00"></input>
@@ -42,12 +44,25 @@
 
 <script>
 let availability ;
-let start_available = document.getElementById("start_available").value ;
-let end_available = document.getElementById("end_available").value ;
+let start_available1 = document.getElementById("start_available1").value ;
+let end_available1 = document.getElementById("end_available1").value ;
+let start_available2 = document.getElementById("start_available2").value ;
+let end_available2 = document.getElementById("end_available2").value ;
 let date = new Date();
 let time = date.getTime () ;
 let today = date.getDay();
-document.getElementById("dev1").innerHTML = start_available ;
+document.getElementById("dev1").innerHTML = end_available1 ;
+if ((today != "6") && (today != "0")) {
+  if ((time > start_available1) && (time < end_available1)) || ((time > start_available2) && (time < end_available2)) {
+    availability = "available" ;
+     } else {
+    availability = "not_available" ;
+     }
+   } else {
+   availability = "tbc"
+  }
+document.getElementById("dev1").innerHTML = availability ;
+  
   </script>
 let saturday = document.getElementById("saturday").value ;
   if ((today == "6") {
