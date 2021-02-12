@@ -1,4 +1,4 @@
-<center>
+center>
   <h1>Chat with a live agent</h1>
   </center>
   <div id="available">
@@ -60,7 +60,6 @@ let date = new Date();
 let today = date.getUTCDay();
 let hour = date.getUTCHours();
 
-document.getElementById("dev1").innerHTML = hour ;
 if ((today != "6") && (today != "0")) {
 document.getElementById("dev1").innerHTML = "bbbc" ;
   if (((hour >= hour_start1) && (hour <= hour_end1)) || ((hour >= hour_start2) && (hour <= hour_end2))) {
@@ -68,7 +67,28 @@ document.getElementById("dev1").innerHTML = "bbbc" ;
     } else {
     availability = "not_available" ;
     }
-  }  
+document.getElementById("dev1").innerHTML = hour ;
+     } 
+ </script>    
+ 
+  } else if (today == "6") {
+  let saturday = document.getElementById("saturday").value ;
+  let saturday_start = document.getElementById("saturday_start").value ;
+  let dateUTC_sat_start = new Date("2021-01-01T" + saturday_start + "Z") ;
+  let hour_sat_start = dateUTC_sat_start.getUTCHours();
+  let saturday_end = document.getElementById("saturday_end").value ;
+  let dateUTC_sat_end = new Date("2021-01-01T" + saturday_end + "Z") ;
+  let hour_sat_end = dateUTC_sat_end.getUTCHours();
+  if (saturday != "yes") {
+  availability = "not_available"
+  } else if ((hour >= hour_sat_start) && (hour <= hour_sat_end))) {
+  availability = "available"
+  } else {
+  availability = "not_available"
+  } 
+  } else {
+  availability = "not_available"
+  } 
  </script>    
     
     availability = "available" ;
