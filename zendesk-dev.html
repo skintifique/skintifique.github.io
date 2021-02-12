@@ -25,19 +25,19 @@
 </center>
 </div>
 
-<!-- set parameters specifying when service team is available. all times values must be in UTC -->
+<!-- set parameters specifying when service team is available. all times values must be in UTC time -->
 <!-- weekdays -->
-<input hidden id="start_available1" type="time" value="10:00"></input>
-<input hidden id="end_available1" type="time" value="13:30"></input>
-<input hidden id="start_available2" type="time" value="14:00"></input>
-<input hidden id="end_available2" type="time" value="18:00"></input>
+<input hidden id="start_available1" type="time" value="09:00"></input>
+<input hidden id="end_available1" type="time" value="12:00"></input>
+<input hidden id="start_available2" type="time" value="12:00"></input>
+<input hidden id="end_available2" type="time" value="17:00"></input>
 <!-- weekend -->
 <input hidden id="saturday" value="no"></input>
-<input hidden id="saturday_start" type="time" value="8:00"></input>
-<input hidden id="saturday_end" type="time" value="no"></input>
+<input hidden id="saturday_start" type="time" value="09:00"></input>
+<input hidden id="saturday_end" type="time" value="15:00"></input>
 <input hidden id="sunday" value="8:00"></input>
-<input hidden id="sunday_start" type="time" value="8:00"></input>
-<input hidden id="sunday_end" type="time" value="no"></input>
+<input hidden id="sunday_start" type="time" value="09:00"></input>
+<input hidden id="sunday_end" type="time" value="15:00"></input>
 <!-- end -->
 
 <p id="dev1">p</p>
@@ -45,22 +45,31 @@
 <script>
 let availability ;
 let start_available1 = document.getElementById("start_available1").value ;
+let dateUTC_start1 = new Date("2021-01-01T" + start_available1 + "Z") ;
+let hour_start1 = dateUTC_start1.getUTCHours();
 let end_available1 = document.getElementById("end_available1").value ;
+let dateUTC_end1 = new Date("2021-01-01T" + end_available1 + "Z") ;
+let hour_end1 = dateUTC_end1.getUTCHours();
 let start_available2 = document.getElementById("start_available2").value ;
-let end_available2 = document.getElementById("end_available2").value ;
+let dateUTC_start2 = new Date("2021-01-01T" + start_available2 + "Z") ;
+let hour_start2 = dateUTC_start2.getUTCHours();
+let end_available2 = document.getElementById("end_available1").value ;
+let dateUTC_end2 = new Date("2021-01-01T" + end_available2 + "Z") ;
+let hour_end2 = dateUTC_end2.getUTCHours();
 let date = new Date();
 let today = date.getUTCDay();
 let hour = date.getUTCHours();
-let minute = date.getUTCMinutes();
 
-document.getElementById("dev1").innerHTML = start_available1 ;
-
-    </script>
+document.getElementById("dev1").innerHTML = hour ;
 if ((today != "6") && (today != "0")) {
-  if ((time > start_available1) && (time < end_available1)) || ((time > start_available2) && (time < end_available2)) {
-    document.getElementById("dev1").innerHTML = "poaure" ;
+document.getElementById("dev1").innerHTML = "bbbc" ;
+  if (((hour >= hour_start1) && (hour <= hour_end1)) || ((hour >= hour_start2) && (hour <= hour_end2))) {
+    availability = "available" ;
+    } else {
+    availability = "not_available" ;
     }
-     
+  }  
+ </script>    
     
     availability = "available" ;
      } else {
