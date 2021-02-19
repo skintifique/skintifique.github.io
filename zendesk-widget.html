@@ -71,7 +71,11 @@ let todayD = date.getUTCDay();
 let today = todayD ;
 let hour = date.getUTCHours();
 if ((today != "6") && (today != "0")) {
-  if ((hour >= hour_start2) && (hour < hour_end2)) {
+  if ((hour >= hour_start1) && (hour < hour_end1)) {
+    availability = "available" ;
+    } else {
+    availability = "not_available" ;
+    } else if ((hour >= hour_start2) && (hour < hour_end2)) {
     availability = "available" ;
     } else {
     availability = "not_available" ;
