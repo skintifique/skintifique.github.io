@@ -17,14 +17,23 @@ document.getElementById("nwsl_url").href = newsletter_url ;
 }
 document.getElementById("img_query_img").src = image_query_page ;
 
-
+let languageCode = document.getElementById("languageCode").value ;
 let ackn_text = document.getElementById("ackn_text") ;
-if (ackn_text) {
-let ackn2 = "SkinTy is powered with &hearts; by Skintifique - Innovative skincare for freedom." ;
-document.getElementById("ackn_text").innerHTML = ackn2 ;
-} else {
-document.getElementById("skintyIntro").innerHTML = "Please bear with us, there is an unknown problem on this page. You should use the genuine SkinTy on Skintifique website: https://www.skintifique.me/skinty " ;
-}
+if (languageCode == "en") {
+  if (ackn_text) {
+  let ackn2 = "SkinTy is powered with &hearts; by Skintifique - Innovative skincare for freedom." ;
+  document.getElementById("ackn_text").innerHTML = ackn2 ;
+  } else {
+  document.getElementById("skintyIntro").innerHTML = "Please bear with us, there is an unknown problem on this page. You should use the genuine SkinTy on Skintifique website: https://www.skintifique.me/skinty " ;
+  }
+} else if (languageCode == "fr") {
+  if (ackn_text) {
+  let ackn2 = "SkinTy est offert avec &hearts; par Skintifique - Les soins dermato-cosmétiques libérateurs pour ma santé et mon bien-être." ;
+  document.getElementById("ackn_text").innerHTML = ackn2 ;
+  } else {
+  document.getElementById("skintyIntro").innerHTML = "Veuillez nous excuses, il y a un problème avec cette page. Vous devriez utiliser SkinTy sur le site de Skintifique: https://www.skintifique.me/skinty " ;
+  }
+} 
 
 
 function with_query () {
