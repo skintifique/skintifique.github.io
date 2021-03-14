@@ -32,10 +32,19 @@ amz_onetag = "skintifique0-20";
 amz_onetag = "skintifique0-20";
 }
 let amz_url ;
+let amz_shop ;
+let url = window.location.ref ;
+if (url.includes("/en/")) {
+	amz_shop = "https://www.amazon.com" ;
+} else if (url.includes("/fr/")) {
+	amz_shop = "https://www.amazon.fr" ;
+} else {	
+	amz_shop = "https://www.amazon.com" ;
+}
 if (product_asin == "unavailable") { 
-	amz_url = "https://www.amazon.com/s?k=skintifique&tag=" + amz_onetag ;
+	amz_url = amz_shop + "/s?k=skintifique&tag=" + amz_onetag ;
     } else {
-	amz_url = "https://www.amazon.com/dp/" + product_asin + "/?tag=" + amz_onetag ;
+	amz_url = amz_shop + "/dp/" + product_asin + "/?tag=" + amz_onetag ;
 	}	
 document.getElementById("go_to_amz_btn").href = amz_url ;
 }
