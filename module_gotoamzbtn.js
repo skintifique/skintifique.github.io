@@ -1,3 +1,5 @@
+//this is code to add the the website to 
+
 // IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
 document.getElementById("go_to_amz_btn").addEventListener("click",function() {
 const url_params = new URLSearchParams(window.location.search);
