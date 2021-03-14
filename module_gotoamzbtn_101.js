@@ -33,7 +33,7 @@ amz_onetag = "skintifique0-20";
 }
 let amz_url ;
 let amz_shop ;
-let url = window.location.ref ;
+let url = window.location.href ;
 if (url.includes("/en/")) {
 	amz_shop = "https://www.amazon.com" ;
 } else if (url.includes("/fr/")) {
