@@ -1,6 +1,8 @@
 //this is code to add the the website to 
 
 // IDENTIFY SKAID AND AMZ_ONETAG AND TARGET AMZ_URL
+let go_to_amz_btn = document.getElementById("go_to_amz_btn") ;
+if (go_to_amz_btn) {
 document.getElementById("go_to_amz_btn").addEventListener("click",function() {
 const url_params = new URLSearchParams(window.location.search);
 let skaid = url_params.get("skaid");
@@ -16,6 +18,7 @@ if (skaid2) {
 	}
 }
 });
+}	
 
 function find_amz_onetag (x) {
 let product_asin_elmt = document.getElementById("product_asin") ;
