@@ -6,7 +6,6 @@
 /*   Skintifique acknowledgment, to show at bottom of SkinTy introduction text */
 /*   possible themeb, beyond the current list */
 
-
 let image_query_page = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYA2n-s-Pn6rtQz-3aLUgj8s1XxhahIv0ZPA&usqp=CAU" ;
 let newsletter_url = document.getElementById("newsletter_url").value ;
 if (newsletter_url === "none") {
@@ -90,6 +89,10 @@ dfMessenger2.renderCustomCard(payload1);
 });
 }
 
+dfMessenger2.addEventListener("df-response-received", function (event) {
+const customText = "test";
+dfMessenger2.renderCustomText(customText);
+});
 
 
 
