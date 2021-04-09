@@ -9,7 +9,6 @@ df-messenger {
    --df-messenger-user-message: rgb(117, 147, 71);
    --df-messenger-minimized-chat-close-icon-color :white;
    --df-messenger-minimized-chat-close-icon-border-color :rgba(45,133,154,1);
-   --df-messenger-chat-background-color :white;
   }
 
 .img {
