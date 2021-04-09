@@ -91,7 +91,7 @@ dfMessenger2.renderCustomCard(payload1);
 
 const dfMessenger3 = document.querySelector("df-messenger");
 dfMessenger3.addEventListener("df-response-received", function (event) {
-const customText = "😍;
+const customText = " 😍 ";
 dfMessenger3.renderCustomText(customText);
 });
 
