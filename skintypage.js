@@ -89,9 +89,10 @@ dfMessenger2.renderCustomCard(payload1);
 });
 }
 
-dfMessenger2.addEventListener("df-response-received", function (event) {
+const dfMessenger3 = document.querySelector("df-messenger");
+dfMessenger3.addEventListener("df-response-received", function (event) {
 const customText = "test";
-dfMessenger2.renderCustomText(customText);
+dfMessenger3.renderCustomText(customText);
 });
 
 
