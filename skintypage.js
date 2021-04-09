@@ -67,7 +67,7 @@ let imageURL = image_query_page ;
 const dfMessenger2 = document.querySelector("df-messenger");
 dfMessenger2.addEventListener("df-messenger-loaded", function (event) {
 let welcomeIntro = "Hello, I am SkinTy, your 24/7 digital assistant."
-let welcomeIntro2 = "Please click below to confirm your question. Or say SUGGESTION to see frequent ones" ;
+let welcomeIntro2 = "Please click below to confirm your question. Or type another one." ;
 const payloadImage = [
   {
         "rawUrl": imageURL,
