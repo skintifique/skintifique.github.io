@@ -1,9 +1,9 @@
 /*USE THIS FILE FOR THE DEFAULT SKINTY PAGE*/
 
 df-messenger {
-   --df-messenger-bot-message: rgba(45,133,154,1);
-   --df-messenger-button-titlebar-color: rgba(45,133,154,1);
-   --df-messenger-chat-background-color: #fafafa;
+   --df-messenger-bot-message: #9AA7AD;
+   --df-messenger-button-titlebar-color: #4B646E;
+   --df-messenger-chat-background-color: #E8EBEC;
    --df-messenger-font-color: white;
    --df-messenger-send-icon: #878fac;
    --df-messenger-user-message: rgb(117, 147, 71);
