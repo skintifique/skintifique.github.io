@@ -7,7 +7,7 @@ df-messenger {
    --df-messenger-font-color: white;
    --df-messenger-send-icon: #878fac;
    --df-messenger-user-message: rgb(117, 147, 71);
-   --df-messenger-minimized-chat-close-icon-color: #9aa7ad;
+   --df-messenger-minimized-chat-close-icon-color: #4b646e;
   }
 
 .img {
