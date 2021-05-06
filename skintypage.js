@@ -6,7 +6,7 @@
 /*   Skintifique acknowledgment, to show at bottom of SkinTy introduction text */
 /*   possible themeb, beyond the current list */
 
-let image_query_page = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYA2n-s-Pn6rtQz-3aLUgj8s1XxhahIv0ZPA&usqp=CAU" ;
+let image_query_page = "https://www.skintifique.me/wp-content/uploads/2021/04/Skintifique_2S_HD_sansongles-2-scaled-2-scaled.jpg" ;
 let newsletter_url = document.getElementById("newsletter_url").value ;
 if (newsletter_url === "none") {
 let nwsl_text = document.getElementById("nwsl_text") ;
