@@ -52,7 +52,7 @@ dfMessenger.setAttribute("chat-icon",chatIcon);
 dfMessenger.getAttribute("intent");
 dfMessenger.setAttribute("intent",intent);
 dfMessenger.getAttribute("expand");
-dfMessenger.setAttribute("expand","close");
+dfMessenger.setAttribute("expand","expand");
 window.customElements.define("df-messenger", dfMessenger);
 }
 
