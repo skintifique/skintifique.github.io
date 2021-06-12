@@ -14,7 +14,7 @@ nwsl_text.style.display = "none" ;
 } else if (newsletter_url) {
 document.getElementById("nwsl_url").href = newsletter_url ;
 }
-document.getElementById("img_query_img").src = image_query_page ;
+/* document.getElementById("img_query_img").src = image_query_page ; */
 
 let languageCode = document.getElementById("languageCode").value ;
 let ackn_text = document.getElementById("ackn_text") ;
