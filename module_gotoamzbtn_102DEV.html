@@ -7,16 +7,16 @@
 
   <a name="product1" class="gotoamzbtn"><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_en.png" /img></a>
   <select hidden id="product1">
-  <option value="amzus">asin1</option>
-  <option value="amzfr">asin2</option>
-  <option value="amzuk">asin3</option>
+  <option value=".us">asin1</option>
+  <option value=".fr">asin2</option>
+  <option value=".co.uk">asin3</option>
                  </select>
   <br>
   <a name="product2" class="gotoamzbtn"><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_en.png" /img></a>
   <select hidden id="product2">
-  <option value="amzus">asin4</option>
-  <option value="amzfr">asin5</option>
-  <option value="amzuk">asin6</option>
+  <option value=".us">asin4</option>
+  <option value=".fr">asin5</option>
+  <option value=".co.uk">asin6</option>
                  </select>
   <br>
 
@@ -25,17 +25,57 @@
     document.addEventListener("click", goToAmz);
     
     function goToAmz(event) { 
-    //identify if the click occured on a gotoamz class button//
+//identify if the click occured on a gotoamz class button//
     let selected_btn_class = event.target.parentElement.className ;
     if (selected_btn_class === "gotoamzbtn")  {
+
+ //identify traffic country source//
+let traffic_source ;
+if (skaid.includes("fr")){
+	traffic_source = "fr" ;
+} else if (skaid.includes("us")){
+	traffic_source = "us" ;
+} else if (skaid.includes("uk")){
+	traffic_source = "uk" ;
+} else {
+	traffic_source = "us" ;
+}
+
+// get url language //
+let current_url = window.location.href ;
+let url_lang ;
+if (current_url.includes("/fr/")) {
+	url_lang = "fr" ;
+} else if (current_url.includes("/en/")) {
+	url_lang = "en" ;
+} else {	
+	url_lang = "en" ;
+}	
+
+// get target amz shop and asin //
+let amz_shop ;
+let amz_tag ;
+if (url_lang === "fr") {
+	amz_shop = ".fr" ;
+  amz_tag = "skintifique-21" ;
+} else if (url_lang === "en") {
+  if (traffic_source === "uk") {
+    amz_shop = ".co.uk" ;
+    amz_tag = "skintifiqueOf-21" ;
+    } else {
+	  amz_shop = ".com" ;
+    amz_tag = "skintifique00-20" ;
+    }
+ }
+      
+//select the target product asin //
     let selected_btn = event.target.parentElement.name ; 
-    let selected_shop = "amzuk" ;
     let selected_list = document.getElementById(selected_btn) ;
-    selected_list.value = selected_shop ;
+    selected_list.value = amz_shop ;
       
             for (var i = 0; i < selected_list.length; i++) {
                 var option = selected_list.options[i];
-                if (option.value == selected_shop) {
+                if (option.value == amz_shop) {
                     document.getElementById("showp").innerHTML = option.text;
                 }
             }  
