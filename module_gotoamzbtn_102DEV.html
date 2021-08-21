@@ -25,8 +25,9 @@
     document.addEventListener("click", myFunction());
     
     function myFunction(event) { 
-  alert(event.target.nodeName);
-}
+    let y = event.target.nodeName ;
+    document.getElementBtId("showp").innerHTML = y ;
+    }
     
     function selectAsin (x) {
     let selected_shop = "amzfr" ;
