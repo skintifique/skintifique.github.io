@@ -4,7 +4,7 @@
   
   <p id="showp">showp</p>
   <br>
-  <input id="selected_shop">amzfr</input>
+  <input id="selected_shop" name="selected_shop">amzfr</input>
   <br>
 
   <button value="product1" onclick="selectAsin(this)">this is a1</button>
@@ -23,7 +23,7 @@
  
   <script>
     function selectAsin (x) {
-    let selected_shop = document.getElementbyId("selected_shop").innerText ;
+    let selected_shop = document.getElementbyId("selected_shop").value ;
     let selected_btn = x.value ;
     let selected_list = document.getElementById(selected_btn) ;
     selected_list.value = selected_shop ;
