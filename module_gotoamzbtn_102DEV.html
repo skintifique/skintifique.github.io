@@ -5,15 +5,15 @@
   <p id="showp">showp1</p>
   <br>
 
-  <a name="gotoamz_product1"><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_en.png" /img></a>
-  <select hidden id="gotoamz_product1">
+  <a name="product1" class="gotoamzbtn"><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_en.png" /img></a>
+  <select hidden id="product1">
   <option value="amzus">asin1</option>
   <option value="amzfr">asin2</option>
   <option value="amzuk">asin3</option>
                  </select>
   <br>
-  <a name="gotoamz_product2"><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_en.png" /img></a>
-  <select hidden id="gotoamz_product2">
+  <a name="product2" class="gotoamzbtn"><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_en.png" /img></a>
+  <select hidden id="product2">
   <option value="amzus">asin4</option>
   <option value="amzfr">asin5</option>
   <option value="amzuk">asin6</option>
@@ -22,12 +22,13 @@
 
  
   <script>
-    document.addEventListener("click", myFunction);
+    document.addEventListener("click", goToAmz);
     
-    function myFunction(event) { 
-    let selected_btn = event.target.parentElement.name ;
-    if (selected_btn.includes("gotoamz_"))  {
-      
+    function goToAmz(event) { 
+    //identify if the click occured on a gotoamz class button//
+    let selected_btn_class = event.target.parentElement.className ;
+    if (selected_btn_class === "gotoamzbtn")  {
+    let selected_btn = event.target.parentElement.name ; 
     let selected_shop = "amzfr" ;
     let selected_list = document.getElementById(selected_btn) ;
     selected_list.value = selected_shop ;
