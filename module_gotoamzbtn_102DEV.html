@@ -41,8 +41,8 @@ if (skaid2) {
     
     function goToAmz(event) { 
 //identify if the click occured on a gotoamz class button//
-    let selected_btn_class = event.target.parentElement.className ;
-    if (selected_btn_class === "gotoamzbtn")  {
+    let classes = event.target.parentElement.classList ;
+    if (classes.contains("gotoamzbtn"))  {
 
  //identify traffic country source//
 let traffic_source ;
