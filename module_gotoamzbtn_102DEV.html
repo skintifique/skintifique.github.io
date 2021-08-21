@@ -25,8 +25,7 @@
     document.addEventListener("click", myFunction);
     
     function myFunction(event) { 
-    let y = event.target ;
-    let z = parent.y.nodeName ;
+    let y = event.target.parentElement.name ;
     document.getElementById("showp").innerHTML = y ;
     }
     
