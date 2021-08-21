@@ -98,10 +98,10 @@ if (url_lang === "fr") {
 
 //devise target url //
 let amz_url ;
-if !(selected_asin) { 
-	amz_url = "https://www.amazon" + amz_shop + "/s?k=skintifique&tag=" + amz_tag ;
-    } else {
+if (selected_asin) { 
 	amz_url = "https://www.amazon" + amz_shop + "/dp/" + selected_asin + "/?tag=" + amz_tag ;
+    } else {
+	amz_url = "https://www.amazon" + amz_shop + "/s?k=skintifique&tag=" + amz_tag ;
 	}
 
 document.getElementById("showp").innerHTML = amz_url ;	    
