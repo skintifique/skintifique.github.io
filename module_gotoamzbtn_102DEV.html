@@ -23,7 +23,7 @@
  
   <script>
     function selectAsin (x) {
-    let selected_shop = "amzfr" ;
+    let selected_shop = document.getElementbyId("selected_shop").innerText ;
     let selected_btn = x.value ;
     let selected_list = document.getElementById(selected_btn) ;
     selected_list.value = selected_shop ;
