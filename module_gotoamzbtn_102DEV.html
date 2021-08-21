@@ -24,10 +24,10 @@
   <script>
     function selectAsin (x) {
     let selected_shop = "amzfr" ;
+        document.getElementById("showp").innerHTML = selected_shop ;
     let selected_btn = this.value ;
     document.getElementById(selected_btn).value = selected_shop ;
     let selected_asin = document.getElementById(selected_btn).value ;
-    document.getElementById("showp").innerHTML = selected_asin ;
 }
 </script>
   
