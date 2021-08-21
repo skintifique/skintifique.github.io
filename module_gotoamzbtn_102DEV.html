@@ -5,9 +5,9 @@
   <p id="showp">showp</p>
   <br>
 
-  <a value="product1" onclick="selectAsin(this)">this is a1</a>
+  <a name="product1" onclick="selectAsin(this)">this is a1</a>
   <br>
-  <a value="product2" onclick="selectAsin(this)">this is a2</a>
+  <a name="product2" onclick="selectAsin(this)">this is a2</a>
   <br>
  
  <form hidden>
@@ -29,7 +29,7 @@
   <script>
     function selectAsin (x) {
     let selected_shop = "amzfr" ;
-    let selected_btn = x.value ;
+    let selected_btn = x.name ;
     let selected_list = document.getElementById(selected_btn) ;
     selected_list.value = selected_shop ;
       
