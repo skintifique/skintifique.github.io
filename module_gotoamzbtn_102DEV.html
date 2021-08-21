@@ -22,6 +22,21 @@
 
  
   <script>
+//store and get skaid if any//
+const url_params = new URLSearchParams(window.location.search);
+let skaid = url_params.get("skaid");
+if (skaid) {
+	sessionStorage.setItem("skaid",skaid);
+} else {
+let skaid2 = sessionStorage.getItem("skaid") ;	
+if (skaid2) {
+	skaid = skaid2 ;
+	} else {
+	skaid = "none" ;
+	}
+}	  
+	  
+//detect click event then gotoamz if event element is with appropriate class//	  
     document.addEventListener("click", goToAmz);
     
     function goToAmz(event) { 
