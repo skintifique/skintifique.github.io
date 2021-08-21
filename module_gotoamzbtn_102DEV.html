@@ -22,10 +22,10 @@
 
  
   <script>
-    document.addEventListener("click", myFunction(event));
+    document.addEventListener("click", myFunction);
     
     function myFunction(event) { 
-    let y = event.target.name ;
+    let y = event.target.nodeName ;
     document.getElementBtId("showp").innerHTML = y ;
     }
     
