@@ -1,13 +1,33 @@
 <html>
 <body>
 <br>
+  
+  <p ide="showp">showp</p>
+  <br>
+  <input id="selected_shop">selected_shop</input>
+  <br>
+
+  <button value="product1" onclick="selectAsin(this)">this is a1</button>
+  <br>
+  <button value="product2" onclick="selectAsin(this)">this is a2</button>
+  <br>
+  
 <select name="asin" id="product1">
-  <option value="asin1">asin1</option>
-  <option value="asin2">asin2</option>
-  <option value="asin3">asin3</option>
+  <option value="amzus">asin1</option>
+  <option value="amzfr">asin2</option>
+  <option value="amzuk">asin3</option>
                  </select>
-  <script src="https://skintifique.github.io/skintifique/module_gotoamzbtn_102DEV.js>
-    
+ 
+  <script>
+    function selectAsin (x) {
+    let selected_shop = "amzfr" ;
+    let selected_btn = this.value ;
+    document.getElementById(selected_btn).value = selected_shop ;
+    let selected_asin = document.getElementById(selected_btn).value ;
+    document.getElementById("showp").innerHTML = selected_asin ;
+}
+</script>
+  
   </body>
   </html>
     
