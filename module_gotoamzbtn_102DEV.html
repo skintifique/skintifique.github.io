@@ -12,7 +12,7 @@
   <option value="amzuk">asin3</option>
                  </select>
   <br>
-  <a name="product2" onclick="selectAsin(this)">this is a2</a>
+  <a name="product2">this is a2</a>
   <select hidden id="product2">
   <option value="amzus">asin4</option>
   <option value="amzfr">asin5</option>
@@ -22,6 +22,12 @@
 
  
   <script>
+    document.addEventListener("click", myFunction());
+    
+    function myFunction(event) { 
+  alert(event.target.nodeName);
+}
+    
     function selectAsin (x) {
     let selected_shop = "amzfr" ;
     let selected_btn = x.name ;
