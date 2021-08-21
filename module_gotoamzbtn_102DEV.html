@@ -25,13 +25,8 @@
     document.addEventListener("click", myFunction);
     
     function myFunction(event) { 
-    let y = event.target.parentElement.name ;
-    document.getElementById("showp").innerHTML = y ;
-    }
-    
-    function selectAsin (x) {
-    let selected_shop = "amzfr" ;
-    let selected_btn = x.name ;
+    let selected_btn = event.target.parentElement.name ;
+    let selected_shop = "amzuk" ;
     let selected_list = document.getElementById(selected_btn) ;
     selected_list.value = selected_shop ;
       
