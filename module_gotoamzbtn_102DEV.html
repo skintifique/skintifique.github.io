@@ -25,7 +25,24 @@
     function selectAsin (x) {
     let selected_shop = "amzfr" ;
     let selected_btn = x.value ;
-    document.getElementById(selected_btn).value = selected_shop ;
+    let selected_list = document.getElementById(selected_btn) ;
+    selected_list.value = selected_shop ;
+         }
+</script>
+
+   function getText() {
+            var a = document.getElementById("GFG_list");
+            for (var i = 0; i < a.length; i++) {
+                var option = a.options[i];
+                if (option.value == val) {
+                    el.innerHTML = option.text;
+                }
+            }
+        }   
+      
+      
+      
+      
     let selected_asin = document.getElementById(selected_btn).innerHTML ;
             document.getElementById("showp").innerHTML = selected_asin ;
       }
