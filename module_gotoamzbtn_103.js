@@ -65,6 +65,9 @@ if (url_lang === "fr") {
     let selected_asin ;
     let selected_btn = event.target.id ;
 	    document.getElementById("showp").innerHTML = selected_btn ;
+	    }
+	     }
+	    
     let selected_btn_option = "option-" + selected_btn ;	    
     let selected_list = document.getElementById(selected_btn_option) ;
     selected_list.value = amz_shop ;
