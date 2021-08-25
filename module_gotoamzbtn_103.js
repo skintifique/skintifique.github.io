@@ -84,7 +84,9 @@ if (selected_asin) {
 	}
 
 // for tests---document.getElementById("showp").innerHTML = amz_url ;---//
-window.open(amz_url, "_blank") ;	    
+//window.open(amz_url, "_blank") ;	//
+	    
+	    document.getElementById(selected_btn).href = amz_url ;
 	    
        }
    }
