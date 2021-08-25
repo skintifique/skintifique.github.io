@@ -63,8 +63,9 @@ if (url_lang === "fr") {
       
 //select the target product asin //
     let selected_asin ;
-    let selected_btn = event.target.parentElement.name ; 
-    let selected_list = document.getElementById(selected_btn) ;
+    let selected_btn = event.target.id ;
+    let selected_btn_option = "option-" + selected_btn ;	    
+    let selected_list = document.getElementById(selected_btn_option) ;
     selected_list.value = amz_shop ;
       
             for (var i = 0; i < selected_list.length; i++) {
