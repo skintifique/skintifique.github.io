@@ -82,7 +82,7 @@ if (selected_asin) {
 	amz_url = "https://www.amazon" + amz_shop + "/s?k=skintifique&tag=" + amz_tag ;
 	}
 
-document.getElementById("showp").innerHTML = amz_url ;
+<--document.getElementById("showp").innerHTML = amz_url ;-->
 window.open(amz_url, "_blank") ;	    
 	    
        }
