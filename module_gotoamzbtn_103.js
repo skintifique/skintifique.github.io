@@ -64,6 +64,7 @@ if (url_lang === "fr") {
 //select the target product asin //
     let selected_asin ;
     let selected_btn = event.target.id ;
+	    document.getElementById("showp").innerHTML = selected_btn ;
     let selected_btn_option = "option-" + selected_btn ;	    
     let selected_list = document.getElementById(selected_btn_option) ;
     selected_list.value = amz_shop ;
@@ -83,7 +84,7 @@ if (selected_asin) {
 	amz_url = "https://www.amazon" + amz_shop + "/s?k=skintifique&tag=" + amz_tag ;
 	}
 
-document.getElementById("showp").innerHTML = amz_url ;
+//document.getElementById("showp").innerHTML = amz_url ;//
 //--window.open(amz_url, "_blank") ;--//
 	    
 document.getElementById(selected_btn).href = amz_url ;
