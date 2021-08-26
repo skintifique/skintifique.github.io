@@ -66,6 +66,7 @@ if (url_lang === "fr") {
 //select the target product asin //
     let selected_asin ;
     let selected_btn = event.target.parentElement.id ;
+    let selected_btn_code ;
 
 	    
 //identify if the button is on ps product page and if so one needs to get the appropriate product_id //
@@ -76,12 +77,14 @@ let product_referenceAff2 = product_referenceAff[0].querySelector("[itemprop=sku
 
 switch (product_referenceAff2) {
 	case "SKP1300003":
-	selected_btn = "CLx1"
+	selected_btn_code = "CLx1"
 	break;
 	default:
-	selected_btn = "HG_facex1"
+	selected_btn_code = "HG_facex1"
 	}
-}
+} else {
+	selected_btn_code = selected_btn ;
+	}
 	
 	
 	
@@ -98,7 +101,7 @@ switch (product_referenceAff2) {
 //} else { //
 //then the button is on wp or a non-product ps page//	
 
-    switch (selected_btn)  { 
+    switch (selected_btn_code)  { 
       case "HG_facex1":
         if (amz_shop === ".com") {
           selected_asin = "asinHG_faceUS" ;
