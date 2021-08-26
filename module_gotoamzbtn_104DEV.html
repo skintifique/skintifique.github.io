@@ -2,7 +2,7 @@
 <body>
 	<p id="showb">showb</p>
   
-  <a href="" target="_blank" id="go_to_amz_btn" class="btn btn_default go_to_amz_btn"><img id="test" src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_fr.png" /img></a>
+  <a target="_blank" id="go_to_amz_btn" class="btn btn_default go_to_amz_btn"><img id="test" src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_fr.png" /img></a>
   <select hidden id="asin-go_to_amz_btn">
   <option value=".com">asin1</option>
   <option value=".fr">asin2</option>
@@ -31,6 +31,10 @@ if (skaid2) {
     function goToAmz(event) { 
 //identify if the click occured on a gotoamz class button//
     let classes = event.target.parentElement.classList ;
+	    document.getElementById("showp").innerHTML = classes ;
+	    }
+	</script>
+	    
     if (classes.contains("go_to_amz_btn"))  {
 
  //identify traffic country source//
