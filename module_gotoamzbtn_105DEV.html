@@ -3,8 +3,14 @@
 	<p id="showp">showp1</p>
   
   <a id="go_to_amz_btn" class="btn btn_default go_to_amz_btn" href="https://www.amazon.com/s?k=skintifique&tag=skintifique00-20" target="_blank" ><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_fr.png" /img></a>
+<select hidden id="asin-go_to_amz_btn">
+  <option value=".com">asin1</option>
+  <option value=".fr">asin2</option>
+  <option value=".co.uk">asin3</option>
+                 </select>
 	
 <a id="HG_bodyx1" class="btn btn_default go_to_amz_btn" href="https://www.amazon.com/s?k=skintifique&tag=skintifique00-20" target="_blank" ><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_fr.png" /img></a>
+<a id="HG_facex1" class="btn btn_default go_to_amz_btn" href="https://www.amazon.com/s?k=skintifique&tag=skintifique00-20" target="_blank" ><img src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_fr.png" /img></a>
 	
 	
 <script>
@@ -74,7 +80,22 @@ if (url_lang === "fr") {
 //select the target product asin //
     let selected_asin ;
     let selected_btn = event.target.parentElement.id ;
-	        
+	    
+//follow different path to identify asin, depending on whether btn is on ps product page or not //
+if (selected_btn === "go_to_amz_btn"){
+//then the button is on ps product page //	
+    let selected_btn_option = "asin-" + selected_btn ;	    
+    let selected_list = document.getElementById(selected_btn_option) ;
+    selected_list.value = amz_shop ;
+      
+            for (var i = 0; i < selected_list.length; i++) {
+                var option = selected_list.options[i];
+                if (option.value == amz_shop) {
+                    selected_asin = option.text;
+                }
+            }
+} else {
+//then the button is on wp or a non-product ps page//		        
     switch (selected_btn)  { 
       case "HG_facex1":
         if (amz_shop === ".com") {
@@ -102,7 +123,7 @@ if (url_lang === "fr") {
           selected_asin = "" ;
         
       }
- 
+ }
 	    
 //devise target url //
 let amz_url ;
