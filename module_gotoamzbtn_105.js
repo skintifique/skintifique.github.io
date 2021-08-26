@@ -77,7 +77,7 @@ switch (product_referenceAff2) {
 	selected_btn = "CLx1"
 	break;
 	default:
-	selected_btn = "";
+	selected_btn = "HG_facex1";
 	}
 }
 	
