@@ -1,6 +1,6 @@
 <html>
 <body>
-	<p id="showp">showp</p>
+	<p id="showp">showp1</p>
   
   <a target="_blank" id="go_to_amz_btn" class="btn btn_default go_to_amz_btn"><img id="test" src="https://www.skintifique.me/shop/themes/warehouse/assets/img/amazon_button_fr.png" /img></a>
   <select hidden id="asin-go_to_amz_btn">
@@ -30,11 +30,7 @@ if (skaid2) {
     
     function goToAmz(event) { 
 //identify if the click occured on a gotoamz class button//
-    let classes = event.target.parentElement.classList ;
-	   document.getElementById("showp").innerHTML = "1234" ;
-	    }
-	</script>
-	    
+    let classes = event.target.parentElement.classList ;	    
     if (classes.contains("go_to_amz_btn"))  {
 
  //identify traffic country source//
