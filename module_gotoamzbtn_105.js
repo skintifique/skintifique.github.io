@@ -67,18 +67,33 @@ if (url_lang === "fr") {
 	    
 //follow different path to identify asin, depending on whether btn is on ps product page or not //
 if (selected_btn === "go_to_amz_btn"){
-//then the button is on ps product page //	
-    let selected_btn_option = "asin-" + selected_btn ;	    
-    let selected_list = document.getElementById(selected_btn_option) ;
-    selected_list.value = amz_shop ;
+//then the button is on ps product page //
+// get the appropriate product_id //
+let product_referenceAff = document.getElementsByClassName("product-reference") ;
+let product_referenceAff2 = product_referenceAff[0].querySelector("[itemprop=sku]").textContent ;
+
+switch (product_referenceAff2) {
+	case "SKP1300003":
+	selected_btn = "CLx1"
+	break;
+	default:
+	selected_btn = "";
+	}
+}
+	
+	
+	
+//    let selected_btn_option = "asin-" + selected_btn ; //	    
+//    let selected_list = document.getElementById(selected_btn_option) ; //
+ //   selected_list.value = amz_shop ; //
       
-            for (var i = 0; i < selected_list.length; i++) {
-                var option = selected_list.options[i];
-                if (option.value == amz_shop) {
-                    selected_asin = option.text;
-                }
-            }
-} else {
+ //           for (var i = 0; i < selected_list.length; i++) { //
+ //               var option = selected_list.options[i]; //
+ //               if (option.value == amz_shop) { //
+//                    selected_asin = option.text; //
+ //               } //
+//            } //
+//} else { //
 //then the button is on wp or a non-product ps page//		        
     switch (selected_btn)  { 
       case "HG_facex1":
