@@ -65,10 +65,8 @@ if (url_lang === "fr") {
     let selected_asin ;
     let selected_btn = event.target.parentElement.id ;
 	    
-//follow different path to identify asin, depending on whether btn is on ps product page or not //
+//identify if the button is on ps product page and if so one needs to get the appropriate product_id //
 if (selected_btn === "go_to_amz_btn"){
-//then the button is on ps product page //
-// get the appropriate product_id //
 let product_referenceAff = document.getElementsByClassName("product-reference") ;
 let product_referenceAff2 = product_referenceAff[0].querySelector("[itemprop=sku]").textContent ;
 
