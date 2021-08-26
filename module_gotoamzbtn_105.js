@@ -18,6 +18,7 @@ if (skaid2) {
     document.addEventListener("click", goToAmz);
     
     function goToAmz(event) { 
+
 //identify if the click occured on a gotoamz class button//
     let classes = event.target.parentElement.classList ;	    
     if (classes.contains("go_to_amz_btn"))  {
@@ -60,13 +61,16 @@ if (url_lang === "fr") {
     amz_tag = "skintifique00-20" ;
     }
  }
+ 
       
 //select the target product asin //
     let selected_asin ;
     let selected_btn = event.target.parentElement.id ;
+
 	    
 //identify if the button is on ps product page and if so one needs to get the appropriate product_id //
 if (selected_btn === "go_to_amz_btn"){
+
 let product_referenceAff = document.getElementsByClassName("product-reference") ;
 let product_referenceAff2 = product_referenceAff[0].querySelector("[itemprop=sku]").textContent ;
 
@@ -75,7 +79,7 @@ switch (product_referenceAff2) {
 	selected_btn = "CLx1"
 	break;
 	default:
-	selected_btn = "HG_facex1";
+	selected_btn = "HG_facex1"
 	}
 }
 	
@@ -92,7 +96,8 @@ switch (product_referenceAff2) {
  //               } //
 //            } //
 //} else { //
-//then the button is on wp or a non-product ps page//		        
+//then the button is on wp or a non-product ps page//	
+
     switch (selected_btn)  { 
       case "HG_facex1":
         if (amz_shop === ".com") {
@@ -116,11 +121,20 @@ switch (product_referenceAff2) {
           selected_asin = "asinHG_faceUS" ;
           }
         break;
+        case "CLx1":
+        if (amz_shop === ".com") {
+          selected_asin = "asinCLx1US" ;
+          } else if (amz_shop === ".fr") {
+          selected_asin = "asinCLx1FR" ;
+          } else if (amz_shop === ".co.uk") {
+          selected_asin = "asinCLx1UK" ;
+          } else {
+          selected_asin = "asinCLx1US" ;
+          }
+        break;
       default:
-          selected_asin = "" ;
-        
+          selected_asin = "" ;    
       }
- }
 	    
 //devise target url //
 let amz_url ;
