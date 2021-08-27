@@ -150,6 +150,7 @@ if (selected_asin) {
 //document.getElementById("showp").innerHTML = amz_url ;//
 //--window.open(amz_url, "_blank") ;--//
 	    
+document.getElementById(selected_btn).target = "_blank" ;	    
 document.getElementById(selected_btn).href = amz_url ;
 	    
        }
