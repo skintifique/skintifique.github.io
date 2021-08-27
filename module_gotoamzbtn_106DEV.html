@@ -3,7 +3,7 @@
 <body>
 <p id="showp">showp</p>
 <br>
-<a id="HG_facex1" class="btn go_to_amz_btn"><p>non product page HG_facex1</p></a>
+<a id="HG40x1" class="btn go_to_amz_btn"><p>non product page HG_facex1</p></a>
 <br>
 <a id="go_to_amz_btn" class="btn go_to_amz_btn"><p>product page Cleanser Lotion x1</p></a>
 <a class="product-reference">
@@ -89,70 +89,30 @@ if (selected_btn === "go_to_amz_btn"){
 let product_referenceAff = document.getElementsByClassName("product-reference") ;
 let product_referenceAff2 = product_referenceAff[0].querySelector("[itemprop=sku]").textContent ;
 
-switch (product_referenceAff2) {
-	case "SKP1300003":
-	selected_btn_code = "CLx1"
-	break;
-	default:
-	selected_btn_code = "HG_facex1"
-	}
+const skp_productCode = {SKP1300003:"CL200x1",SKP1400007:"CP20x1",SKP1400010:"HG40x1"} ;
+selected_btn_code = skp_productCode[product_referenceAff2] ;
+
 } else {
 	selected_btn_code = selected_btn ;
 	}
-	
-	
-	
-//    let selected_btn_option = "asin-" + selected_btn ; //	    
-//    let selected_list = document.getElementById(selected_btn_option) ; //
- //   selected_list.value = amz_shop ; //
-      
- //           for (var i = 0; i < selected_list.length; i++) { //
- //               var option = selected_list.options[i]; //
- //               if (option.value == amz_shop) { //
-//                    selected_asin = option.text; //
- //               } //
-//            } //
-//} else { //
-//then the button is on wp or a non-product ps page//	
-
-    switch (selected_btn_code)  { 
-      case "HG_facex1":
-        if (amz_shop === ".com") {
-          selected_asin = "asinHG_faceUS" ;
-          } else if (amz_shop === ".fr") {
-          selected_asin = "asinHG_faceFR" ;
-          } else if (amz_shop === ".co.uk") {
-          selected_asin = "asinHG_faceUK" ;
-          } else {
-          selected_asin = "asinHG_faceUS" ;
-          }
-        break;
-      case "HG_bodyx1":
-        if (amz_shop === ".com") {
-          selected_asin = "asinHG_bodyUS" ;
-          } else if (amz_shop === ".fr") {
-          selected_asin = "asinHG_bodyFR" ;
-          } else if (amz_shop === ".co.uk") {
-          selected_asin = "asinHG_bodyUK" ;
-          } else {
-          selected_asin = "asinHG_faceUS" ;
-          }
-        break;
-        case "CLx1":
-        if (amz_shop === ".com") {
-          selected_asin = "asinCLx1US" ;
-          } else if (amz_shop === ".fr") {
-          selected_asin = "asinCLx1FR" ;
-          } else if (amz_shop === ".co.uk") {
-          selected_asin = "asinCLx1UK" ;
-          } else {
-          selected_asin = "asinCLx1US" ;
-          }
-        break;
-      default:
-          selected_asin = "" ;    
-      }
-	    
+    
+ const productCode_asin_us = {CL200x1:"asinCL200x1US",CP20x1:"asinCP20x1US",HG40x1:"asinHG40x1US"}
+ const productCode_asin_eu = {CL200x1:"asinCL200x1EU",CP20x1:"asinCP20x1EU",HG40x1:"asinHG40x1EU"}
+ 
+ switch (amz_shop) {
+ 	case ".com":
+    selected_asin = productCode_asin_us[selected_btn_code]
+    break;
+    case ".fr":
+    selected_asin = productCode_asin_eu[selected_btn_code]
+ 	break;
+    case ".uk":
+    selected_asin = productCode_asin_eu[selected_btn_code]
+    break;
+    default:
+    selected_asin = "";
+    }
+    	    
 //devise target url //
 let amz_url ;
 if (selected_asin) { 
@@ -161,11 +121,11 @@ if (selected_asin) {
 	amz_url = "https://www.amazon" + amz_shop + "/s?k=skintifique&tag=" + amz_tag ;
 	}
 
-//document.getElementById("showp").innerHTML = amz_url ;//
+document.getElementById("showp").innerHTML = amz_url ;
 //--window.open(amz_url, "_blank") ;--//
 
 document.getElementById(selected_btn).target = "_blank" ;
-document.getElementById(selected_btn).href = amz_url ;
+//document.getElementById(selected_btn).href = amz_url ;//
 	    
        }
    }
