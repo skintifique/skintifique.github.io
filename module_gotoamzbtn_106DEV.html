@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <html>
 <body>
+<p id="showp">showp</p>
+<br>
 <a id="HG_facex1" class="btn go_to_amz_btn"><p>non product page HG_facex1</p></a>
 <br>
-<a id="go_to_amz_btn" class="btn go_to_amz_btn" target="_blank"><p>product page Cleanser Lotion x1</p></a>
+<a id="go_to_amz_btn" class="btn go_to_amz_btn"><p>product page Cleanser Lotion x1</p></a>
 <a class="product-reference">
   <label class="label">Reference</label>
   <span itemprop="sku">SKP1300003</span>
@@ -158,7 +161,7 @@ if (selected_asin) {
 	amz_url = "https://www.amazon" + amz_shop + "/s?k=skintifique&tag=" + amz_tag ;
 	}
 
-document.getElementById("showp").innerHTML = amz_url ;
+//document.getElementById("showp").innerHTML = amz_url ;//
 //--window.open(amz_url, "_blank") ;--//
 
 document.getElementById(selected_btn).target = "_blank" ;
