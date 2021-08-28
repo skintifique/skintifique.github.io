@@ -58,7 +58,7 @@ if (url_lang === "fr") {
 } else if (url_lang === "en") {
   if (traffic_source === "uk") {
     amz_shop = ".co.uk" ;
-    amz_tag = "skintifiqueOf-21" ;
+    amz_tag = "skintifique0f-21" ;
     } else {
 	  amz_shop = ".com" ;
     amz_tag = "skintifique00-20" ;
