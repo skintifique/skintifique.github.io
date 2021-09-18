@@ -1,11 +1,11 @@
 <html>
     <body>
         <div id="jobelement">
-            <p>element to replace</p>
+           <a href="https://www.skintifique.me">See all job offers at Skintifique</a>
         </div>
         
         
-        <div hidden id="jobwidget">
+        <div  id="jobwidget">
         <script type='text/javascript' src='https://static.smartrecruiters.com/job-widget/1.6.0/script/smart_widget.js'></script>
 <script type='text/javascript' class='job_widget'>
 widget({
@@ -29,11 +29,12 @@ widget({
     "custom_css_url": "https://static.smartrecruiters.com/job-widget/1.6.0/css/smart_widget.css"
 });
 </script>
+ 	
             </div>
       
 <script>
   jobWidget = document.getElementById("jobwidget") ;
-  jobElement = document.getElementById("jobelement").childNodes[0] ;
+  jobElement = document.getElementById("jobelement").childNodes[1] ;
    jobElement.replaceChild(jobWidget, jobElement.childNodes[0]);
       </script>
     </body>
