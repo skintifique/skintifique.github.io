@@ -4,7 +4,31 @@
 <strong><p>SK product Images</p></strong>
 <p id="productImg">{"ML200x1":"/shop/367-thickbox_default/moisturizing-lotion-hp.jpg","CL200x1":"/shop/370-thickbox_default/cleanser-p.jpg","PC20x1":"Protective Cream","HG40x1":"Hydrating Gel Face","HG150x1":"/shop/373-thickbox_default/hydrating-gel-plus-hs-body.jpg","DISC_pack":"Discovery Pack","PSO_face_pack":"/shop/353-thickbox_default/psoriasis-pack.jpg","GH40x3":"Hydrating Gel Face x3","ML200x2":"Moisturizing Lotion x2","ML200x3":"Moisturizing Lotion x3","ACNE_pack":"/shop/359-thickbox_default/acne-pack.jpg","ECZE_face_pack":"Eczema-Dermatitis Relief Face","NAL_pack":"Nickel Allergy Relief","SEB_pack":"Seborrheic Dermatitis Relief","CL200x3":"/shop/371-thickbox_default/cleanser-p-pack-of-3.jpg","PC20x3":"Protective Cream x3","PSO_body_pack":"/shop/354-thickbox_default/psoriasis-pack-body.jpg","HG150x3":"Hydrating Gel Body x3","MATE_pack":"Maternity Pack","ECZE_body_pack":"Eczema-Dermatitis Relief Body","DYSH_pack":"Dyshidrosis Pack"}</p>
 <br>
-<p id="productName_fr">{"ML200x1":"Lait Hydratant","CL200x1":"Lotion Nettoyante","PC20x1":"Crème Protectrice","HG40x1":"Gel Hydratant Visage","HG150x1":"Gel Hydratant Corps","DISC_pack":"Pack Découverte","PSO_face_pack":"Pack Psoriasis Visage","GH40x3":"Gel Hydratant Visage x3","ML200x2":"Lait Hydratant x2","ML200x3":"Lait Hydratant x3","ACNE_pack":"Pack Acné","ECZE_face_pack":"Pack Eczéma-Dermatite Visage","NAL_pack":"Pack Allergie au Nickel","SEB_pack":"Pack Dermite Seborrhéique","CL200x3":"Lotion Nettoyante x3","PC20x3":"Crème Protectrice x3","PSO_body_pack":"Pack Psoriasis Corps","HG150x3":"Gel Hydratant Corps x3","MATE_pack":"Pack Maternité","ECZE_body_pack":"Pack Eczéma-Dermatite Corps","DYSH_pack":"Pack Dyshidrose"}</p>
+<p id="productName_frORG">{"ML200x1":"Lait Hydratant","CL200x1":"Lotion Nettoyante","PC20x1":"Crème Protectrice","HG40x1":"Gel Hydratant Visage","HG150x1":"Gel Hydratant Corps","DISC_pack":"Pack Découverte","PSO_face_pack":"Pack Psoriasis Visage","GH40x3":"Gel Hydratant Visage x3","ML200x2":"Lait Hydratant x2","ML200x3":"Lait Hydratant x3","ACNE_pack":"Pack Acné","ECZE_face_pack":"Pack Eczéma-Dermatite Visage","NAL_pack":"Pack Allergie au Nickel","SEB_pack":"Pack Dermite Seborrhéique","CL200x3":"Lotion Nettoyante x3","PC20x3":"Crème Protectrice x3","PSO_body_pack":"Pack Psoriasis Corps","HG150x3":"Gel Hydratant Corps x3","MATE_pack":"Pack Maternité","ECZE_body_pack":"Pack Eczéma-Dermatite Corps","DYSH_pack":"Pack Dyshidrose"}</p>
+<br>
+<p id="productName_fr">{
+"ML200x1":"Lait Hydratant",
+"CL200x1":"Lotion Nettoyante",
+"PC20x1":"Crème Protectrice",
+"HG40x1":"Gel Hydratant Visage",
+"HG150x1":"Gel Hydratant Corps",
+"DISC_pack":"Pack Découverte",
+"PSO_face_pack":"Pack Psoriasis Visage",
+"GH40x3":"Gel Hydratant Visage x3",
+"ML200x2":"Lait Hydratant x2",
+"ML200x3":"Lait Hydratant x3",
+"ACNE_pack":"Pack Acné",
+"ECZE_face_pack":"Pack Eczéma-Dermatite Visage",
+"NAL_pack":"Pack Allergie au Nickel",
+"SEB_pack":"Pack Dermite Seborrhéique",
+"CL200x3":"Lotion Nettoyante x3",
+"PC20x3":"Crème Protectrice x3",
+"PSO_body_pack":"Pack Psoriasis Corps",
+"HG150x3":"Gel Hydratant Corps x3",
+"MATE_pack":"Pack Maternité",
+"ECZE_body_pack":"Pack Eczéma-Dermatite Corps",
+"DYSH_pack":"Pack Dyshidrose"
+}</p>
 <br>
 <p id="productName_us">{"ML200x1":"Moisturizing Lotion","CL200x1":"Cleanser Lotion","PC20x1":"Protective Cream","HG40x1":"Hydrating Gel Face","HG150x1":"Hydrating Gel Body","DISC_pack":"Discovery Pack","PSO_face_pack":"Psoriasis Relief Face","GH40x3":"Hydrating Gel Face x3","ML200x2":"Moisturizing Lotion x2","ML200x3":"Moisturizing Lotion x3","ACNE_pack":"Acne Relief","ECZE_face_pack":"Eczema-Dermatitis Relief Face","NAL_pack":"Nickel Allergy Relief","SEB_pack":"Seborrheic Dermatitis Relief","CL200x3":"Cleanser Lotion x3","PC20x3":"Protective Cream x3","PSO_body_pack":"Psoriasis Relief Body","HG150x3":"Hydrating Gel Body x3","MATE_pack":"Maternity Pack","ECZE_body_pack":"Eczema-Dermatitis Relief Body","DYSH_pack":"Dyshidrosis Pack"}</p>
 <br>
