@@ -1,0 +1,127 @@
+/* 1- css to hide H1 title on specific cms pages */
+.cms-id-118 .h1.page-title {
+display: none !important ;
+}
+/* 1b- css to hide H1 title on specific product pages */
+.product-id-52 .h1.page-title, .product-id-27 .h1.page-title, .product-id-116 .h1.page-title {
+display: none !important ;
+}
+.product-id-52 .product_header_container,.product-id-27 .product_header_container, .product-id-116 .product_header_container {
+padding-bottom: 1rem;
+margin-bottom: 1rem;
+border-bottom: none;
+}
+/* 1c- css to display made in France flag & logo */
+.madeinfrance2 {
+background-image: url(/shop/img/flag-fr.png) !important;
+background-size: contain !important;
+background-position-x: center;
+background-position-y: top;
+background-repeat: no-repeat;
+background-repeat-x: no-repeat;
+background-repeat-y: no-repeat;
+width: 170px !important;
+/*float: left;*/
+font-size: 15px;
+text-align: center;
+text-align-last: justify;
+padding-top: 18px;
+text-transform: uppercase;
+font-weight: 400;
+margin-top: 4px !important;
+}
+/* see css for center to center madeinfrance logo on mobile*/
+/* 1d css to center the default H1 (.h1) and coded H1 (.center) on mobile product /*pages */
+@media (max-width: 600px) {
+#product .h1 {
+text-align: center !important;
+}
+.center {
+text-align:center !important;
+}
+}
+/* 2- css to modify background color of top menu on specific pages. For home page, replace .cms-id-18 with #index */
+/*.cms-id-118 #desktop-header .header-top #desktop-header-container {
+/*background-color:grey !important ;
+/*}
+/* 3- css to modify opacity of top menu when scrolling down for all pages. for specific page, add eg: /*.cms-id-118 */
+/*.cms-id-118 #desktop-header .header-top #desktop-header-container #iqitmegamenu-wrapper.stuck {
+/*opacity: 0.75;
+/*}
+/* 4- css to modify background color of top menu when scrolling down for specific page */
+/*.cms-id-118 #desktop-header .header-top #desktop-header-container #iqitmegamenu-wrapper.stuck {
+/*background-color:grey !important ;
+/*}
+/* 5- css to modify opacity of top menu band on specific page, before scrolling. For home page, /*replace .cms-id-18 with #index . for all pages, remove .cms-id-118 */
+/*.cms-id-118 #desktop-header {
+/*opacity: 0.75 !important ;
+/*}
+/* 6- css to center external text inside blockcart */
+/*.blockcart-ext-text {
+/*width: 100%;
+/*margin: auto;
+/*text-align: center;
+/*color: #00b6e2 !important;
+/*}
+/* 7- css for textarea with ingredients to analyse with MILA */
+.textareaIngredients {
+width:90%;
+margin: auto;
+text-align: center;
+border: 2px solid #00b6e2 ;
+text-color: black;
+}
+/* 8- css to hide subscription link in client account (on left and in top bar) NOTE: UNUSED FOR LEFT AREA AS WE INSTEAD UNHOOKED THE MODULE FROM DISPLAYCUSTOMERACCOUNT*/
+/*.my-account-side-links #pm_subscription-link {*/
+/*visibility:hidden !important ;*/
+/*}*/
+.user-info.pm_subscription {
+visibility:hidden !important ;
+}
+/* 9- css to hide email alerts link in client account */
+.my-account-side-links #emailsalerts {
+visibility:hidden !important ;
+}
+/* 10- TEST css to modifiy specific icons in client account */
+#sponsorship-link .material-icons {
+background-color: white;
+font-size: 10px;
+border: 2px dotted grey;
+}
+#rewards-link .material-icons {
+background-color: white;
+font-size: 1px;
+border: 2px solid blue;
+}
+/* 11- css for MILA diagnostic */
+.row_diag {
+display:flex ;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+height:250px;
+}
+.column_diag {
+flex:20% ;
+}
+@media screen and (max-width: 600px) {
+.column_diag {
+flex: 40%;
+}
+}
+.button_diag {
+border:1px solid grey;
+cursor:pointer;
+border-radius:30px;
+width:80%;
+margin-bottom:20px;
+margin-top:20px;
+font-size:18px;
+}
+.btn_condition_selected {
+border:5px solid #1895E2;
+}
+i.icon_diag {
+font-size:34px;
+}
