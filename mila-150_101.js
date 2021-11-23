@@ -472,7 +472,7 @@ lang = "en-us" ;
 }
 let textUnderMILAProfileBtn ;
 if (lang === "fr-fr") {
-textUnderMILAProfileBtn = "Merci de patientez quelques secondes, le temps de réaliser l'analyse et l'afficher ci-dessous" ;
+textUnderMILAProfileBtn = "Merci de patientez quelques secondes, le temps de réaliser l analyse et l afficher ci-dessous" ;
 } else {
 textUnderMILAProfileBtn = "Please wait a few seconds for the profile to be completed and displayed below";
 }
