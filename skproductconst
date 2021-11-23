@@ -3,27 +3,27 @@
 <h3>1 - Correspondances</h3>
 <strong><p>SK product Images</p></strong>
 <p id="productImg">{
-"HG40x1":"Hydrating Gel Face",
+"HG40x1":"/shop/374-thickbox_default/hydrating-gel-plus-hs-face.jpg",
 "HG150x1":"/shop/373-thickbox_default/hydrating-gel-plus-hs-body.jpg",
 "ML200x1":"/shop/367-thickbox_default/moisturizing-lotion-hp.jpg",
 "CL200x1":"/shop/370-thickbox_default/cleanser-p.jpg",
-"PC20x1":"Protective Cream",
+"PC20x1":"/shop/377-thickbox_default/protective-cream-hps.jpg",
 "ACNE_pack":"/shop/359-thickbox_default/acne-pack.jpg",
-"MATE_pack":"Maternity Pack",
-"ECZE_face_pack":"Eczema-Dermatitis Relief Face",
-"ECZE_body_pack":"Eczema-Dermatitis Relief Body",
-"SEB_pack":"Seborrheic Dermatitis Relief",
-"DYSH_pack":"Dyshidrosis Pack",
-"NAL_pack":"Nickel Allergy Relief",
+"MATE_pack":"/shop/366-thickbox_default/maternity-pack.jpg",
+"ECZE_face_pack":"/shop/363-thickbox_default/eczema-dermatitis-pack.jpg",
+"ECZE_body_pack":"/shop/364-thickbox_default/eczema-dermatitis-pack-body.jpg",
+"SEB_pack":"/shop/362-thickbox_default/seborrheic-dermatitiseczema-pack.jpg",
+"DYSH_pack":"/shop/361-thickbox_default/dyshidrosis-pack.jpg",
+"NAL_pack":"/shop/360-thickbox_default/metal-nickel-allergy-pack.jpg",
 "PSO_face_pack":"/shop/353-thickbox_default/psoriasis-pack.jpg",
 "PSO_body_pack":"/shop/354-thickbox_default/psoriasis-pack-body.jpg",
-"DISC_pack":"Discovery Pack",
-"HG40x3":"Hydrating Gel Face x3",
-"HG150x3":"Hydrating Gel Body x3",
-"ML200x2":"Moisturizing Lotion x2",
-"ML200x3":"Moisturizing Lotion x3",
+"DISC_pack":"/shop/365-thickbox_default/discovery-pack.jpg",
+"HG40x3":"/shop/375-thickbox_default/hydrating-gel-plus-hs-face-x3.jpg",
+"HG150x3":"/shop/376-thickbox_default/hydrating-gel-plus-hs-body-x3.jpg",
+"ML200x2":"/shop/368-thickbox_default/moisturizing-lotion-hp-pack-of-2.jpg",
+"ML200x3":"/shop/369-thickbox_default/moisturizing-lotion-hp-pack-of-3.jpg",
 "CL200x3":"/shop/371-thickbox_default/cleanser-p-pack-of-3.jpg",
-"PC20x3":"Protective Cream x3"
+"PC20x3":"/shop/378-thickbox_default/protective-cream-hps-pack-x3.jpg"
 }</p>
 <br>
 <p id="productName_fr">{
