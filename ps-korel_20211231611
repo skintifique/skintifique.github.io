@@ -1,0 +1,456 @@
+body .header-top a.header-cart-btn:not(:hover) {
+color:#777;
+}
+ .product-prices .has-discount {
+display:none !important;
+}
+
+.new-product-infos .owl-carousel {
+color:#50626C;
+}
+
+/* css for images in mega-menu (desktop) */
+/*.mega-menu-imgs {*/
+/*  padding: 5px  ;*/
+/*}*/
+
+/* css to shape forms (in order process) */
+.form-control {
+  border-radius:20px ;
+  border: 1px solid #00b6e2 !important;
+  color: black !important;
+}
+body#checkout section.checkout-step {
+  border: none !important;
+}
+body#checkout section.checkout-step.-current .step-title {
+  border-bottom: none !important;
+}
+
+body#checkout section.checkout-step .delivery-option {
+ border: 1px solid #00b6e2 !important;
+ background: none !important;
+}
+body#checkout section.checkout-step .address-item {
+  border: 1px solid #00b6e2 !important;
+}
+body#checkout section.checkout-step .address {
+  height:200px;
+  min-width:200px;
+}
+
+body#checkout section.checkout-step .address-selector {
+ border:none !important;
+}
+section#js-checkout-summary.card.cart-summary.js-cart {
+    border:1px solid grey!important;
+    border-radius:20px;
+}
+
+
+.cubyn-relay-inner {
+color: #00b6e2;
+}
+
+.stripe-payment-form .form-row {
+text-align:center;
+}
+
+.stripe-card-cardholdername input, #stripe-card-number, #stripe-card-expiry, #stripe-card-cvc, #stripe-card-postalcode {
+  border-radius:5px;
+  border: 1px solid #00b6e2 !important;
+  height:40px;
+  margin:auto;
+}
+
+#payment-option-1.ps-hidden-by-js {
+  display:block;
+}
+
+#pay-with-payment-option-1-form {
+  border: 1px solid #00b6e2;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom:20px;
+}
+/* #stripe-card-element  {*/
+/* background-color: none;*/
+/* color: #00b6e2;*/
+/* }*/
+
+#powered_by_stripe {
+  margin-left:33%;
+  margin-right:33%;
+  width:33%;
+  padding: 50px 20px 0px 20px;
+   display:block;
+}
+
+#payment-option-3-additional-information dt, #payment-option-3-additional-information dd {
+  border: 1px solid #00b6e2;
+  background-color:white;
+}
+#payment-option-4-additional-information {
+  border: 1px solid #00b6e2;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+  margin-bottom:20px;
+}
+
+/* css for add to cart buttons */
+.btn-primary:hover {
+  background-color: grey !important ;
+}
+.btn-custom:hover {
+  background-color: grey !important ;
+}
+
+/* css for reward message on checkout page */
+
+.reward_alert_message {
+  background-color: transparent !important ;
+  border: none !important;
+  font-weight: bold;
+}
+/* css to hide Continue shopping btn on cart page */
+#cart .btn-secondary.mt-3.mb-3 {
+  display:none !important ;
+}
+
+/* css for button styling (including tests) */
+
+.btn-style1 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-style2 {
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.btn-style3 {
+  background-color: white;
+  border: 2px solid #73AD21;
+  border-radius: 20px;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-style4 {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 50px;
+  color: black;
+font: railway ;
+  padding: 6px 25px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-style5footer {
+  background-color: #3c4d56;
+  border: none;
+  color: white ;
+  font: railway ;
+  padding: 10px 0px;
+  display: inline-block;
+  cursor:pointer;
+}
+
+.btn-style5footer:hover {opacity: 20 ;}
+
+.btn-style6 {
+  background-color: transparent;
+  border: 3px solid #1895E2;
+  border-radius: 50px;
+  color: #51636C !important;
+  font: railway ;
+  font-weight: 600;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-style6:hover {
+  background-color: #1895E2;
+  color: white !important ;
+}
+
+.btn-style7 {
+  background-color: #1895E2;
+  border: 3px solid #1895E2;
+  border-radius: 50px;
+  color: #FFFFFF  !important;
+  font: railway ;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-style7:hover {
+  background-color: transparent !important;
+  color: #51636C !important ;
+}
+
+.btn-style8Footer {
+  background-color: #1895E2;
+  border: 3px solid #1895E2;
+  border-radius: 50px;
+  color: #FFFFFF  !important;
+  font: railway ;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-style8Footer:hover {
+  background-color: white;
+  color: #51636C !important ;
+}
+
+.btn-style9 {
+  background-color: #51636C;
+  border: 3px solid #51636C;
+  border-radius: 10px;
+  color: #FFFFFF  !important;
+  font-family: PT Serif ; 
+  font-weight: normal;
+  padding: 5px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn-style9:hover {
+  background-color: rgba(67,169,224,0.12) !important;
+  color: #239EE0 !important ;
+  border: 3px solid #239EE0 !important;
+}
+
+.btn-styleAcc1 {
+  background-color: #1895E2 !important;
+  border: 3px solid #1895E2;
+  border-top-right-radius: 20px;
+  color: white !important ;
+  font: railway ;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  width:120%;
+  text-transform: uppercase;
+  left: -60px !important;
+}
+
+.btn-styleAcc1:active {
+  background-color: grey;
+}
+
+/* css for Go to Amz buttons */
+.go_to_amz_btn {
+  cursor:pointer !important;
+}
+
+.go_to_amz_btn:hover {
+  transition-duration: .3s;
+    transition-property: transform;
+}
+
+/* css for top menu integrated in pages */
+
+@media (min-width: 992px) {
+
+
+
+/* test integration header into page top on cms pages */
+/* THIS IS COMMENTED OUT FOR NOW, AS THE SCRIPT WORKS BUT IMPLIES A DELAY TO CHANGE STYLE AFTER PAGE LOADS AND IMPACT CUSTEX */
+
+/*body#cms.header-style1 header#header {*/
+/*    position: absolute !important;*/
+/*    top: 0 !important;*/
+/*    left: 0 !important;*/
+/*    width: 100% !important;*/
+/*}*/
+
+/*body#cms.header-style1 header.page-header {*/
+/*display:none !important;*/
+/*}*/
+
+/*body#cms.header-style1 #wrapper *//*.container:first-of-type {*/
+/*display:none !important;*/
+/*}*/
+
+}
+
+/* css for test? */
+
+.btn-custom-red {
+background:red;
+}
+
+/* css to get add-to-cart btn on product pages sticky */
+
+@media (max-width: 600px) {
+  .sticky {
+  position: -webkit -fixed ; 
+  position: fixed;
+  padding: 0px;
+   top: 0px;
+  right: 5px !important;
+  width: 98%;
+  margin: 1%;
+  z-index: 100;
+ display: block;
+  border-radius: 0px !important;
+  }
+}
+
+.sticky  {
+  position: -webkit -fixed ; 
+  position: fixed;
+  padding: 0px;
+   top: -10px;
+   right:50px;
+  width: 98%;
+  margin: 1%;
+  z-index: 100;
+  display: block;
+  border-radius: 0px;
+}
+.sticky:hover {
+  background-color: grey !important ;
+}
+
+/*styling iqit accordion on product pages */
+.product-style1 #iqitadditionaltabs-accordion {
+  background-color: #8F2C5B; 
+  width:80%;
+}
+
+.product-style1 #iqitadditionaltabs-accordion .card {
+  border: 2px solid !important;
+  border-color: white !important;
+}
+
+.product-style1 #iqitadditionaltabs-accordion .card .title a {
+  color: white !important;
+  font-weight: bold;
+text-transform: uppercase;
+ padding: 10px;
+}
+
+.product-style1 #iqitadditionaltabs-accordion .card .content {
+  background-color: white !important ;
+  color:black !important;
+}
+
+.product-style1 #iqitadditionaltabs-accordion .card .title .fa {
+  display: block !important ;
+}
+
+/*styling for btn-product-list add-to-cart (make same as btn-primary */
+
+.btn-product-list {
+ background: #00b6e2;
+  border: none;
+  color: #fff  !important;
+  font: railway ;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-product-list:hover {
+  background-color: grey !important;
+  color: #51636C !important ;
+}
+
+/*styling for product-styleX */
+/*product-styleX: background */
+.product-styleX {
+background:  #f5f6f7 !important;
+}
+
+/*product-styleX: btn-primary  */
+.product-styleX .btn-primary {
+  border: none !important;
+  border-radius: 50px;
+  color: #FFFFFF  !important;
+  font: railway ;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.product-styleX .btn-primary:hover {
+  background-color: white !important;
+  color: #51636C !important ;
+  border: 2px solid !important;
+}
+
+/*product-style1: show amz button and slider on product pages  */
+.product-style1 .new-product-infos  {
+  display: block !important ;
+}
+
+/*css to hide navigation and buttons on own-carrousel below add to cart btn on product pages */
+.owl-dots  {
+  display: none !important ;
+}
+.owl-nav  {
+  display: none !important ;
+}
+.new-product-infos .owl-carousel strong {
+  text-transform: none !important ;
+  padding-bottom: 1px !important;
+}
+.new-product-infos .go_to_amz_btn img {
+    width: 60%;
+}
+
+/* css for cookie law popup */
+#iqitcookielaw {
+color: #00b6e2 !important;
+background-color: white !important;
+border: 1px solid #00b6e2 !important;
+}
+
+/* css for mobile menu */
+#iqitmegamenu-mobile { 
+line-height:0.8em !important;
+font-size:1em !important;
+} 
