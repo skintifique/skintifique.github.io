@@ -548,6 +548,7 @@ case "solution_dyshidrosis" :
 //reset all other diag_solution buttons to non selected display
 let s13;
 for (s13 = 0; s13 < diag_solution.length; s13++) {
+//diag_solution[s13].classList.remove("option_selectedLookingFor") ;
 diag_solution[s13].classList.remove("option_selectedLookingFor") ;
 }
 //do other stuff
