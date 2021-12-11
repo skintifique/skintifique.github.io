@@ -1,3 +1,4 @@
+<script>
 let current_url = window.location.href ;
 //functions for Flamingo ingredient comparisons with SK products : check archive on github
 // -
@@ -1424,3 +1425,4 @@ div.style.display = "none";
 let mobile_menu_elmts = document.getElementById("iqitmegamenu-mobile").querySelectorAll(".mm-expand");
 //mobile_menu_elmts[2].style.visibility = "hidden";
 mobile_menu_elmts[2].parentElement.classList.add("show"); 
+</script>
