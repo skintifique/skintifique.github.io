@@ -1,0 +1,52 @@
+let langNav ;
+let currency;
+let country ;
+// find out country
+let countryNav ;
+let countryCookie ;
+let countryCF ;
+if (countryCookie) {
+country = countryCookie ;
+} else if (countryCF) {
+country = countryCF ;
+} else {
+country = countryNav ;
+}
+//
+let currentUrl ;
+let redirectUrl;
+if (currentUrl.includes("/fr/")) {
+// change the currency only if the visitor's country is not France (this assumes that by default PS will associate EURO to country = FR)
+  if (country === "USA") {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=2";
+  } else if (country === "UK")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=3";
+  } else if (country === "CA")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=4";
+  } else if (country != "FR")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=1";
+  }
+} else if (currentUrl.includes("/en/")) {
+// change the currency only if the visitor's country is not USA (this assumes that by default PS will associate USD to country = USA)
+  if (country === "UK") {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=3";
+  } else if (country === "CA")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=4";
+  } else if (country === "FR")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=1";
+  } else if (country != "US")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=2";
+  }
+} else if ((currentUrl === "https://skintifique.me/")) OR (currentUrl === "https://www.skintifique.me/")) OR (currentUrl === "http://skintifique.me/")) OR (currentUrl === "http://www.skintifique.me/"))
+) OR (currentUrl === "https://skintifique.me/shop/")) OR (currentUrl === "https://www.skintifique.me/shop/")) OR (currentUrl === "http://skintifique.me/shop/")) OR (currentUrl === "http://www.skintifique.me/shop/"))){
+  if (country === "FR")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=1";
+  } else if (country != "US")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=2";
+  } else if (country === "UK") {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=3";
+  } else if (country === "CA")) {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=4";
+  } else {
+    redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=1";
+  }
