@@ -1,10 +1,10 @@
-let langNav ;
+let langNav ; //language from the navigator
 let currency;
 let country ;
 // find out country
-let countryNav ;
-let countryCookie ;
-let countryCF ;
+let countryNav ; //country from the navigator
+let countryCookie ; //country from the cookie
+let countryCF ; //country from cloudflare
 if (countryCookie) {
 country = countryCookie ;
 } else if (countryCF) {
@@ -13,8 +13,8 @@ country = countryCF ;
 country = countryNav ;
 }
 //
-let currentUrl ;
-let redirectUrl;
+let currentUrl ; //url called by the visitor
+let redirectUrl; // url where to redirect the call
 if (currentUrl.includes("/fr/")) {
 // change the currency only if the visitor's country is not France (this assumes that by default PS will associate EURO to country = FR)
   if (country === "USA") {
@@ -40,6 +40,7 @@ if (currentUrl.includes("/fr/")) {
 } else if ((currentUrl === "https://skintifique.me/")) OR (currentUrl === "https://www.skintifique.me/")) OR (currentUrl === "http://skintifique.me/")) OR (currentUrl === "http://www.skintifique.me/"))
 ) OR (currentUrl === "https://skintifique.me/shop/")) OR (currentUrl === "https://www.skintifique.me/shop/")) OR (currentUrl === "http://skintifique.me/shop/")) OR (currentUrl === "http://www.skintifique.me/shop/"))){
   if (country === "FR")) {
+  // NOTE : the code below can probably be simplified based on the default PS behavior when the home page is called without a language >> THIS NEEDS TO BE CHECKED
     redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=1";
   } else if (country != "US")) {
     redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=2";
@@ -50,3 +51,5 @@ if (currentUrl.includes("/fr/")) {
   } else {
     redirectUrl = currentUrl + "? OR &" + "SubmitCurrency=1&id_currency=1";
   }
+}
+// no redirection if the url does not contain /fr/ or /en/ or is not the home page (because this is then likely an api call to a specific url)
