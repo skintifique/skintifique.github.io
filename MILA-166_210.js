@@ -1,7 +1,9 @@
-let current_url = window.location.href ;
+let current_urlMILA = window.location.href ;
 
 //functions for MILA page
-if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
+//the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
+if (current_urlMILA.includes("/166-mila")) {
+//if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
 let selectedSkinType ;
