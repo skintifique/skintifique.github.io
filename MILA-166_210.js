@@ -1,3 +1,5 @@
+let current_url = window.location.href ;
+
 //functions for MILA page
 if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
