@@ -600,7 +600,7 @@ document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "none"
 } else if (selectedProduct === "recoProduct3_reviews") {
 document.getElementById("recoProduct3_reviews").href = "#topMILA" ;
 //let productUrl = document.getElementById("recoProduct3_url").href ;
-selectedProduct = document.getElementById("recoProduct1or").innerText ;
+selectedProduct = document.getElementById("recoProduct3or").innerText ;
 let productUrl = "https://www.skintifique.me/shop/fr/avisclients" ;
 let productUrl_reviews = productUrl + "?skshow=reviewsframe&skproduct=" + selectedProduct ;
 document.getElementById("iframeProductReviews").src = productUrl_reviews ;
