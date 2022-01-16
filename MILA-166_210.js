@@ -133,15 +133,15 @@ var slideIndex = 1;
 //showSlides(slideIndex);
 function plusSlides() {
 //modif 20220116 to avoid user moving to next slides when selectedSolution is null
-let selected_solution = document.getElementById("selectedSolution").innerText ;
-let selected_top_option = document.getElementById("selectedTopOption").innerText ;
-let selected_ingredient_list = document.getElementById("selectedIngredientList").innerText ;
-  if (((selected_top_option === "recoOption") && (selected_solution)) || ((selected_top_option === "diagOption") && (selected_ingredient_list))){
+//let selected_solution = document.getElementById("selectedSolution").innerText ;
+//let selected_top_option = document.getElementById("selectedTopOption").innerText ;
+//let selected_ingredient_list = document.getElementById("selectedIngredientList").innerText ;
+ // if (((selected_top_option === "recoOption") && (selected_solution)) || ((selected_top_option === "diagOption") && (selected_ingredient_list))){
 showSlides(slideIndex += 1) ;
-    } else {
-      alert("Please finalise your selection.\n " +
-                "Finalisez votre sélection !");
-      }
+//    } else {
+ //     alert("Please finalise your selection\n " +
+ //               "Finalisez votre sélection !");
+ //     }
 }
 function minusSlides() {
 showSlides(slideIndex += -1) ;
