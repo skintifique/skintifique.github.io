@@ -520,6 +520,9 @@ document.getElementById("selectedProductprofile").innerHTML = "My List" ;
 document.getElementById("selectedProductdiag").innerHTML = "My List" ;
 let ingredients_textarea = document.getElementById("ingredients_textarea") ;
 selectedIngredientList = ingredients_textarea.value ;
+  //the 1 liner below is added on 20220116 to avoid user going to next slide before selected a list of ingredients
+  document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
+  //
 document.getElementById("ingredients_textarea").style.border = "5px solid #1895E2" ;
 document.getElementById("anyList").classList.add("option_selected1") ;
 document.getElementById("anyList_text").style.display = "none" ;
