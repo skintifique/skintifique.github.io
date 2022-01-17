@@ -850,15 +850,21 @@ break;
 //options in recommendation section
 let accordionSolution = document.getElementsByClassName("accordionSolution") ;
 let diag_solution = document.getElementsByClassName("diag_solution") ;
+ let diag_moisturizer = document.getElementsByClassName("diag_moisturizer") ;
+ let diag_cleanser = document.getElementsByClassName("diag_cleanser") ;
 switch (selectedOption) {
 case "product_type_solution" :
 //go to the anchor element,
 document.getElementById("product_type_solution").href= "#anchorSolution" ;
 //reset all diag_solution buttons to non selected display
 let s000;
-for (s000 = 0; s000 < diag_solution.length; s000++) {
-diag_solution[s000].classList.remove("option_selectedLookingFor") ;
-diag_solution[s000].classList.remove("option_selectedLookingForAcc") ;
+for (s000 = 0; s000 < diag_moisturizer.length; s000++) {
+diag_moisturizer[s000].classList.remove("option_selectedLookingFor") ;
+diag_moisturizer[s000].classList.remove("option_selectedLookingForAcc") ;
+}
+for (s000 = 0; s000 < diag_cleanser.length; s000++) {
+diag_cleanser[s000].classList.remove("option_selectedLookingFor") ;
+diag_cleanser[s000].classList.remove("option_selectedLookingForAcc") ;
 }
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingForAcc") ;
@@ -888,6 +894,10 @@ let s001;
 for (s001 = 0; s001 < diag_solution.length; s001++) {
 diag_solution[s001].classList.remove("option_selectedLookingFor") ;
 diag_solution[s001].classList.remove("option_selectedLookingForAcc") ;
+}
+for (s001 = 0; s001 < diag_cleanser.length; s001++) {
+diag_cleanser[s001].classList.remove("option_selectedLookingFor") ;
+diag_cleanser[s001].classList.remove("option_selectedLookingForAcc") ;
 }
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.add("option_selectedLookingForAcc") ;
@@ -919,6 +929,10 @@ let s002;
 for (s002 = 0; s002 < diag_solution.length; s002++) {
 diag_solution[s002].classList.remove("option_selectedLookingFor") ;
 diag_solution[s002].classList.remove("option_selectedLookingForAcc") ;
+}
+for (s002 = 0; s002 < diag_moisturizer.length; s002++) {
+diag_moisturizer[s002].classList.remove("option_selectedLookingFor") ;
+diag_moisturizer[s002].classList.remove("option_selectedLookingForAcc") ;
 }
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingForAcc") ;
