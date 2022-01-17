@@ -854,8 +854,7 @@ switch (selectedOption) {
 case "product_type_solution" :
 //go to the anchor element,
 document.getElementById("product_type_solution").href= "#anchorSolution" ;
-//reset all diag_solution and diag_product_type buttons to non selected display
-//let diag_buttons = document.getElementsByClassNames("diag_solution","diag_product_type") ;
+//reset all diag_solution buttons to non selected display
 let s000;
 for (s000 = 0; s000 < diag_solution.length; s000++) {
 diag_solution[s000].classList.remove("option_selectedLookingFor") ;
@@ -884,6 +883,12 @@ break;
 case "product_type_moisturizer" :
 //go to the anchor element,
 document.getElementById("product_type_moisturizer").href= "#anchorMoisturizer" ;
+//reset all diag_solution buttons to non selected display
+let s001;
+for (s001 = 0; s001 < diag_solution.length; s001++) {
+diag_solution[s001].classList.remove("option_selectedLookingFor") ;
+diag_solution[s001].classList.remove("option_selectedLookingForAcc") ;
+}
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.add("option_selectedLookingForAcc") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
@@ -909,6 +914,12 @@ break;
 case "product_type_cleanser" :
 //go to the anchor element
 document.getElementById("product_type_cleanser").href= "#topOfDiagInput" ;
+//reset all diag_solution buttons to non selected display
+let s002;
+for (s002 = 0; s002 < diag_solution.length; s002++) {
+diag_solution[s002].classList.remove("option_selectedLookingFor") ;
+diag_solution[s002].classList.remove("option_selectedLookingForAcc") ;
+}
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingForAcc") ;
 document.getElementById("product_type_cleanser").classList.add("option_selectedLookingFor") ;
