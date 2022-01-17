@@ -856,7 +856,7 @@ document.getElementById("product_type_solution").href= "#anchorSolution" ;
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.add("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.add("option_selectedLookingForAcc") ;
 //show the accordions relevant for product_type_solution
 let c;
 for (c = 0; c < accordionSolution.length; c++) {
@@ -879,7 +879,7 @@ document.getElementById("product_type_moisturizer").href= "#anchorMoisturizer" ;
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.add("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
 let d;
 for (d = 0; d < accordionSolution.length; d++) {
@@ -904,7 +904,7 @@ document.getElementById("product_type_cleanser").href= "#topOfDiagInput" ;
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.add("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
 let f;
 for (f = 0; f < accordionSolution.length; f++) {
