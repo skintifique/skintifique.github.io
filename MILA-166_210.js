@@ -854,7 +854,7 @@ case "product_type_solution" :
 //go to the anchor element,
 document.getElementById("product_type_solution").href= "#anchorSolution" ;
 //display the buttons product_type
-document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingForAcc") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_solution").classList.add("option_selectedLookingForAcc") ;
 //show the accordions relevant for product_type_solution
@@ -877,7 +877,7 @@ case "product_type_moisturizer" :
 //go to the anchor element,
 document.getElementById("product_type_moisturizer").href= "#anchorMoisturizer" ;
 //display the buttons product_type
-document.getElementById("product_type_moisturizer").classList.add("option_selectedLookingFor") ;
+document.getElementById("product_type_moisturizer").classList.add("option_selectedLookingForAcc") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
@@ -902,7 +902,7 @@ case "product_type_cleanser" :
 //go to the anchor element
 document.getElementById("product_type_cleanser").href= "#topOfDiagInput" ;
 //display the buttons product_type
-document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingForAcc") ;
 document.getElementById("product_type_cleanser").classList.add("option_selectedLookingFor") ;
 document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
