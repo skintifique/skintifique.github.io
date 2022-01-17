@@ -849,10 +849,18 @@ break;
 //ENDoptions in ingredient slide
 //options in recommendation section
 let accordionSolution = document.getElementsByClassName("accordionSolution") ;
+let diag_solution = document.getElementsByClassName("diag_solution") ;
 switch (selectedOption) {
 case "product_type_solution" :
 //go to the anchor element,
 document.getElementById("product_type_solution").href= "#anchorSolution" ;
+//reset all diag_solution and diag_product_type buttons to non selected display
+//let diag_buttons = document.getElementsByClassNames("diag_solution","diag_product_type") ;
+let s000;
+for (s000 = 0; s000 < diag_solution.length; s000++) {
+diag_solution[s000].classList.remove("option_selectedLookingFor") ;
+diag_solution[s000].classList.remove("option_selectedLookingForAcc") ;
+}
 //display the buttons product_type
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingForAcc") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
@@ -926,7 +934,7 @@ plusSlides() ;
 break;
 }
 //options in recommendation section - solutions
-let diag_solution = document.getElementsByClassName("diag_solution") ;
+//let diag_solution = document.getElementsByClassName("diag_solution") ;
 switch (selectedOption) {
 case "solution_see_more" :
 //reset all other diag_solution buttons to non selected display
