@@ -933,6 +933,7 @@ case "solution_see_more" :
 let s00;
 for (s00 = 0; s00 < diag_solution.length; s00++) {
 diag_solution[s00].classList.remove("option_selectedLookingFor") ;
+diag_solution[s00].classList.remove("option_selectedLookingForAcc") ;
 }
 //do other stuff
 document.getElementById("solution_see_more").classList.add("option_selectedLookingFor") ;
@@ -955,7 +956,7 @@ document.getElementById("product_type_moisturizer_body_default").classList.remov
 document.getElementById("product_type_moisturizer_deal").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
 let m1;
 for (m1 = 0; m1 < accordionSolution.length; m1++) {
@@ -984,7 +985,7 @@ document.getElementById("product_type_moisturizer_body_default").classList.remov
 document.getElementById("product_type_moisturizer_deal").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
 let m2;
 for (m2 = 0; m2 < accordionSolution.length; m2++) {
@@ -1013,7 +1014,7 @@ document.getElementById("product_type_moisturizer_body_default").classList.add("
 document.getElementById("product_type_moisturizer_deal").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
 let m3;
 for (m3 = 0; m3 < accordionSolution.length; m3++) {
@@ -1042,7 +1043,7 @@ document.getElementById("product_type_moisturizer_body_default").classList.remov
 document.getElementById("product_type_moisturizer_deal").classList.add("option_selectedLookingFor") ;
 document.getElementById("product_type_moisturizer").classList.remove("option_selectedLookingFor") ;
 document.getElementById("product_type_cleanser").classList.remove("option_selectedLookingFor") ;
-document.getElementById("product_type_solution").classList.remove("option_selectedLookingFor") ;
+document.getElementById("product_type_solution").classList.remove("option_selectedLookingForAcc") ;
 //hide and reset the accordions solution
 let m4;
 for (m4 = 0; m4 < accordionSolution.length; m4++) {
@@ -1066,6 +1067,7 @@ case "solution_no_concern" :
 let s0;
 for (s0 = 0; s0 < diag_solution.length; s0++) {
 diag_solution[s0].classList.remove("option_selectedLookingFor") ;
+diag_solution[s0].classList.remove("option_selectedLookingForAcc") ;
 }
 //do other stuff
 document.getElementById("solution_no_concern").classList.add("option_selectedLookingFor") ;
@@ -1086,9 +1088,10 @@ document.getElementById("solution_eczema").href = "#anchorEczema" ;
 let s1;
 for (s1 = 0; s1 < diag_solution.length; s1++) {
 diag_solution[s1].classList.remove("option_selectedLookingFor") ;
+diag_solution[s1].classList.remove("option_selectedLookingForAcc") ;
 }
 //do other stuff
-document.getElementById("solution_eczema").classList.add("option_selectedLookingFor") ;
+document.getElementById("solution_eczema").classList.add("option_selectedLookingForAcc") ;
 document.getElementById("selectedSolution").innerText = "eczema" ;
 //document.getElementsByClassName("accordionSolutionSeeMore")[0].style.display = "none" ;
 document.getElementsByClassName("accordionSolutionEczema")[0].style.display = "block" ;
@@ -1174,6 +1177,7 @@ document.getElementById("solution_psoriasis").href= "#topOfDiagInput" ;
 let s2;
 for (s2 = 0; s2 < diag_solution.length; s2++) {
 diag_solution[s2].classList.remove("option_selectedLookingFor") ;
+diag_solution[s2].classList.remove("option_selectedLookingForAcc") ;
 }
 //do other stuff
 document.getElementById("solution_psoriasis").classList.add("option_selectedLookingFor") ;
@@ -1193,6 +1197,7 @@ document.getElementById("solution_acne").href= "#topOfDiagInput" ;
 let s3;
 for (s3 = 0; s3 < diag_solution.length; s3++) {
 diag_solution[s3].classList.remove("option_selectedLookingFor") ;
+diag_solution[s3].classList.remove("option_selectedLookingForAcc") ;
 }
 //do other stuff
 document.getElementById("solution_acne").classList.add("option_selectedLookingFor") ;
