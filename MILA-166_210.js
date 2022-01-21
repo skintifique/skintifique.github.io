@@ -1123,7 +1123,7 @@ document.getElementById("solution_eczema").href = "#anchorEczema" ;
 //reset all other diag_solution buttons to non selected display
 let s1;
 for (s1 = 0; s1 < diag_solution.length; s1++) {
-diag_solution[s1].classList.remove("option_selectedLookingFor") ;
+//diag_solution[s1].classList.remove("option_selectedLookingFor") ;
 diag_solution[s1].classList.remove("option_selectedLookingForAcc") ;
 }
 //do other stuff
