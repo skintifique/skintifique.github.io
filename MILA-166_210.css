@@ -6,28 +6,6 @@ text-align: center;
 border: 2px solid #00b6e2 ;
 text-color: black;
 }
-/* 8- css to hide subscription link in client account (on left and in top bar) NOTE: UNUSED FOR LEFT AREA AS WE INSTEAD UNHOOKED THE MODULE FROM DISPLAYCUSTOMERACCOUNT*/
-/*.my-account-side-links #pm_subscription-link {*/
-/*visibility:hidden !important ;*/
-/*}*/
-.user-info.pm_subscription {
-visibility:hidden !important ;
-}
-/* 9- css to hide email alerts link in client account */
-.my-account-side-links #emailsalerts {
-visibility:hidden !important ;
-}
-/* 10- TEST css to modifiy specific icons in client account */
-#sponsorship-link .material-icons {
-background-color: white;
-font-size: 10px;
-border: 2px dotted grey;
-}
-#rewards-link .material-icons {
-background-color: white;
-font-size: 1px;
-border: 2px solid blue;
-}
 /* 11- css for MILA diagnostic */
 .row_diag {
 display:flex ;
