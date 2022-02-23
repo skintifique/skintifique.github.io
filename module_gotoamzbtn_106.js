@@ -80,8 +80,8 @@ let product_referenceAff = document.getElementsByClassName("product-reference") 
 // code ci-dessous pour tolerer les situations ou il y a plusieurs elements avec class product-reference
 let product_referenceAff2 ;
 let product_referenceAffi ;
-for (let i = 0; i < product_referenceAff.length; i++) {
-  product_referenceAffi = product_referenceAff[i].querySelector("[itemprop=sku]").textContent ;
+for (let j = 0; j < product_referenceAff.length; j++) {
+  product_referenceAffi = product_referenceAff[j].querySelector("[itemprop=sku]").textContent ;
   if (product_referenceAffi) {
   product_referenceAff2 = product_referenceAffi ;
   }
