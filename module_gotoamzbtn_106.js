@@ -78,14 +78,7 @@ let product_referenceAff = document.getElementsByClassName("product-reference") 
 // ligne de code ci-dessous est ok mais pas quand il y a plusieurs elements avec class product-reference	
 //let product_referenceAff2 = product_referenceAff[0].querySelector("[itemprop=sku]").textContent ;
 // code ci-dessous pour tolerer les situations ou il y a plusieurs elements avec class product-reference
-let product_referenceAff2 ;
-let product_referenceAffi ;
-for (let j = 0; j < product_referenceAff.length; j++) {
-  product_referenceAffi = product_referenceAff[j].querySelector("[itemprop=sku]").textContent ;
-  if (product_referenceAffi) {
-  product_referenceAff2 = product_referenceAffi ;
-  }
-}	
+let product_referenceAff2 = document.querySelector("[itemprop=sku]").textContent ;
 	
 
 const skp_productCode = {SKP1300002:"ML200x1",SKP1300003:"CL200x1",SKP1400007:"PC20x1",SKP1400010:"HG40x1",SKP1700310:"HG150x1",SKP1400121:"DISC_pack",SKP1400122:"PSO_face_pack",SKP1400123:"GH40x3",SKP1400124:"ML200x2",SKP1400125:"ML200x3",SKP1400177:"ACNE_pack",SKP1600129:"ECZE_face_pack",SKP1600130:"NAL_pack",SKP1700150:"SEB_pack",SKP1700215:"CL200x3",SKP1700317:"PC20x3",SKP1700408:"PSO_body_pack",SKP1700420:"HG150x3",SKP2100403:"MATE_pack",SKP2100514:"ECZE_body_pack",SKP2100615:"DYSH_pack"} ;
