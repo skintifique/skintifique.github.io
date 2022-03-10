@@ -57,7 +57,7 @@ if (url_lang === "fr") {
   const skaid_tag_amzfr = {skp201frtestdktess:"amzfr_tag_test1",skp202frtestdktess:"amzfr_tag_test2"} ;
   let amz_tag0 = skaid_tag_amzfr[skaid] ;
   if (amz_tag0) {
-    amz_tag = "amz_tag0" ;
+    amz_tag = amz_tag0 ;
   } else {
     amz_tag = "skintifique-21a" ;
   }
