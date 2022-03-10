@@ -59,7 +59,7 @@ if (url_lang === "fr") {
   if (amz_tag0) {
     amz_tag = amz_tag0 ;
   } else {
-    amz_tag = "skintifique-21a" ;
+    amz_tag = "skintifique-21" ;
   }
   
   
