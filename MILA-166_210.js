@@ -2012,7 +2012,7 @@ if (ingredientsToExclude.indexOf(recoProduct1_ingredients_arrayed[ingred]) > -1)
 recoProduct1_bad_ing.push(recoProduct1_ingredients_arrayed[ingred]) ;
 document.getElementById("recoProduct1Allergic").style.display = "block" ;
 }
-document.getElementById("recoProduct1Allergic").innerText = "⚠️ Contient: " + recoProduct1_bad_ing ;
+document.getElementById("recoProduct1Allergic").innerText = "⚠️ " + recoProduct1_bad_ing ;
 document.getElementById("recoProduct1Allergic").style.color = "red" ;
 }
 // for recoProduct2
@@ -2027,7 +2027,7 @@ if (ingredientsToExclude.indexOf(recoProduct2_ingredients_arrayed[ingred2]) > -1
 recoProduct2_bad_ing.push(recoProduct2_ingredients_arrayed[ingred2]) ;
 document.getElementById("recoProduct2Allergic").style.display = "block" ;
 }
-document.getElementById("recoProduct2Allergic").innerText = "⚠️ Contient: " + recoProduct2_bad_ing ;
+document.getElementById("recoProduct2Allergic").innerText = "⚠️ " + recoProduct2_bad_ing ;
 document.getElementById("recoProduct2Allergic").style.color = "red" ;
 }
 // for recoProduct3
@@ -2042,7 +2042,7 @@ if (ingredientsToExclude.indexOf(recoProduct3_ingredients_arrayed[ingred3]) > -1
 recoProduct3_bad_ing.push(recoProduct3_ingredients_arrayed[ingred3]) ;
 document.getElementById("recoProduct3Allergic").style.display = "block" ;
 }
-document.getElementById("recoProduct3Allergic").innerText = "⚠️ Contient: " + recoProduct3_bad_ing ;
+document.getElementById("recoProduct3Allergic").innerText = "⚠️ " + recoProduct3_bad_ing ;
 document.getElementById("recoProduct3Allergic").style.color = "red" ;
 }
 //END check that and signal if product contains ingredients that user is allergic to
