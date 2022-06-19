@@ -1978,11 +1978,19 @@ document.getElementsByName("id_product")[0].value = recoProduct1_psid ;
 document.getElementsByName("id_product")[1].value = recoProduct2_psid ;
 document.getElementsByName("id_product")[2].value = recoProduct3_psid ;
 //get the product url
+if (lang = "fr-fr") {
 let productUrl_fr_from_front = document.getElementById("productUrl_fr").innerText ;
 const productUrl_fr = JSON.parse(productUrl_fr_from_front) ;
 let recoProduct1_url = productUrl_fr[recoProduct1];
 let recoProduct2_url = productUrl_fr[recoProduct2];
 let recoProduct3_url = productUrl_fr[recoProduct3];
+} else {
+let productUrl_us_from_front = document.getElementById("productUrl_us").innerText ;
+const productUrl_us = JSON.parse(productUrl_us_from_front) ;
+let recoProduct1_url = productUrl_us[recoProduct1];
+let recoProduct2_url = productUrl_us[recoProduct2];
+let recoProduct3_url = productUrl_us[recoProduct3];
+} 
 document.getElementById("recoProduct1_url").href = recoProduct1_url ;
 document.getElementById("recoProduct2_url").href = recoProduct2_url ;
 document.getElementById("recoProduct3_url").href = recoProduct3_url ;
