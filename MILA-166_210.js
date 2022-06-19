@@ -1978,7 +1978,7 @@ document.getElementsByName("id_product")[0].value = recoProduct1_psid ;
 document.getElementsByName("id_product")[1].value = recoProduct2_psid ;
 document.getElementsByName("id_product")[2].value = recoProduct3_psid ;
 //get the product url
-if (lang = "fr-fr") {
+if (lang === "fr-fr") {
 let productUrl_fr_from_front = document.getElementById("productUrl_fr").innerText ;
 const productUrl_fr = JSON.parse(productUrl_fr_from_front) ;
 let recoProduct1_url = productUrl_fr[recoProduct1];
@@ -1997,7 +1997,7 @@ document.getElementById("recoProduct3_url").href = recoProduct3_url ;
 // publish specific messages to user NOTE: NEED TO MAKE SURE selectedSKINTYPE is stored before this process!
 let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
 if (selectedSkinType === "reactive") {
-if (lang = "fr-fr") {
+if (lang === "fr-fr") {
 document.getElementById("recoProducts_message1").innerHTML = "Nos produits sont certainement parmi les plus sûrs au monde, mais puisque votre peau est réactive, nous vous recommandons de faire un test sur une petite partie de votre peau. S'il n'y pas de réaction après 10-15 minutes, alors ce produit devrait être sûr pour vous, et vous pouvez l'utiliser autant que vous le souhaitez!"
 } else {
 document.getElementById("recoProducts_message1").innerHTML = "Our products are certainly among the safest in the world. Yet, as you have reactive skin, we recommend you test on a small part of your body. If there is no reaction after 10-15 minutes, then this product should be safe for you and you can use it as much as you please!"
