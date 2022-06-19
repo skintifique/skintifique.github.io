@@ -1978,18 +1978,21 @@ document.getElementsByName("id_product")[0].value = recoProduct1_psid ;
 document.getElementsByName("id_product")[1].value = recoProduct2_psid ;
 document.getElementsByName("id_product")[2].value = recoProduct3_psid ;
 //get the product url
+let recoProduct1_url ;
+let recoProduct2_url ;
+let recoProduct3_url ;
 if (lang === "fr-fr") {
 let productUrl_fr_from_front = document.getElementById("productUrl_fr").innerText ;
 const productUrl_fr = JSON.parse(productUrl_fr_from_front) ;
-let recoProduct1_url = productUrl_fr[recoProduct1];
-let recoProduct2_url = productUrl_fr[recoProduct2];
-let recoProduct3_url = productUrl_fr[recoProduct3];
+recoProduct1_url = productUrl_fr[recoProduct1];
+recoProduct2_url = productUrl_fr[recoProduct2];
+recoProduct3_url = productUrl_fr[recoProduct3];
 } else {
 let productUrl_us_from_front = document.getElementById("productUrl_us").innerText ;
 const productUrl_us = JSON.parse(productUrl_us_from_front) ;
-let recoProduct1_url = productUrl_us[recoProduct1];
-let recoProduct2_url = productUrl_us[recoProduct2];
-let recoProduct3_url = productUrl_us[recoProduct3];
+recoProduct1_url = productUrl_us[recoProduct1];
+recoProduct2_url = productUrl_us[recoProduct2];
+recoProduct3_url = productUrl_us[recoProduct3];
 } 
 document.getElementById("recoProduct1_url").href = recoProduct1_url ;
 document.getElementById("recoProduct2_url").href = recoProduct2_url ;
