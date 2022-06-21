@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 4" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 5" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
@@ -419,47 +419,47 @@ document.getElementById("iframeExclusionList").src = targeturl ;
 //END decrypt and store excluded ingredients and riskgroups form Exclusion List
 //end manage exclusion list
 //show-hide SK products below the textarea
-document.getElementById("showHideSKproducts").addEventListener("click",showHideSKproducts) ;
-function showHideSKproducts () {
-let accordionSKproducts = document.getElementsByClassName("accordionSKproducts")[0] ;
-let accordionSKproducts_situation = accordionSKproducts.style.display ;
-if (accordionSKproducts_situation == "none") {
-accordionSKproducts.style.display = "block" ;
-document.getElementsByClassName("accordionSKproducts")[1].style.display = "block" ;
-} else if (accordionSKproducts_situation == "block") {
-accordionSKproducts.style.display = "none" ;
-document.getElementsByClassName("accordionSKproducts")[1].style.display = "none" ;
-} else {
-accordionSKproducts.style.display = "block" ;
-document.getElementsByClassName("accordionSKproducts")[1].style.display = "block" ;
-}
-}
+///////////////////////////document.getElementById("showHideSKproducts").addEventListener("click",showHideSKproducts) ;
+///////////////////////////function showHideSKproducts () {
+///////////////////////////let accordionSKproducts = document.getElementsByClassName("accordionSKproducts")[0] ;
+///////////////////////////let accordionSKproducts_situation = accordionSKproducts.style.display ;
+///////////////////////////if (accordionSKproducts_situation == "none") {
+///////////////////////////accordionSKproducts.style.display = "block" ;
+///////////////////////////document.getElementsByClassName("accordionSKproducts")[1].style.display = "block" ;
+///////////////////////////} else if (accordionSKproducts_situation == "block") {
+///////////////////////////accordionSKproducts.style.display = "none" ;
+///////////////////////////document.getElementsByClassName("accordionSKproducts")[1].style.display = "none" ;
+///////////////////////////} else {
+///////////////////////////accordionSKproducts.style.display = "block" ;
+///////////////////////////document.getElementsByClassName("accordionSKproducts")[1].style.display = "block" ;
+///////////////////////////}
+///////////////////////////}
 //ENDshow-hide SK products below the textarea
 //script to select text input in textarea box
-document.getElementById("ingredients_textarea").onchange = function(){
-document.getElementById("selectedProduct").innerHTML = "My List" ;
-document.getElementById("selectedProductprofile").innerHTML = "My List" ;
-document.getElementById("selectedProductdiag").innerHTML = "My List" ;
+///////////////////////////document.getElementById("ingredients_textarea").onchange = function(){
+///////////////////////////document.getElementById("selectedProduct").innerHTML = "My List" ;
+///////////////////////////document.getElementById("selectedProductprofile").innerHTML = "My List" ;
+///////////////////////////document.getElementById("selectedProductdiag").innerHTML = "My List" ;
 //let ingredients_textarea = document.getElementById("ingredients_textarea") ;
-selectedIngredientList = ingredients_textarea.value ;
-document.getElementById("ingredients_textarea").style.border = "1px solid #1895E2" ;
-if (selectedIngredientList) {
-document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientListprofile").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientListdiag").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientList").style.color = "#00b6e2" ;
-document.getElementById("selectedIngredientListprofile").style.color = "#00b6e2" ;
-document.getElementById("selectedIngredientListdiag").style.color = "#00b6e2" ;
-startCleanIngrList(selectedIngredientList) ;
-} else {
-document.getElementById("selectedIngredientList").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientListprofile").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientListdiag").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientList").style.color = "red" ;
-document.getElementById("selectedIngredientListprofile").style.color = "red" ;
-document.getElementById("selectedIngredientListdiag").style.color = "red" ;
-}
-};
+///////////////////////////selectedIngredientList = ingredients_textarea.value ;
+///////////////////////////document.getElementById("ingredients_textarea").style.border = "1px solid #1895E2" ;
+///////////////////////////if (selectedIngredientList) {
+///////////////////////////document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientListprofile").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientListdiag").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientList").style.color = "#00b6e2" ;
+///////////////////////////document.getElementById("selectedIngredientListprofile").style.color = "#00b6e2" ;
+///////////////////////////document.getElementById("selectedIngredientListdiag").style.color = "#00b6e2" ;
+///////////////////////////startCleanIngrList(selectedIngredientList) ;
+///////////////////////////} else {
+///////////////////////////document.getElementById("selectedIngredientList").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientListprofile").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientListdiag").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientList").style.color = "red" ;
+///////////////////////////document.getElementById("selectedIngredientListprofile").style.color = "red" ;
+///////////////////////////document.getElementById("selectedIngredientListdiag").style.color = "red" ;
+///////////////////////////}
+///////////////////////////};
 //END script to select text input in textarea box
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
@@ -2110,7 +2110,7 @@ let str = "new_product_composition2=" + selectedIngredientList_cleaned ;
 let ingredients_encoded = window.btoa(str);
 if (selectedTopOption === "profileOption") {
 document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "block" ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang3 + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
+///////////////////////////iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang3 + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
 } else if ((selectedTopOption === "recoOption") || (selectedTopOption === "diagOption")) {
 if (selectedTopOption === "diagOption") {
 document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "block" ;
@@ -2134,11 +2134,11 @@ const ingredientsToExclude_arr = ingredientsToExclude.split(",");
 let ingredientsToExclude_arr_str = JSON.stringify(ingredientsToExclude_arr) ;
 const riskgroupsExclusionList_arr = riskgroupsExclusionList.split(",");
 let riskgroupsExclusionList_arr_str = JSON.stringify(riskgroupsExclusionList_arr) ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang3 + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
+///////////////////////////iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang3 + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
 //the 2 lines of code below are expected to set the height of the iframe to the content inside. The inline style of the iframe may need to be removed + the height of the inside content may need to be adapted
-iframeMILA.onload = function(){
-iframeMILA.style.height = iframeMILA.contentWindow.document.body.scrollHeight + 'px';
-}
+///////////////////////////iframeMILA.onload = function(){
+///////////////////////////iframeMILA.style.height = iframeMILA.contentWindow.document.body.scrollHeight + 'px';
+///////////////////////////}
 //END script to adapt height of iframeMILA
 }
 }
