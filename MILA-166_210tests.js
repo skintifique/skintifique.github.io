@@ -1930,13 +1930,13 @@ document.getElementById("recoProduct1or").innerText = recoProduct1 ;
 document.getElementById("recoProduct2or").innerText = recoProduct2 ;
 document.getElementById("recoProduct3or").innerText = recoProduct3 ;
 //select appropriate names, images, urls etc for the recommended products
-let lang ;
+let lang2 ;
 if (current_url.includes("/en/")) {
-lang = "en-us" ;
+lang2 = "en-us" ;
 } else if (current_url.includes("/fr/")) {
-lang = "fr-fr" ;
+lang2 = "fr-fr" ;
 } else {
-lang = "en-us" ;
+lang2 = "en-us" ;
 }
 //get the correspondance data from the front
 //get the product names
@@ -1947,7 +1947,7 @@ const productName_fr = JSON.parse(productName_fr_from_front) ;
 let recoProduct1_name ;
 let recoProduct2_name ;
 let recoProduct3_name ;
-if (lang === "fr-fr") {
+if (lang2 === "fr-fr") {
 recoProduct1_name = productName_fr[recoProduct1];
 recoProduct2_name = productName_fr[recoProduct2];
 recoProduct3_name = productName_fr[recoProduct3];
@@ -1981,7 +1981,7 @@ document.getElementsByName("id_product")[2].value = recoProduct3_psid ;
 let recoProduct1_url ;
 let recoProduct2_url ;
 let recoProduct3_url ;
-if (lang === "fr-fr") {
+if (lang2 === "fr-fr") {
 let productUrl_fr_from_front = document.getElementById("productUrl_fr").innerText ;
 const productUrl_fr = JSON.parse(productUrl_fr_from_front) ;
 recoProduct1_url = productUrl_fr[recoProduct1];
@@ -2000,7 +2000,7 @@ document.getElementById("recoProduct3_url").href = recoProduct3_url ;
 // publish specific messages to user NOTE: NEED TO MAKE SURE selectedSKINTYPE is stored before this process!
 let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
 if (selectedSkinType === "reactive") {
-if (lang === "fr-fr") {
+if (lang2 === "fr-fr") {
 document.getElementById("recoProducts_message1").innerHTML = "Nos produits sont certainement parmi les plus sûrs au monde, mais puisque votre peau est réactive, nous vous recommandons de faire un test sur une petite partie de votre peau. S'il n'y pas de réaction après 10-15 minutes, alors ce produit devrait être sûr pour vous, et vous pouvez l'utiliser autant que vous le souhaitez!"
 } else {
 document.getElementById("recoProducts_message1").innerHTML = "Our products are certainly among the safest in the world. Yet, as you have reactive skin, we recommend you test on a small part of your body. If there is no reaction after 10-15 minutes, then this product should be safe for you and you can use it as much as you please!"
@@ -2076,16 +2076,16 @@ openMILA ();
 document.getElementById("openMILAdiag").addEventListener("click", function () {setTimeout(openMILA, 500)}) ;
 //document.getElementById("openMILAreco").addEventListener("click", openMILA) ;
 function openMILA() {
-let lang ;
+let lang3 ;
 if (current_url.includes("/en/")) {
-lang = "en-us" ;
+lang3 = "en-us" ;
 } else if (current_url.includes("/fr/")) {
-lang = "fr-fr" ;
+lang3 = "fr-fr" ;
 } else {
-lang = "en-us" ;
+lang3 = "en-us" ;
 }
 let textAboveMILAiFrame ;
-if (lang === "fr-fr") {
+if (lang3 === "fr-fr") {
 textAboveMILAiFrame = "Merci de patienter quelques secondes, le temps d'afficher le profil de sûreté" ;
 } else {
 textAboveMILAiFrame = "Please wait a few seconds for the safety profile to be displayed below" ;
