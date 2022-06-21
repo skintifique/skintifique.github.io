@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 30" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 31" ;
 
 
 //function to select product and other options
@@ -30,10 +30,10 @@ selectedOption = selectedOption_parent ;
 }
 
 // control the display of top options
-if ((selectedOption === "recoOption") || (selectedOption === "profileOption") || (selectedOption === "diagOption")) {
+///////////////////if ((selectedOption === "recoOption") || (selectedOption === "profileOption") || (selectedOption === "diagOption")) {
 
 //hide the text line under the topOptions as it is now not useful to the user
-document.getElementById("textUnderTopOptions").style.display = "none" ;
+///////////////////document.getElementById("textUnderTopOptions").style.display = "none" ;
 //remove borders for all the top option buttons
 ///////////////////document.getElementById("recoOption").classList.remove("topOption_selected") ;
 ///////////////////document.getElementById("profileOption").classList.remove("topOption_selected") ;
@@ -51,7 +51,7 @@ document.getElementById("textUnderTopOptions").style.display = "none" ;
 ///////////////////document.getElementById("textUnderMILAdiagBtn").style.display = "none";
 ///////////////////document.getElementById("textUnderMILArecoBtn").style.display = "none";
 
-}
+///////////////////}
 
 });
 }
