@@ -4,61 +4,61 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 15" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 16" ;
 
-document.getElementById("goToExcludedIngredients").addEventListener("click",goToExcludedIngredients) ;
-function goToExcludedIngredients () {
-plusSlides() ;
-}
-document.getElementById("notAllergicToAnyIngredient").addEventListener("click",notAllergicToAnyIngredient) ;
-function notAllergicToAnyIngredient() {
-document.getElementById("ingredientsToExclude").innerText = "Vous n'avez indiqué aucun ingrédient à exclure" ;
-document.getElementById("ingredientsToExcludeValues").innerText = "9999999" ;
-document.getElementById("riskgroupsExclusionListLabels").innerText = "Vous n'avez indiqué aucun groupe d'ingrédients à exclure" ;
-document.getElementById("riskgroupsExclusionListValues").innerText = "9999999" ;
-document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
-plusSlides() ;
-}
-document.getElementById("confirmSKingredients").addEventListener("click",confirmSKingredients) ;
-function confirmSKingredients() {
-document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
-plusSlides() ;
-}
+////////////////////document.getElementById("goToExcludedIngredients").addEventListener("click",goToExcludedIngredients) ;
+////////////////////function goToExcludedIngredients () {
+////////////////////plusSlides() ;
+////////////////////}
+////////////////////document.getElementById("notAllergicToAnyIngredient").addEventListener("click",notAllergicToAnyIngredient) ;
+////////////////////function notAllergicToAnyIngredient() {
+////////////////////document.getElementById("ingredientsToExclude").innerText = "Vous n'avez indiqué aucun ingrédient à exclure" ;
+////////////////////document.getElementById("ingredientsToExcludeValues").innerText = "9999999" ;
+////////////////////document.getElementById("riskgroupsExclusionListLabels").innerText = "Vous n'avez indiqué aucun groupe d'ingrédients à exclure" ;
+////////////////////document.getElementById("riskgroupsExclusionListValues").innerText = "9999999" ;
+////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
+////////////////////plusSlides() ;
+////////////////////}
+////////////////////document.getElementById("confirmSKingredients").addEventListener("click",confirmSKingredients) ;
+////////////////////function confirmSKingredients() {
+////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
+////////////////////plusSlides() ;
+////////////////////}
 //show-hide accordionSKingredients
-document.getElementById("showHideSKingredients").addEventListener("click",showHideSKingredients) ;
-function showHideSKingredients () {
-document.getElementById("showHideSKingredients").href = "#anchorAboveShowHideSkIng";
+////////////////////document.getElementById("showHideSKingredients").addEventListener("click",showHideSKingredients) ;
+////////////////////function showHideSKingredients () {
+////////////////////document.getElementById("showHideSKingredients").href = "#anchorAboveShowHideSkIng";
 //hide accordion_notAllergicToAnyIng if it has been opened
 //document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].style.display = "none" ;
-document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].classList.remove("showElement");
-document.getElementsByClassName("accordion_notAllergicToAnyIng")[1].classList.remove("showElement");
+////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].classList.remove("showElement");
+////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[1].classList.remove("showElement");
 //other stuff to do
-document.getElementById("showHideiframeExclusionList").classList.remove("option_selected1") ;
-document.getElementById("iframeExclusionList").style.display = "none" ;
-document.getElementsByClassName("accordionExclusionList")[0].style.display = "none" ;
-let accordionSKingredients = document.getElementsByClassName("accordionSKingredients") ;
-let accordionSKingredients_situation = accordionSKingredients[0].style.display ;
-if (accordionSKingredients_situation == "none") {
-accordionSKingredients[0].style.display = "block" ;
-accordionSKingredients[1].style.display = "block" ;
-document.getElementById("showHideSKingredients").classList.add("option_selected1") ;
+////////////////////document.getElementById("showHideiframeExclusionList").classList.remove("option_selected1") ;
+////////////////////document.getElementById("iframeExclusionList").style.display = "none" ;
+////////////////////document.getElementsByClassName("accordionExclusionList")[0].style.display = "none" ;
+////////////////////let accordionSKingredients = document.getElementsByClassName("accordionSKingredients") ;
+////////////////////let accordionSKingredients_situation = accordionSKingredients[0].style.display ;
+////////////////////if (accordionSKingredients_situation == "none") {
+////////////////////accordionSKingredients[0].style.display = "block" ;
+////////////////////accordionSKingredients[1].style.display = "block" ;
+////////////////////document.getElementById("showHideSKingredients").classList.add("option_selected1") ;
 //the code below should be triggered only when user clicks on confirmSKingredients
 //document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
-document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-} else if (accordionSKingredients_situation == "block") {
-accordionSKingredients[0].style.display = "none" ;
-accordionSKingredients[1].style.display = "none" ;
-document.getElementById("showHideSKingredients").classList.remove("option_selected1");
-document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-} else {
-accordionSKingredients[0].style.display = "block" ;
-accordionSKingredients[1].style.display = "block" ;
-document.getElementById("showHideSKingredients").classList.add("option_selected1") ;
+////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
+////////////////////} else if (accordionSKingredients_situation == "block") {
+////////////////////accordionSKingredients[0].style.display = "none" ;
+////////////////////accordionSKingredients[1].style.display = "none" ;
+////////////////////document.getElementById("showHideSKingredients").classList.remove("option_selected1");
+////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
+////////////////////} else {
+////////////////////accordionSKingredients[0].style.display = "block" ;
+////////////////////accordionSKingredients[1].style.display = "block" ;
+////////////////////document.getElementById("showHideSKingredients").classList.add("option_selected1") ;
 //the code below should be triggered only when user clicks on confirmSKingredients
 //document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
-document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-}
-}
+////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
+////////////////////}
+////////////////////}
 
 //manage exclusion list
 //
@@ -321,77 +321,7 @@ localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValue
 }
 // END script to get all the selected ingredients to avoid
 });
-//START script to do stuff when user comes in with flamclip or inputProduct urlparameter
-///////////////////////////let urlParamsCurrentUrl = new URLSearchParams(current_url);
-//case when url parameter includes urlProduct
-///////////////////////////let inputProduct = urlParamsCurrentUrl.get('inputProduct') ;
-///////////////////////////if (inputProduct) {
-///////////////////////////document.getElementsByClassName("accordionInputProduct")[0].style.display = "block" ;
-///////////////////////////document.getElementById("inputProduct_code").innerText = inputProduct ;
-//store the selectedTopOption
-///////////////////////////document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
-//get the inputProduct name and image
-///////////////////////////let sk_img = document.getElementById("productImg").innerText ;
-///////////////////////////const sk_img_const = JSON.parse(sk_img) ;
-///////////////////////////let inputProduct_img = sk_img_const[inputProduct] ;
-///////////////////////////let sk_names_fr = document.getElementById("productName_fr").innerText ;
-///////////////////////////const sk_names_fr_const = JSON.parse(sk_names_fr) ;
-///////////////////////////let inputProduct_name_fr = sk_names_fr_const[inputProduct] ;
-///////////////////////////document.getElementById("inputProduct_img").src = inputProduct_img ;
-///////////////////////////document.getElementById("inputProduct_name").innerText = inputProduct_name_fr ;
-//hide and style the appropriate elements
-///////////////////////////document.getElementById("profileOption").style.border = "5px solid #1895E2" ;
-///////////////////////////document.getElementById("recoOption_button").style.opacity = "0.3" ;
-// hide the text under the top options
-///////////////////////////document.getElementById("textUnderTopOptions").style.display = "none" ;
-///////////////////////////}
-//case when url parameter includes flamclip
-///////////////////////////let flamclip = urlParamsCurrentUrl.get('flamclip') ;
-///////////////////////////if (flamclip > 0 ) {
-///////////////////////////document.getElementById("flamclipText1").style.display = "block" ;
-//do the standard things to do when selectedOption = profileOption
-///////////////////////////document.getElementById("profileOption").style.border = "5px solid #1895E2" ;
-///////////////////////////document.getElementById("recoOption_button").style.opacity = "0.3" ;
-// hide the text under the top options
-///////////////////////////document.getElementById("textUnderTopOptions").style.display = "none" ;
-//show all the accordion elements with the selectedOption class
-///////////////////////////let accordionProfile = document.getElementsByClassName("accordionProfile") ;
-///////////////////////////let i;
-///////////////////////////for (i = 0; i < accordionProfile.length; i++) {
-///////////////////////////accordionProfile[i].style.display = "block" ;
-///////////////////////////}
-//store the selectedTopOption
-///////////////////////////document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
-// reset slideIndex and show first appropriate slide
-///////////////////////////var slideIndex = 0 ;
-///////////////////////////plusSlides() ;
-//show elements for the personal diag questions
-///////////////////////////document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
-///////////////////////////}
-//include new_product_composition2 or composition_url into textarea
-///////////////////////////let ingredients_textarea = document.getElementById("ingredients_textarea") ;
-///////////////////////////let ingredients_for_textarea ;
-///////////////////////////if (ingredients_textarea) {
-// parameter new_product_composition2 is from email share access
-///////////////////////////let new_product_composition2 = urlParamsCurrentUrl.get('new_product_composition2');
-// parameter composition_url is from iOS Shortcuts access
-///////////////////////////let composition_url = urlParamsCurrentUrl.get('composition_url');
-///////////////////////////if (new_product_composition2) {
-///////////////////////////let compo1 = window.atob(new_product_composition2) ;
-///////////////////////////let compo2 = compo1.replace(/,"/g,", ");
-///////////////////////////let compo3 = compo2.replace(/",/g,",");
-///////////////////////////let compo4 = compo3.replace(/"/g,"");
-///////////////////////////ingredients_for_textarea = compo4 ;
-///////////////////////////document.getElementById("ingredients_textarea").innerText = ingredients_for_textarea ;
-///////////////////////////} else if (composition_url) {
-///////////////////////////ingredients_for_textarea = window.atob(composition_url) ;
-//document.getElementById("ingredients_textarea").innerText = composition_url_decode ;
-///////////////////////////document.getElementById("ingredients_textarea").innerText = ingredients_for_textarea ;
-///////////////////////////}
-///////////////////////////}
-//}
-//END script to include new_product_composition2 into textarea
-//END script to do all the stuff when user comes in with flamclip parameter
+
 //script to validate and start cleaning the ingredient list
 function startCleanIngrList(x) {
 // 1- remove the special characters
@@ -438,18 +368,7 @@ selectedIngr_corr2.push(ingr_corr1) ;
 document.getElementById("selectedIngredientList").innerText = selectedIngr_corr2.join(", ") ;
 //END script to validate ingredient list
 }
-//actions when button confirm_excludedIngredients is clicked
-//document.getElementById("confirm_excludedIngredients").addEventListener("click", confirmExcludedIngredients) ;
-//function confirmExcludedIngredients() {
-//let ingredientsToExclude3 = document.getElementById("ingredientsToExclude").innerText ;
-//let ingredientsToExcludeValues3 = document.getElementById("ingredientsToExcludeValues").innerText ;
-//let riskgroupsExclusionListLabels3 = //document.getElementById("riskgroupsExclusionListLabels").innerText ;
-//let riskgroupsExclusionListValues3 = document.getElementById("riskgroupsExclusionListValues").innerText ;
-//localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude3) ;
-//localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues3) ;
-//localStorage.setItem("MILA_riskgroupsExclusionListLabels",riskgroupsExclusionListLabels3) ;
-//localStorage.setItem("MILA_riskgroupsExclusionListValues",riskgroupsExclusionListValues3) ;
-//}
+
 //actions when button openMILArecoSKproduct is clicked
 document.getElementById("openMILArecoSKproduct").addEventListener("click", openMILArecoSKproduct) ;
 function openMILArecoSKproduct() {
@@ -472,118 +391,6 @@ case "moisturizer-none" :
 recoProduct1 = "HG150x1";
 recoProduct2 = "ML200x1";
 recoProduct3 = "HG150x3";
-break ;
-case "cleanser-none" :
-recoProduct1 = "CL200x1";
-recoProduct2 = "CL200x3";
-recoProduct3 = "ML200x1";
-break ;
-case "moisturizer_face_intense-none" :
-recoProduct1 = "HG40x1";
-recoProduct2 = "HG40x3";
-recoProduct3 = "CL200x1";
-break ;
-case "moisturizer_body_intense-none" :
-recoProduct1 = "HG150x1";
-recoProduct2 = "HG150x3";
-recoProduct3 = "ML200x1";
-break ;
-case "moisturizer_body_default-none" :
-recoProduct1 = "ML200x1";
-recoProduct2 = "ML200x3";
-recoProduct3 = "HG150x1";
-break ;
-case "moisturizer_deal-none" :
-recoProduct1 = "HG40x3";
-recoProduct2 = "HG150x3";
-recoProduct3 = "ML200x3";
-break ;
-case "solution-eczema" :
-recoProduct1 = "ECZE_body_pack";
-recoProduct2 = "ECZE_face_pack";
-recoProduct3 = "ML200x1";
-break ;
-// new situations
-case "solution-eczema_dermatitis" :
-recoProduct1 = "ECZE_body_pack";
-recoProduct2 = "ECZE_face_pack";
-recoProduct3 = "ML200x1";
-break ;
-case "solution-dyshidrosis" :
-recoProduct1 = "DYSH_pack";
-recoProduct2 = "HG150x1";
-recoProduct3 = "ML200x1";
-break ;
-case "solution-seborrheic" :
-recoProduct1 = "SEB_pack";
-recoProduct2 = "CL200x1";
-recoProduct3 = "ML200x1";
-break ;
-case "solution-contact_eczema_nickel" :
-recoProduct1 = "NAL_pack";
-recoProduct2 = "PC20x1";
-recoProduct3 = "ML200x1";
-break ;
-case "solution-burn" :
-recoProduct1 = "HG150x1";
-recoProduct2 = "HG40x1";
-recoProduct3 = "HG150x3";
-break ;
-// END new situations
-case "solution-psoriasis" :
-recoProduct1 = "PSO_body_pack";
-recoProduct2 = "PSO_face_pack";
-recoProduct3 = "HG150x1";
-break ;
-case "solution-acne" :
-recoProduct1 = "ACNE_pack";
-recoProduct2 = "CL200x1";
-recoProduct3 = "ML200x1";
-break ;
-case "solution-pregnancy" :
-recoProduct1 = "MATE_pack";
-recoProduct2 = "HG150x1";
-recoProduct3 = "ML200x1";
-break ;
-case "solution-pollution" :
-recoProduct1 = "ML200x1";
-recoProduct2 = "CL200x1";
-recoProduct3 = "CL200x3";
-break ;
-case "solution-allergy_metal" :
-recoProduct1 = "PC20x1";
-recoProduct2 = "NAL_pack";
-recoProduct3 = "PC20x3";
-break ;
-case "solution-allergy_metal" :
-recoProduct1 = "PC20x1";
-recoProduct2 = "NAL_pack";
-recoProduct3 = "PC20x3";
-break ;
-case "solution-allergy_jewellery" :
-recoProduct1 = "PC20x1";
-recoProduct2 = "NAL_pack";
-recoProduct3 = "PC20x3";
-break ;
-case "solution-allergy_jewellery" :
-recoProduct1 = "PC20x1";
-recoProduct2 = "NAL_pack";
-recoProduct3 = "PC20x3";
-break ;
-case "solution-allergy_leather" :
-recoProduct1 = "PC20x1";
-recoProduct2 = "PC20x3";
-recoProduct3 = "NAL_pack";
-break ;
-case "solution-allergy_construction_material" :
-recoProduct1 = "PC20x1";
-recoProduct2 = "PC20x3";
-recoProduct3 = "NAL_pack";
-break ;
-case "solution-aging" :
-recoProduct1 = "HG40x1";
-recoProduct2 = "HG150x1";
-recoProduct3 = "HG40x3";
 break ;
 }
 //END select the appropriate products based on user input
@@ -792,53 +599,8 @@ let ingredientsToExclude_arr_str = JSON.stringify(ingredientsToExclude_arr) ;
 const riskgroupsExclusionList_arr = riskgroupsExclusionList.split(",");
 let riskgroupsExclusionList_arr_str = JSON.stringify(riskgroupsExclusionList_arr) ;
 ///////////////////////////iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang3 + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
-//the 2 lines of code below are expected to set the height of the iframe to the content inside. The inline style of the iframe may need to be removed + the height of the inside content may need to be adapted
-///////////////////////////iframeMILA.onload = function(){
-///////////////////////////iframeMILA.style.height = iframeMILA.contentWindow.document.body.scrollHeight + 'px';
-///////////////////////////}
-//END script to adapt height of iframeMILA
+
 }
 }
-// script to manage the bad ingredients lists
-// Add a "checked" symbol when clicking on a list item
-///////////////////////////let list = document.querySelector("#bad_ingredient_list");
-///////////////////////////list.addEventListener("click", function(ev) {
-///////////////////////////if (ev.target.tagName === "LI") {
-///////////////////////////ev.target.classList.toggle("checked");
-///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-///////////////////////////}
-///////////////////////////}, false);
-///////////////////////////let list2 = document.querySelector("#bad_ingredient_list2");
-///////////////////////////list2.addEventListener("click", function(ev) {
-///////////////////////////if (ev.target.tagName === "LI") {
-///////////////////////////ev.target.classList.toggle('checked');
-///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-///////////////////////////}
-///////////////////////////}, false);
-///////////////////////////let list3 = document.querySelector("#bad_ingredient_list3");
-///////////////////////////list3.addEventListener("click", function(ev) {
-///////////////////////////if (ev.target.tagName === "LI") {
-///////////////////////////ev.target.classList.toggle("checked");
-///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-///////////////////////////}
-///////////////////////////}, false);
-///////////////////////////let list4 = document.querySelector("#bad_ingredient_list4");
-///////////////////////////list4.addEventListener("click", function(ev) {
-///////////////////////////if (ev.target.tagName === "LI") {
-///////////////////////////ev.target.classList.toggle("checked");
-///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-///////////////////////////}
-///////////////////////////}, false);
-///////////////////////////let span = document.createElement("SPAN");
-///////////////////////////let txt = document.createTextNode("\u00D7");
-///////////////////////////span.className = "close";
-///////////////////////////span.appendChild(txt);
-///////////////////////////li.appendChild(span);
-///////////////////////////for (i = 0; i < close.length; i++) {
-///////////////////////////close[i].onclick = function() {
-///////////////////////////let div = this.parentElement;
-///////////////////////////div.style.display = "none";
-///////////////////////////}
-///////////////////////////}
 }
 // END OF SCRIPT FOR MILA PAGE
