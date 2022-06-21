@@ -4,38 +4,12 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 22" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 23" ;
 
 
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
 let e = selectProduct.target ;
-//let e_class = e.className ;
-//if (e_class === "selectProduct") {
-// actions when clicks on a various buttons inside the slider
-//////////////////////if (e.id === "noneOfTheseFactors") {
-// unselect any allergicToFactor that has been selected
-//////////////////////let selectDiag_allergicToFactor = document.getElementsByClassName("selectDiag_allergicToFactor") ;
-//////////////////////var sD1 ;
-//////////////////////for (sD1 = 0; sD1 < selectDiag_allergicToFactor.length; sD1++) {
-//////////////////////selectDiag_allergicToFactor[sD1].classList.remove("option_selectedAllergicToFactor") ;
-//////////////////////}
-//move to next slide
-//////////////////////plusSlides() ;
-//////////////////////}
-//////////////////////if (e.classList.contains("confirm_slide_btn")) {
-//////////////////////plusSlides() ;
-//////////////////////}
-
-//actions when user selects various options
-//////////////////////if (e.classList.contains("accordion_info")) {
-//////////////////////let info_elmt_class = "accordion_" + e.id ;
-//////////////////////let info_elmts = document.getElementsByClassName(info_elmt_class) ;
-//////////////////////var info_elmts0 ;
-//////////////////////for (info_elmts0 = 0; info_elmts0 < info_elmts.length; info_elmts0++) {
-//////////////////////info_elmts[info_elmts0].classList.toggle("showElement") ;
-//////////////////////}
-//////////////////////}
 
 //script to select options
 let selectedOption = e.id ;
@@ -137,63 +111,28 @@ if ((allergicToFactor_pollution_classList.contains("option_selectedAllergicToFac
 document.getElementById("condition_nickel_allergy").classList.add("option_selectedCondition") ;
 }
 //get all the selected conditions
-const selectedConditions = [];
-let conditions = document.getElementsByClassName("option_selectedCondition") ;
+////////////////const selectedConditions = [];
+////////////////let conditions = document.getElementsByClassName("option_selectedCondition") ;
 //if (conditions) {
-var selCond;
-for (selCond = 0; selCond < conditions.length; selCond++) {
-let condition_id = conditions[selCond].id ;
-let condition_name = condition_id.replace("condition_","") ;
-selectedConditions.push(condition_name) ;
-}
-document.getElementById("selectedConditions").innerHTML = selectedConditions ;
-localStorage.setItem("MILA_selectedConditions",selectedConditions) ;
+////////////////var selCond;
+////////////////for (selCond = 0; selCond < conditions.length; selCond++) {
+////////////////let condition_id = conditions[selCond].id ;
+////////////////let condition_name = condition_id.replace("condition_","") ;
+////////////////selectedConditions.push(condition_name) ;
+////////////////}
+////////////////document.getElementById("selectedConditions").innerHTML = selectedConditions ;
+////////////////localStorage.setItem("MILA_selectedConditions",selectedConditions) ;
 //get all the selected allergicToFactors
-const selectedAllergicToFactors = [];
-let allergicToFactors = document.getElementsByClassName("option_selectedAllergicToFactor") ;
-var s2;
-for (s2 = 0; s2 < allergicToFactors.length; s2++) {
-let allergicToFactors_id = allergicToFactors[s2].id ;
-let allergicToFactors_name = allergicToFactors_id.replace("allergicToFactor_","") ;
-selectedAllergicToFactors.push(allergicToFactors_name) ;
-document.getElementById("selectedAllergicToFactors").innerHTML = selectedAllergicToFactors ;
-}
+////////////////const selectedAllergicToFactors = [];
+////////////////let allergicToFactors = document.getElementsByClassName("option_selectedAllergicToFactor") ;
+////////////////var s2;
+////////////////for (s2 = 0; s2 < allergicToFactors.length; s2++) {
+////////////////let allergicToFactors_id = allergicToFactors[s2].id ;
+////////////////let allergicToFactors_name = allergicToFactors_id.replace("allergicToFactor_","") ;
+////////////////selectedAllergicToFactors.push(allergicToFactors_name) ;
+////////////////document.getElementById("selectedAllergicToFactors").innerHTML = selectedAllergicToFactors ;
+////////////////}
 //END get all the selected conditions
-// START script to get all the selected SK ingredients to avoid
-//////////////////////let ingredientsToAvoidOption = document.getElementById("ingredientsToAvoidOption").innerText ;
-//////////////////////if (ingredientsToAvoidOption === "skIngredients") {
-//////////////////////const ingredientsToExclude = [] ;
-//////////////////////let displayedIngredientsList = document.getElementsByClassName("displayedIngredientsList") ;
-//////////////////////var ing1;
-//////////////////////for (ing1 = 0; ing1 < displayedIngredientsList.length; ing1++) {
-//////////////////////let displayedIngredientsNodes = displayedIngredientsList[ing1].childNodes ;
-//////////////////////var ing2 ;
-//////////////////////for (ing2 = 0; ing2 < displayedIngredientsNodes.length; ing2++) {
-//////////////////////let displayedIngredient = displayedIngredientsNodes[ing2] ;
-//////////////////////let displayedIngredient_name = displayedIngredient.innerText ;
-//////////////////////let displayedIngredientClass = displayedIngredient.className ;
-//////////////////////if (displayedIngredientClass == "checked") {
-//////////////////////ingredientsToExclude.push(displayedIngredient_name) ;
-//////////////////////}
-//////////////////////}
-//////////////////////}
-//////////////////////document.getElementById("ingredientsToExclude").innerHTML = ingredientsToExclude;
-//////////////////////localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude) ;
-// get the values of the ingredients
-//////////////////////const ingredientsToExcludeValues = [];
-//////////////////////let skIngredientsReferences_from_front = document.getElementById("skIngredientsReferences").innerText ;
-//////////////////////const skIngredientsReferences = JSON.parse(skIngredientsReferences_from_front) ;
-//////////////////////let ing99 ;
-//////////////////////for (ing99 = 0; ing99 < ingredientsToExclude.length; ing99++) {
-//////////////////////let ingToExclude = ingredientsToExclude[ing99] ;
-//////////////////////let ingValue = skIngredientsReferences[ingToExclude] ;
-//////////////////////ingredientsToExcludeValues.push(ingValue) ;
-//////////////////////}
-//////////////////////document.getElementById("ingredientsToExcludeValues").innerText = ingredientsToExcludeValues ;
-//////////////////////localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues) ;
-// END get the values of the ingredients
-//////////////////////}
-// END script to get all the selected ingredients to avoid
 });
 }
 // END OF SCRIPT FOR MILA PAGE
