@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 3" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 4" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
@@ -726,31 +726,31 @@ document.getElementsByClassName("iframeMILA")[2].style.display = "none" ;
 document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
 //highlight selectedOption and do the other stuff
 switch (selectedOption) {
-case "profileOption" :
+///////////////////////////case "profileOption" :
 //reset slideIndex
 //slideIndex = 1;
 //
 //document.getElementById(selectedOption).style.border = "5px solid #1895E2" ;
-document.getElementById(selectedOption).classList.add("topOption_selected") ;
-document.getElementById("profileOption_button").style.opacity = "1" ;
-document.getElementById("recoOption_button").style.opacity = "0.3" ;
+///////////////////////////document.getElementById(selectedOption).classList.add("topOption_selected") ;
+///////////////////////////document.getElementById("profileOption_button").style.opacity = "1" ;
+///////////////////////////document.getElementById("recoOption_button").style.opacity = "0.3" ;
 //hide the text under the GoAnalyse btn and hide the MILA analysis
 //iframeMILA.style.display = "none" ;
-document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
+///////////////////////////document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
 //show all the accordion elements with the selectedOption class
-let accordionProfile = document.getElementsByClassName("accordionProfile") ;
-let i;
-for (i = 0; i < accordionProfile.length; i++) {
-accordionProfile[i].style.display = "block" ;
-}
+///////////////////////////let accordionProfile = document.getElementsByClassName("accordionProfile") ;
+///////////////////////////let i;
+///////////////////////////for (i = 0; i < accordionProfile.length; i++) {
+///////////////////////////accordionProfile[i].style.display = "block" ;
+///////////////////////////}
 //replace profileOptionText1 by profileOptionText2
-document.getElementById("profileOptionText1").style.display = "none" ;
-document.getElementById("profileOptionText2").style.display = "block" ;
+///////////////////////////document.getElementById("profileOptionText1").style.display = "none" ;
+///////////////////////////document.getElementById("profileOptionText2").style.display = "block" ;
 //store the selectedTopOption
-document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
+///////////////////////////document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 //reset slideIndex
-var slideIndex = 1 ;
-break;
+///////////////////////////var slideIndex = 1 ;
+///////////////////////////break;
 /////////////////////////// case "diagOption" :
 //reset slideIndex
 //slideIndex = 1;
@@ -829,27 +829,27 @@ break;
 }
 }
 //navigation options
-switch (selectedOption) {
-case "recoPath_diag" :
-document.getElementById("recoPath_diag").href = "#topOfDiagInput" ;
-document.getElementById("recoPath_diag").classList.add("option_selectedRecoPath") ;
-document.getElementById("recoPath_direct").classList.remove("option_selectedRecoPath") ;
-plusSlides();
-break;
-case "recoPath_direct" :
-document.getElementById("recoPath_diag").classList.remove("option_selectedRecoPath") ;
+///////////////////////////switch (selectedOption) {
+///////////////////////////case "recoPath_diag" :
+///////////////////////////document.getElementById("recoPath_diag").href = "#topOfDiagInput" ;
+///////////////////////////document.getElementById("recoPath_diag").classList.add("option_selectedRecoPath") ;
+///////////////////////////document.getElementById("recoPath_direct").classList.remove("option_selectedRecoPath") ;
+///////////////////////////plusSlides();
+///////////////////////////break;
+///////////////////////////case "recoPath_direct" :
+///////////////////////////document.getElementById("recoPath_diag").classList.remove("option_selectedRecoPath") ;
 //document.getElementById("recoPath_direct").classList.add("option_selectedRecoPath") ;
-document.getElementById("recoPath_direct").classList.add("option_selected1") ;
-let slideIndex = document.getElementsByClassName("slideReco").length ;
-document.getElementsByClassName("slideReco")[slideIndex-1].style.display = "block" ;
-break;
-case "notAllergicToAnyIng" :
+///////////////////////////document.getElementById("recoPath_direct").classList.add("option_selected1") ;
+///////////////////////////let slideIndex = document.getElementsByClassName("slideReco").length ;
+///////////////////////////document.getElementsByClassName("slideReco")[slideIndex-1].style.display = "block" ;
+///////////////////////////break;
+///////////////////////////case "notAllergicToAnyIng" :
 //hide sk ingredients and iframeExclusion list if they have been opened
-document.getElementsByClassName("accordionSKingredients")[0].style.display = "none" ;
-document.getElementsByClassName("accordionSKingredients")[1].style.display = "none" ;
-document.getElementsByClassName("accordionExclusionList")[0].style.display = "none" ;
-break;
-}
+///////////////////////////document.getElementsByClassName("accordionSKingredients")[0].style.display = "none" ;
+///////////////////////////document.getElementsByClassName("accordionSKingredients")[1].style.display = "none" ;
+///////////////////////////document.getElementsByClassName("accordionExclusionList")[0].style.display = "none" ;
+///////////////////////////break;
+///////////////////////////}
 //END navigation options
 //ENDoptions in ingredient slide
 //options in recommendation section
