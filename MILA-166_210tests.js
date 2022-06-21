@@ -4,37 +4,8 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 14" ;
-///////////////////////////
-//END get the stored profile parameters and set up all the options
-//////////////////////////////////
-// if click backToIngredientSelectors 'on excluded ingredient synthesis slide, then go back to appropriate slide
-///////////////////////////document.getElementById("backToIngredientSelectors").addEventListener("click",function() {
-///////////////////////////minusSlides();
-///////////////////////////});
-//various navigations
-//skip the diag in Reco option when user selects recoPath_direct button
-//document.getElementById("recoPath_direct").addEventListener("click",function() {
-//let slides0 = document.getElementsByClassName("slideReco") ;
-//let slideIndex = slides0.length ;
-//let slideIndex = 8;
-//plusSlides();
-//});
-//END various navigations
-// if click inside ingredient textarea, then unselect this ingredient list
-////////////////////////////document.getElementById("ingredients_textarea").addEventListener("click",function() { document.getElementById("anyList").style.border = "2px solid #1895E2" ;
-////////////////////////////document.getElementById("anyList").classList.remove("option_selected1") ;
-////////////////////////////document.getElementById("anyList_text").style.display = "block" ;
-////////////////////////////document.getElementById("anyList_icon").style.display = "none" ;
-////////////////////////////document.getElementById("ingredients_textarea").style.border = "1px solid #1895E2" ;
-////////////////////////////});
-// END if click inside ingredient textarea, then unselect this ingredient list
-//manage button goToExcludedIngredients
-//let thereAreExcludedIngredients = document.getElementById("ingredientsToExclude").innerText ;
-//document.getElementById("test2").innerText = thereAreExcludedIngredients ;
-//if (thereAreExcludedIngredients.includes("aucun ingrédient")) {
-//document.getElementById("goToExcludedIngredients").style.display = "none" ;
-//}
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 15" ;
+
 document.getElementById("goToExcludedIngredients").addEventListener("click",goToExcludedIngredients) ;
 function goToExcludedIngredients () {
 plusSlides() ;
@@ -88,36 +59,7 @@ document.getElementById("showHideSKingredients").classList.add("option_selected1
 document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
 }
 }
-//END show-hide accordionSKingredients
-//show-hide iframeExclusionList
-///////////////////////////document.getElementById("showHideiframeExclusionList").addEventListener("click",showHideiframeExclusionList) ;
-///////////////////////////function showHideiframeExclusionList () {
-///////////////////////////document.getElementById("showHideiframeExclusionList").href = "#anchorAboveShowHideSkIng" ;
-///////////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].classList.remove("showElement");
-///////////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[1].classList.remove("showElement");
-//document.getElementById("showHideSKingredients").style.border = "1px solid grey" ;
-///////////////////////////document.getElementById("showHideSKingredients").classList.remove("option_selected1") ;
-///////////////////////////document.getElementsByClassName("accordionSKingredients")[0].style.display = "none" ;
-///////////////////////////document.getElementsByClassName("accordionSKingredients")[1].style.display = "none" ;
-///////////////////////////document.getElementsByClassName("accordionExclusionList")[0].style.display = "block" ;
-///////////////////////////let iframeExclusionList = document.getElementById("iframeExclusionList") ;
-///////////////////////////let iframeExclusionList_situation = iframeExclusionList.style.display ;
-///////////////////////////if (iframeExclusionList_situation == "none") {
-///////////////////////////iframeExclusionList.style.display = "block" ;
-//document.getElementById("showHideiframeExclusionList").style.border = "5px solid #1895E2" ;
-///////////////////////////document.getElementById("showHideiframeExclusionList").classList.add("option_selected1") ;
-///////////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
-///////////////////////////} else if (iframeExclusionList_situation == "block") {
-///////////////////////////iframeExclusionList.style.display = "none" ;
-//document.getElementById("showHideiframeExclusionList").style.border = "1px solid grey" ;
-///////////////////////////document.getElementById("showHideiframeExclusionList").classList.remove("option_selected1") ;
-///////////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-///////////////////////////} else {
-///////////////////////////iframeExclusionList.style.display = "block" ;
-//document.getElementById("showHideiframeExclusionList").style.border = "5px solid #1895E2" ;
-///////////////////////////document.getElementById("showHideiframeExclusionList").classList.add("option_selected1") ;
-///////////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
-///////////////////////////}
+
 //manage exclusion list
 //
 let ingredientsToExcludeValues = document.getElementById("ingredientsToExcludeValues").innerText ;
@@ -139,17 +81,6 @@ lang = "fr-fr";
 } else {
 lang = "en-us" ;
 }
-//let fromcdiframe = localStorage.getItem("fromcdiframe"); code from iflam3, not in use here
-////////////////////////////let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
-////////////////////////////let targeturl ;
-/////////////////////////// if (windowwidth < 900) {
-
-/////////////////////////// targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
-/////////////////////////// } else {
-////////////////////////////targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
-/////////////////////////// }
-////////////////////////////document.getElementById("iframeExclusionList").src = targeturl ;
-////////////////////////////}
 
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
@@ -170,9 +101,7 @@ plusSlides() ;
 if (e.classList.contains("confirm_slide_btn")) {
 plusSlides() ;
 }
-//if (e.id === "saveInfoIcon") {
-//document.getElementById("saveInfo").classList.toggle("showElement");
-//}
+
 //actions when user selects various options
 if (e.classList.contains("accordion_info")) {
 let info_elmt_class = "accordion_" + e.id ;
@@ -205,141 +134,7 @@ let selectedProduct = e.id ;
 e.style.border = "5px solid #1895E2" ;
 //get the ingredient list
 let selectedIngredientList ;
-//let product_designation ;
-//switch (selectedProduct) {
-////////////////////////////if ((selectedProduct === "anyList") || (selectedProduct === "anyList_text") || (selectedProduct === "anyList_icon")){
-//case "anyList" :
-//document.getElementById("anyList").href= "#topOfDiagInput" ;
-////////////////////////////document.getElementById("selectedProduct").innerHTML = "My List" ;
-////////////////////////////document.getElementById("selectedProductprofile").innerHTML = "My List" ;
-////////////////////////////document.getElementById("selectedProductdiag").innerHTML = "My List" ;
-////////////////////////////let ingredients_textarea = document.getElementById("ingredients_textarea") ;
-////////////////////////////selectedIngredientList = ingredients_textarea.value ;
-  //the 1 liner below is added on 20220116 to avoid user going to next slide before selected a list of ingredients
-////////////////////////////  document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
-  //
-////////////////////////////document.getElementById("ingredients_textarea").style.border = "5px solid #1895E2" ;
-////////////////////////////document.getElementById("anyList").classList.add("option_selected1") ;
-////////////////////////////document.getElementById("anyList_text").style.display = "none" ;
-////////////////////////////document.getElementById("anyList_icon").style.display = "block" ;
-////////////////////////////var slideIndex = 1 ;
-////////////////////////////plusSlides() ;
-//break ;
-////////////////////////////} else {
-////////////////////////////let product_designation ;
-////////////////////////////if (selectedProduct === "HG150x1") {
-//case "HG150x1" :
-////////////////////////////product_designation = "Hydrating Gel" ;
-//break ;
-//case "ML200x1" :
-////////////////////////////} else if (selectedProduct === "ML200x1") {
-////////////////////////////product_designation = "Moisturizing Lotion" ;
-//break ;
-//case "CL200x1" :
-////////////////////////////} else if (selectedProduct === "CL200x1") {
-////////////////////////////product_designation = "Cleanser Lotion" ;
-//break ;
-//case "PC40x1" :
-////////////////////////////} else if (selectedProduct === "PC20x1") {
-////////////////////////////product_designation = "Protective Cream" ;
-//break ;
-//default:
-//} else if (selectedProduct === "recoProduct1_img") {
-//let selectedProduct_root = selectedProduct.replace("_img","");
-//let selectedProduct_corr = selectedProduct_root.concat("or") ;
-//selectedProduct = document.getElementById(selectedProduct_corr).innerText ;
-//product_designation = document.getElementById("recoProduct1_name").innerText ;
-//selectedProduct = document.getElementById("recoProduct1or").innerText ;
-//document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "block" ;
-//document.getElementsByClassName("accordionRecoInstructionMILA")[0].style.display = "none" ;
-////////////////////////////} else if (selectedProduct === "recoProduct1_mila") {
-////////////////////////////product_designation = document.getElementById("recoProduct1_name").innerText ;
-////////////////////////////selectedProduct = document.getElementById("recoProduct1or").innerText ;
-////////////////////////////document.getElementsByClassName("accordionRecoInstructionMILA")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionProductReviews")[0].style.display = "none" ;
-////////////////////////////setTimeout(openMILA, 1000) ;
-//} else if (selectedProduct === "recoProduct2_img") {
-//product_designation = document.getElementById("recoProduct2_name").innerText ;
-//selectedProduct = document.getElementById("recoProduct2or").innerText ;
-//document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "block" ;
-//document.getElementsByClassName("accordionRecoInstructionMILA")[0].style.display = "none" ;
-////////////////////////////} else if (selectedProduct === "recoProduct2_mila") {
-////////////////////////////product_designation = document.getElementById("recoProduct2_name").innerText ;
-////////////////////////////selectedProduct = document.getElementById("recoProduct2or").innerText ;
-////////////////////////////document.getElementsByClassName("accordionRecoInstructionMILA")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionProductReviews")[0].style.display = "none" ;
-////////////////////////////setTimeout(openMILA, 1000) ;
-//} else if (selectedProduct === "recoProduct3_img") {
-//product_designation = document.getElementById("recoProduct3_name").innerText ;
-//selectedProduct = document.getElementById("recoProduct3or").innerText ;
-//document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "block" ;
-//document.getElementsByClassName("accordionRecoInstructionMILA")[0].style.display = "none" ;
-////////////////////////////} else if (selectedProduct === "recoProduct3_mila") {
-////////////////////////////product_designation = document.getElementById("recoProduct3_name").innerText ;
-////////////////////////////selectedProduct = document.getElementById("recoProduct3or").innerText ;
-////////////////////////////document.getElementsByClassName("accordionRecoInstructionMILA")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionProductReviews")[0].style.display = "none" ;
-////////////////////////////setTimeout(openMILA, 1000) ;
-////////////////////////////} else if (selectedProduct === "recoProduct1_reviews") {
-////////////////////////////document.getElementById("recoProduct1_reviews").href = "#topMILA" ;
-//let productUrl = document.getElementById("recoProduct1_url").href ;
-////////////////////////////selectedProduct = document.getElementById("recoProduct1or").innerText ;
-////////////////////////////let productUrl = "https://www.skintifique.me/shop/fr/avisclients" ;
-////////////////////////////let productUrl_reviews = productUrl + "?skshow=reviewsframe&skproduct=" + selectedProduct ;
-////////////////////////////document.getElementById("iframeProductReviews").src = productUrl_reviews ;
-////////////////////////////document.getElementsByClassName("accordionProductReviews")[0].style.display = "block" ;
-////////////////////////////document.getElementsByClassName("iframeMILA")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "none" ;
-////////////////////////////} else if (selectedProduct === "recoProduct2_reviews") {
-////////////////////////////document.getElementById("recoProduct2_reviews").href = "#topMILA" ;
-//let productUrl = document.getElementById("recoProduct2_url").href ;
-////////////////////////////selectedProduct = document.getElementById("recoProduct2or").innerText ;
-////////////////////////////let productUrl = "https://www.skintifique.me/shop/fr/avisclients" ;
-////////////////////////////let productUrl_reviews = productUrl + "?skshow=reviewsframe&skproduct=" + selectedProduct ;
-////////////////////////////document.getElementById("iframeProductReviews").src = productUrl_reviews ;
-////////////////////////////document.getElementsByClassName("accordionProductReviews")[0].style.display = "block" ;
-////////////////////////////document.getElementsByClassName("iframeMILA")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "none" ;
-////////////////////////////} else if (selectedProduct === "recoProduct3_reviews") {
-////////////////////////////document.getElementById("recoProduct3_reviews").href = "#topMILA" ;
-//let productUrl = document.getElementById("recoProduct3_url").href ;
-////////////////////////////selectedProduct = document.getElementById("recoProduct3or").innerText ;
-////////////////////////////let productUrl = "https://www.skintifique.me/shop/fr/avisclients" ;
-////////////////////////////let productUrl_reviews = productUrl + "?skshow=reviewsframe&skproduct=" + selectedProduct ;
-////////////////////////////document.getElementById("iframeProductReviews").src = productUrl_reviews ;
-////////////////////////////document.getElementsByClassName("accordionProductReviews")[0].style.display = "block" ;
-////////////////////////////document.getElementsByClassName("iframeMILA")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "none" ;
-////////////////////////////document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "none" ;
-////////////////////////////} else if (selectedProduct === "confirm_inputProduct") {
-////////////////////////////document.getElementById("confirm_inputProduct").href = "#topOfDiagInput" ;
-////////////////////////////document.getElementsByClassName("accordionInputProduct")[0].style.display = "none" ;
-//document.getElementById("inputProduct_name").innerText = "inputProduct_nameDEV" ;
-////////////////////////////product_designation = document.getElementById("inputProduct_code").innerText ;
-//reset selectedProduct
-////////////////////////////selectedProduct = product_designation ;
-// reset slideIndex and show first appropriate slide
-////////////////////////////var slideIndex = 0 ;
-////////////////////////////plusSlides() ;
-//show elements for the personal diag questions
-////////////////////////////document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
-////////////////////////////} else {
-////////////////////////////product_designation = selectedProduct ;
-////////////////////////////}
-////////////////////////////document.getElementById("selectedProduct").innerHTML = "Skintifique - " + product_designation ;
-////////////////////////////document.getElementById("selectedProductprofile").innerHTML = "Skintifique - " + product_designation ;
-////////////////////////////document.getElementById("selectedProductdiag").innerHTML = "Skintifique - " + product_designation ;
-////////////////////////////document.getElementById("selectedProductreco").innerHTML = "Skintifique - " + product_designation ;
-// could add a script to build ingredient list for SK packs
-////////////////////////////let selectedProduct_ingredients = selectedProduct.concat("_ingredients") ;
-////////////////////////////selectedIngredientList = document.getElementById(selectedProduct_ingredients).innerText ;
-////////////////////////////document.getElementById("ingredients_textarea").style.border = "2px solid #00b6e2" ;
-////////////////////////////}
+
 if (selectedIngredientList) {
 document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
 document.getElementById("selectedIngredientListprofile").innerHTML = selectedIngredientList ;
@@ -416,76 +211,7 @@ document.getElementsByClassName("iframeMILA")[2].style.display = "none" ;
 document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
 //highlight selectedOption and do the other stuff
 switch (selectedOption) {
-///////////////////////////case "profileOption" :
-//reset slideIndex
-//slideIndex = 1;
-//
-//document.getElementById(selectedOption).style.border = "5px solid #1895E2" ;
-///////////////////////////document.getElementById(selectedOption).classList.add("topOption_selected") ;
-///////////////////////////document.getElementById("profileOption_button").style.opacity = "1" ;
-///////////////////////////document.getElementById("recoOption_button").style.opacity = "0.3" ;
-//hide the text under the GoAnalyse btn and hide the MILA analysis
-//iframeMILA.style.display = "none" ;
-///////////////////////////document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
-//show all the accordion elements with the selectedOption class
-///////////////////////////let accordionProfile = document.getElementsByClassName("accordionProfile") ;
-///////////////////////////let i;
-///////////////////////////for (i = 0; i < accordionProfile.length; i++) {
-///////////////////////////accordionProfile[i].style.display = "block" ;
-///////////////////////////}
-//replace profileOptionText1 by profileOptionText2
-///////////////////////////document.getElementById("profileOptionText1").style.display = "none" ;
-///////////////////////////document.getElementById("profileOptionText2").style.display = "block" ;
-//store the selectedTopOption
-///////////////////////////document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
-//reset slideIndex
-///////////////////////////var slideIndex = 1 ;
-///////////////////////////break;
-/////////////////////////// case "diagOption" :
-//reset slideIndex
-//slideIndex = 1;
-//
-//document.getElementsByClassName("diagOption")[1].style.display = "block" ;
-///////////////////////////document.getElementById(selectedOption).href = "#topOfDiagInput" ;
-///////////////////////////document.getElementById(selectedOption).classList.add("option_selected1") ;
-//document.getElementById("diagOption").classList.add("option_selected1") ;
-///////////////////////////document.getElementById("openMILAprofile").classList.remove("option_selected1") ;
-//show the top of the sliderfor the selectedOption class
-///////////////////////////document.getElementsByClassName("accordionDiag")[0].style.display = "block" ;
-///////////////////////////document.getElementsByClassName("accordionDiag")[1].style.display = "block" ;
-///////////////////////////document.getElementsByClassName("accordionDiag")[2].style.display = "block" ;
-///////////////////////////document.getElementsByClassName("accordionDiag")[3].style.display = "block" ;
-//show the starting (new) slide for the selectedOption class and reset the slideIndex
-//slideIndex = 2;
-//document.getElementsByClassName("slideDiag")[2].style.display = "block" ;
-//hide the text under the GoAnalyse btn and hide the MILA analysis
-//iframeMILA.style.display = "none" ;
-///////////////////////////document.getElementById("textUnderMILAdiagBtn").style.display = "none" ;
-//show all the accordion elements with the selectedOption class
-//let accordionDiag = document.getElementsByClassName("accordionDiag") ;
-//let b;
-//for (b = 0; b < accordionDiag.length; b++) {
-//accordionDiag[b].style.display = "block" ;
-//}
-// if selectedSkinType = reactive, then also show the accordionAllergicToSynthesis
-//let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
-//if (selectedSkinType === "reactive"){
-//document.getElementsByClassName("accordionAllergicToSynthesis")[0].style.display = "block" ;
-//}
-//replace diagOptionText1 by diagOptionText2
-///////////////////////////document.getElementById("diagOptionText1").style.display = "none" ;
-///////////////////////////document.getElementById("diagOptionText2").style.display = "block" ;
-//store the selectedTopOption
-///////////////////////////document.getElementById("selectedTopOption").innerHTML = "diagOption" ;
-//show appropirate slide
-//document.getElementsByClassName("slideDiag")[2].style.display = "block" ;
-//var slideIndex = 4 ;
-//showSlides(slideIndex += 3) ;
-///////////////////////////var slideIndex = 2 ;
-///////////////////////////plusSlides();
-// show prevnextbuttons
-///////////////////////////document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
-///////////////////////////break;
+
 case "recoOption" :
 //reset slideIndex
 //slideIndex = 1;
@@ -518,29 +244,7 @@ document.getElementById("selectedTopOption").innerHTML = "recoOption" ;
 break;
 }
 }
-//navigation options
-///////////////////////////switch (selectedOption) {
-///////////////////////////case "recoPath_diag" :
-///////////////////////////document.getElementById("recoPath_diag").href = "#topOfDiagInput" ;
-///////////////////////////document.getElementById("recoPath_diag").classList.add("option_selectedRecoPath") ;
-///////////////////////////document.getElementById("recoPath_direct").classList.remove("option_selectedRecoPath") ;
-///////////////////////////plusSlides();
-///////////////////////////break;
-///////////////////////////case "recoPath_direct" :
-///////////////////////////document.getElementById("recoPath_diag").classList.remove("option_selectedRecoPath") ;
-//document.getElementById("recoPath_direct").classList.add("option_selectedRecoPath") ;
-///////////////////////////document.getElementById("recoPath_direct").classList.add("option_selected1") ;
-///////////////////////////let slideIndex = document.getElementsByClassName("slideReco").length ;
-///////////////////////////document.getElementsByClassName("slideReco")[slideIndex-1].style.display = "block" ;
-///////////////////////////break;
-///////////////////////////case "notAllergicToAnyIng" :
-//hide sk ingredients and iframeExclusion list if they have been opened
-///////////////////////////document.getElementsByClassName("accordionSKingredients")[0].style.display = "none" ;
-///////////////////////////document.getElementsByClassName("accordionSKingredients")[1].style.display = "none" ;
-///////////////////////////document.getElementsByClassName("accordionExclusionList")[0].style.display = "none" ;
-///////////////////////////break;
-///////////////////////////}
-//END navigation options
+
 //ENDoptions in ingredient slide
 //options in recommendation section
 let accordionSolution = document.getElementsByClassName("accordionSolution") ;
