@@ -4,14 +4,14 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 13" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 14" ;
 ///////////////////////////
 //END get the stored profile parameters and set up all the options
 //////////////////////////////////
 // if click backToIngredientSelectors 'on excluded ingredient synthesis slide, then go back to appropriate slide
-document.getElementById("backToIngredientSelectors").addEventListener("click",function() {
-minusSlides();
-});
+///////////////////////////document.getElementById("backToIngredientSelectors").addEventListener("click",function() {
+///////////////////////////minusSlides();
+///////////////////////////});
 //various navigations
 //skip the diag in Reco option when user selects recoPath_direct button
 //document.getElementById("recoPath_direct").addEventListener("click",function() {
@@ -90,34 +90,34 @@ document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
 }
 //END show-hide accordionSKingredients
 //show-hide iframeExclusionList
-document.getElementById("showHideiframeExclusionList").addEventListener("click",showHideiframeExclusionList) ;
-function showHideiframeExclusionList () {
-document.getElementById("showHideiframeExclusionList").href = "#anchorAboveShowHideSkIng" ;
-document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].classList.remove("showElement");
-document.getElementsByClassName("accordion_notAllergicToAnyIng")[1].classList.remove("showElement");
+///////////////////////////document.getElementById("showHideiframeExclusionList").addEventListener("click",showHideiframeExclusionList) ;
+///////////////////////////function showHideiframeExclusionList () {
+///////////////////////////document.getElementById("showHideiframeExclusionList").href = "#anchorAboveShowHideSkIng" ;
+///////////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].classList.remove("showElement");
+///////////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[1].classList.remove("showElement");
 //document.getElementById("showHideSKingredients").style.border = "1px solid grey" ;
-document.getElementById("showHideSKingredients").classList.remove("option_selected1") ;
-document.getElementsByClassName("accordionSKingredients")[0].style.display = "none" ;
-document.getElementsByClassName("accordionSKingredients")[1].style.display = "none" ;
-document.getElementsByClassName("accordionExclusionList")[0].style.display = "block" ;
-let iframeExclusionList = document.getElementById("iframeExclusionList") ;
-let iframeExclusionList_situation = iframeExclusionList.style.display ;
-if (iframeExclusionList_situation == "none") {
-iframeExclusionList.style.display = "block" ;
+///////////////////////////document.getElementById("showHideSKingredients").classList.remove("option_selected1") ;
+///////////////////////////document.getElementsByClassName("accordionSKingredients")[0].style.display = "none" ;
+///////////////////////////document.getElementsByClassName("accordionSKingredients")[1].style.display = "none" ;
+///////////////////////////document.getElementsByClassName("accordionExclusionList")[0].style.display = "block" ;
+///////////////////////////let iframeExclusionList = document.getElementById("iframeExclusionList") ;
+///////////////////////////let iframeExclusionList_situation = iframeExclusionList.style.display ;
+///////////////////////////if (iframeExclusionList_situation == "none") {
+///////////////////////////iframeExclusionList.style.display = "block" ;
 //document.getElementById("showHideiframeExclusionList").style.border = "5px solid #1895E2" ;
-document.getElementById("showHideiframeExclusionList").classList.add("option_selected1") ;
-document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
-} else if (iframeExclusionList_situation == "block") {
-iframeExclusionList.style.display = "none" ;
+///////////////////////////document.getElementById("showHideiframeExclusionList").classList.add("option_selected1") ;
+///////////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
+///////////////////////////} else if (iframeExclusionList_situation == "block") {
+///////////////////////////iframeExclusionList.style.display = "none" ;
 //document.getElementById("showHideiframeExclusionList").style.border = "1px solid grey" ;
-document.getElementById("showHideiframeExclusionList").classList.remove("option_selected1") ;
-document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-} else {
-iframeExclusionList.style.display = "block" ;
+///////////////////////////document.getElementById("showHideiframeExclusionList").classList.remove("option_selected1") ;
+///////////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
+///////////////////////////} else {
+///////////////////////////iframeExclusionList.style.display = "block" ;
 //document.getElementById("showHideiframeExclusionList").style.border = "5px solid #1895E2" ;
-document.getElementById("showHideiframeExclusionList").classList.add("option_selected1") ;
-document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
-}
+///////////////////////////document.getElementById("showHideiframeExclusionList").classList.add("option_selected1") ;
+///////////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
+///////////////////////////}
 //manage exclusion list
 //
 let ingredientsToExcludeValues = document.getElementById("ingredientsToExcludeValues").innerText ;
@@ -618,73 +618,73 @@ localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValue
 // END script to get all the selected ingredients to avoid
 });
 //START script to do stuff when user comes in with flamclip or inputProduct urlparameter
-let urlParamsCurrentUrl = new URLSearchParams(current_url);
+///////////////////////////let urlParamsCurrentUrl = new URLSearchParams(current_url);
 //case when url parameter includes urlProduct
-let inputProduct = urlParamsCurrentUrl.get('inputProduct') ;
-if (inputProduct) {
-document.getElementsByClassName("accordionInputProduct")[0].style.display = "block" ;
-document.getElementById("inputProduct_code").innerText = inputProduct ;
+///////////////////////////let inputProduct = urlParamsCurrentUrl.get('inputProduct') ;
+///////////////////////////if (inputProduct) {
+///////////////////////////document.getElementsByClassName("accordionInputProduct")[0].style.display = "block" ;
+///////////////////////////document.getElementById("inputProduct_code").innerText = inputProduct ;
 //store the selectedTopOption
-document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
+///////////////////////////document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 //get the inputProduct name and image
-let sk_img = document.getElementById("productImg").innerText ;
-const sk_img_const = JSON.parse(sk_img) ;
-let inputProduct_img = sk_img_const[inputProduct] ;
-let sk_names_fr = document.getElementById("productName_fr").innerText ;
-const sk_names_fr_const = JSON.parse(sk_names_fr) ;
-let inputProduct_name_fr = sk_names_fr_const[inputProduct] ;
-document.getElementById("inputProduct_img").src = inputProduct_img ;
-document.getElementById("inputProduct_name").innerText = inputProduct_name_fr ;
+///////////////////////////let sk_img = document.getElementById("productImg").innerText ;
+///////////////////////////const sk_img_const = JSON.parse(sk_img) ;
+///////////////////////////let inputProduct_img = sk_img_const[inputProduct] ;
+///////////////////////////let sk_names_fr = document.getElementById("productName_fr").innerText ;
+///////////////////////////const sk_names_fr_const = JSON.parse(sk_names_fr) ;
+///////////////////////////let inputProduct_name_fr = sk_names_fr_const[inputProduct] ;
+///////////////////////////document.getElementById("inputProduct_img").src = inputProduct_img ;
+///////////////////////////document.getElementById("inputProduct_name").innerText = inputProduct_name_fr ;
 //hide and style the appropriate elements
-document.getElementById("profileOption").style.border = "5px solid #1895E2" ;
-document.getElementById("recoOption_button").style.opacity = "0.3" ;
+///////////////////////////document.getElementById("profileOption").style.border = "5px solid #1895E2" ;
+///////////////////////////document.getElementById("recoOption_button").style.opacity = "0.3" ;
 // hide the text under the top options
-document.getElementById("textUnderTopOptions").style.display = "none" ;
-}
+///////////////////////////document.getElementById("textUnderTopOptions").style.display = "none" ;
+///////////////////////////}
 //case when url parameter includes flamclip
-let flamclip = urlParamsCurrentUrl.get('flamclip') ;
-if (flamclip > 0 ) {
-document.getElementById("flamclipText1").style.display = "block" ;
+///////////////////////////let flamclip = urlParamsCurrentUrl.get('flamclip') ;
+///////////////////////////if (flamclip > 0 ) {
+///////////////////////////document.getElementById("flamclipText1").style.display = "block" ;
 //do the standard things to do when selectedOption = profileOption
-document.getElementById("profileOption").style.border = "5px solid #1895E2" ;
-document.getElementById("recoOption_button").style.opacity = "0.3" ;
+///////////////////////////document.getElementById("profileOption").style.border = "5px solid #1895E2" ;
+///////////////////////////document.getElementById("recoOption_button").style.opacity = "0.3" ;
 // hide the text under the top options
-document.getElementById("textUnderTopOptions").style.display = "none" ;
+///////////////////////////document.getElementById("textUnderTopOptions").style.display = "none" ;
 //show all the accordion elements with the selectedOption class
-let accordionProfile = document.getElementsByClassName("accordionProfile") ;
-let i;
-for (i = 0; i < accordionProfile.length; i++) {
-accordionProfile[i].style.display = "block" ;
-}
+///////////////////////////let accordionProfile = document.getElementsByClassName("accordionProfile") ;
+///////////////////////////let i;
+///////////////////////////for (i = 0; i < accordionProfile.length; i++) {
+///////////////////////////accordionProfile[i].style.display = "block" ;
+///////////////////////////}
 //store the selectedTopOption
-document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
+///////////////////////////document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 // reset slideIndex and show first appropriate slide
-var slideIndex = 0 ;
-plusSlides() ;
+///////////////////////////var slideIndex = 0 ;
+///////////////////////////plusSlides() ;
 //show elements for the personal diag questions
-document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
-}
+///////////////////////////document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
+///////////////////////////}
 //include new_product_composition2 or composition_url into textarea
-let ingredients_textarea = document.getElementById("ingredients_textarea") ;
-let ingredients_for_textarea ;
-if (ingredients_textarea) {
+///////////////////////////let ingredients_textarea = document.getElementById("ingredients_textarea") ;
+///////////////////////////let ingredients_for_textarea ;
+///////////////////////////if (ingredients_textarea) {
 // parameter new_product_composition2 is from email share access
-let new_product_composition2 = urlParamsCurrentUrl.get('new_product_composition2');
+///////////////////////////let new_product_composition2 = urlParamsCurrentUrl.get('new_product_composition2');
 // parameter composition_url is from iOS Shortcuts access
-let composition_url = urlParamsCurrentUrl.get('composition_url');
-if (new_product_composition2) {
-let compo1 = window.atob(new_product_composition2) ;
-let compo2 = compo1.replace(/,"/g,", ");
-let compo3 = compo2.replace(/",/g,",");
-let compo4 = compo3.replace(/"/g,"");
-ingredients_for_textarea = compo4 ;
-document.getElementById("ingredients_textarea").innerText = ingredients_for_textarea ;
-} else if (composition_url) {
-ingredients_for_textarea = window.atob(composition_url) ;
+///////////////////////////let composition_url = urlParamsCurrentUrl.get('composition_url');
+///////////////////////////if (new_product_composition2) {
+///////////////////////////let compo1 = window.atob(new_product_composition2) ;
+///////////////////////////let compo2 = compo1.replace(/,"/g,", ");
+///////////////////////////let compo3 = compo2.replace(/",/g,",");
+///////////////////////////let compo4 = compo3.replace(/"/g,"");
+///////////////////////////ingredients_for_textarea = compo4 ;
+///////////////////////////document.getElementById("ingredients_textarea").innerText = ingredients_for_textarea ;
+///////////////////////////} else if (composition_url) {
+///////////////////////////ingredients_for_textarea = window.atob(composition_url) ;
 //document.getElementById("ingredients_textarea").innerText = composition_url_decode ;
-document.getElementById("ingredients_textarea").innerText = ingredients_for_textarea ;
-}
-}
+///////////////////////////document.getElementById("ingredients_textarea").innerText = ingredients_for_textarea ;
+///////////////////////////}
+///////////////////////////}
 //}
 //END script to include new_product_composition2 into textarea
 //END script to do all the stuff when user comes in with flamclip parameter
