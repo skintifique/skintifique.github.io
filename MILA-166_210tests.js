@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 2" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 3" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
@@ -369,54 +369,50 @@ lang = "en-us" ;
 let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
 let targeturl ;
 /////////////////////////// if (windowwidth < 900) {
- if (windowwidth < 9) {
-targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
-} else {
+
+/////////////////////////// targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
+/////////////////////////// } else {
 targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
-}
+/////////////////////////// }
 document.getElementById("iframeExclusionList").src = targeturl ;
 }
 //
-function getMessage(e) {
-if (e.origin !== 'https://flamingo.skintifique.me') return;
-let msg = e.data ;
-document.getElementById("fromIframeExclusionList").innerText = msg ;
-  ////////////////////////// test close this function
- ////////////////////////// }
+///////////////////////////function getMessage(e) {
+///////////////////////////if (e.origin !== 'https://flamingo.skintifique.me') return;
+///////////////////////////let msg = e.data ;
+///////////////////////////document.getElementById("fromIframeExclusionList").innerText = msg ;
+///////////////////////////let ing_labels_start = msg.search("excluded_ingredients_labels=");
+///////////////////////////let ing_values_start = msg.search("excluded_ingredients_values=") ;
+///////////////////////////let riskgroups_labels_start = msg.search("excluded_riskgroups_labels=") ;
+///////////////////////////let riskgroups_values_start = msg.search("excluded_riskgroups_values=");
+///////////////////////////let excluded_ingredients_labels_start = ing_labels_start + 28;
+///////////////////////////let excluded_ingredients_values_start = ing_values_start + 28;
+///////////////////////////let excluded_riskgroups_labels_start = riskgroups_labels_start + 27;
+///////////////////////////let excluded_riskgroups_values_start = riskgroups_values_start + 27;
+///////////////////////////let excluded_ingredients_labels = msg.slice(excluded_ingredients_labels_start,ing_values_start) ;
+///////////////////////////if ((excluded_ingredients_labels.length === 0) || (excluded_ingredients_labels == "0")) {
+///////////////////////////excluded_ingredients_labels = "Vous n'avez indiqué aucun ingrédient à exclure" ;
+///////////////////////////}
+///////////////////////////document.getElementById("ingredientsToExclude").innerText = excluded_ingredients_labels ;
+///////////////////////////localStorage.setItem("MILA_ingredientsToExclude",excluded_ingredients_labels) ;
+///////////////////////////let excluded_ingredients_values = msg.slice(excluded_ingredients_values_start,riskgroups_labels_start) ;
+///////////////////////////if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")) {
+///////////////////////////excluded_ingredients_values = "9999999" ;
+///////////////////////////}
+///////////////////////////document.getElementById("ingredientsToExcludeValues").innerText = excluded_ingredients_values ;
+///////////////////////////localStorage.setItem("MILA_ingredientsToExcludeValues",excluded_ingredients_values) ;
+///////////////////////////let excluded_riskgroups_labels = msg.slice(excluded_riskgroups_labels_start,riskgroups_values_start) ;
+///////////////////////////if ((excluded_riskgroups_labels.length === 0) || (excluded_riskgroups_labels == "0")) {
+///////////////////////////excluded_riskgroups_labels = "Vous n'avez indiqué aucun groupe d'ingrédient à exclure" ;
+///////////////////////////}
+///////////////////////////document.getElementById("riskgroupsExclusionListLabels").innerText = excluded_riskgroups_labels ;
+///////////////////////////localStorage.setItem("MILA_riskgroupsExclusionListLabels",excluded_riskgroups_labels) ;
+///////////////////////////let excluded_riskgroups_values = msg.slice(excluded_riskgroups_values_start) ;
+///////////////////////////document.getElementById("riskgroupsExclusionListValues").innerText = excluded_riskgroups_values ;
+///////////////////////////localStorage.setItem("MILA_riskgroupsExclusionListValues",excluded_riskgroups_values) ;
+///////////////////////////}
 
-let ing_labels_start = msg.search("excluded_ingredients_labels=");
-let ing_values_start = msg.search("excluded_ingredients_values=") ;
-let riskgroups_labels_start = msg.search("excluded_riskgroups_labels=") ;
-let riskgroups_values_start = msg.search("excluded_riskgroups_values=");
-let excluded_ingredients_labels_start = ing_labels_start + 28;
-let excluded_ingredients_values_start = ing_values_start + 28;
-let excluded_riskgroups_labels_start = riskgroups_labels_start + 27;
-let excluded_riskgroups_values_start = riskgroups_values_start + 27;
-let excluded_ingredients_labels = msg.slice(excluded_ingredients_labels_start,ing_values_start) ;
-if ((excluded_ingredients_labels.length === 0) || (excluded_ingredients_labels == "0")) {
-excluded_ingredients_labels = "Vous n'avez indiqué aucun ingrédient à exclure" ;
-}
-document.getElementById("ingredientsToExclude").innerText = excluded_ingredients_labels ;
-localStorage.setItem("MILA_ingredientsToExclude",excluded_ingredients_labels) ;
-let excluded_ingredients_values = msg.slice(excluded_ingredients_values_start,riskgroups_labels_start) ;
-if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")) {
-excluded_ingredients_values = "9999999" ;
-}
-document.getElementById("ingredientsToExcludeValues").innerText = excluded_ingredients_values ;
-localStorage.setItem("MILA_ingredientsToExcludeValues",excluded_ingredients_values) ;
-let excluded_riskgroups_labels = msg.slice(excluded_riskgroups_labels_start,riskgroups_values_start) ;
-if ((excluded_riskgroups_labels.length === 0) || (excluded_riskgroups_labels == "0")) {
-excluded_riskgroups_labels = "Vous n'avez indiqué aucun groupe d'ingrédient à exclure" ;
-}
-document.getElementById("riskgroupsExclusionListLabels").innerText = excluded_riskgroups_labels ;
-localStorage.setItem("MILA_riskgroupsExclusionListLabels",excluded_riskgroups_labels) ;
-let excluded_riskgroups_values = msg.slice(excluded_riskgroups_values_start) ;
-document.getElementById("riskgroupsExclusionListValues").innerText = excluded_riskgroups_values ;
-localStorage.setItem("MILA_riskgroupsExclusionListValues",excluded_riskgroups_values) ;
-}
- ////////////////////////// test close this function
-//////////////////////////  }
-window.addEventListener("message", getMessage, false);
+///////////////////////////window.addEventListener("message", getMessage, false);
 
 //
 //decrypt and store excluded ingredients and riskgroups form Exclusion List
