@@ -750,26 +750,26 @@ document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 //reset slideIndex
 var slideIndex = 1 ;
 break;
-case "diagOption" :
+/////////////////////////// case "diagOption" :
 //reset slideIndex
 //slideIndex = 1;
 //
 //document.getElementsByClassName("diagOption")[1].style.display = "block" ;
-document.getElementById(selectedOption).href = "#topOfDiagInput" ;
-document.getElementById(selectedOption).classList.add("option_selected1") ;
+///////////////////////////document.getElementById(selectedOption).href = "#topOfDiagInput" ;
+///////////////////////////document.getElementById(selectedOption).classList.add("option_selected1") ;
 //document.getElementById("diagOption").classList.add("option_selected1") ;
-document.getElementById("openMILAprofile").classList.remove("option_selected1") ;
+///////////////////////////document.getElementById("openMILAprofile").classList.remove("option_selected1") ;
 //show the top of the sliderfor the selectedOption class
-document.getElementsByClassName("accordionDiag")[0].style.display = "block" ;
-document.getElementsByClassName("accordionDiag")[1].style.display = "block" ;
-document.getElementsByClassName("accordionDiag")[2].style.display = "block" ;
-document.getElementsByClassName("accordionDiag")[3].style.display = "block" ;
+///////////////////////////document.getElementsByClassName("accordionDiag")[0].style.display = "block" ;
+///////////////////////////document.getElementsByClassName("accordionDiag")[1].style.display = "block" ;
+///////////////////////////document.getElementsByClassName("accordionDiag")[2].style.display = "block" ;
+///////////////////////////document.getElementsByClassName("accordionDiag")[3].style.display = "block" ;
 //show the starting (new) slide for the selectedOption class and reset the slideIndex
 //slideIndex = 2;
 //document.getElementsByClassName("slideDiag")[2].style.display = "block" ;
 //hide the text under the GoAnalyse btn and hide the MILA analysis
 //iframeMILA.style.display = "none" ;
-document.getElementById("textUnderMILAdiagBtn").style.display = "none" ;
+///////////////////////////document.getElementById("textUnderMILAdiagBtn").style.display = "none" ;
 //show all the accordion elements with the selectedOption class
 //let accordionDiag = document.getElementsByClassName("accordionDiag") ;
 //let b;
@@ -782,19 +782,19 @@ document.getElementById("textUnderMILAdiagBtn").style.display = "none" ;
 //document.getElementsByClassName("accordionAllergicToSynthesis")[0].style.display = "block" ;
 //}
 //replace diagOptionText1 by diagOptionText2
-document.getElementById("diagOptionText1").style.display = "none" ;
-document.getElementById("diagOptionText2").style.display = "block" ;
+///////////////////////////document.getElementById("diagOptionText1").style.display = "none" ;
+///////////////////////////document.getElementById("diagOptionText2").style.display = "block" ;
 //store the selectedTopOption
-document.getElementById("selectedTopOption").innerHTML = "diagOption" ;
+///////////////////////////document.getElementById("selectedTopOption").innerHTML = "diagOption" ;
 //show appropirate slide
 //document.getElementsByClassName("slideDiag")[2].style.display = "block" ;
 //var slideIndex = 4 ;
 //showSlides(slideIndex += 3) ;
-var slideIndex = 2 ;
-plusSlides();
+///////////////////////////var slideIndex = 2 ;
+///////////////////////////plusSlides();
 // show prevnextbuttons
-document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
-break;
+///////////////////////////document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
+///////////////////////////break;
 case "recoOption" :
 //reset slideIndex
 //slideIndex = 1;
