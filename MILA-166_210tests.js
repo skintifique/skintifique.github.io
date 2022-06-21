@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 10" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 11" ;
 ///////////////////////////
 //END get the stored profile parameters and set up all the options
 //////////////////////////////////
@@ -22,11 +22,11 @@ minusSlides();
 //});
 //END various navigations
 // if click inside ingredient textarea, then unselect this ingredient list
-document.getElementById("ingredients_textarea").addEventListener("click",function() { document.getElementById("anyList").style.border = "2px solid #1895E2" ;
-document.getElementById("anyList").classList.remove("option_selected1") ;
-document.getElementById("anyList_text").style.display = "block" ;
-document.getElementById("anyList_icon").style.display = "none" ;
-document.getElementById("ingredients_textarea").style.border = "1px solid #1895E2" ;
+////////////////////////////document.getElementById("ingredients_textarea").addEventListener("click",function() { document.getElementById("anyList").style.border = "2px solid #1895E2" ;
+////////////////////////////document.getElementById("anyList").classList.remove("option_selected1") ;
+////////////////////////////document.getElementById("anyList_text").style.display = "block" ;
+////////////////////////////document.getElementById("anyList_icon").style.display = "none" ;
+////////////////////////////document.getElementById("ingredients_textarea").style.border = "1px solid #1895E2" ;
 });
 // END if click inside ingredient textarea, then unselect this ingredient list
 //manage button goToExcludedIngredients
@@ -140,16 +140,16 @@ lang = "fr-fr";
 lang = "en-us" ;
 }
 //let fromcdiframe = localStorage.getItem("fromcdiframe"); code from iflam3, not in use here
-let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
-let targeturl ;
+////////////////////////////let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
+////////////////////////////let targeturl ;
 /////////////////////////// if (windowwidth < 900) {
 
 /////////////////////////// targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
 /////////////////////////// } else {
-targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
+////////////////////////////targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
 /////////////////////////// }
-document.getElementById("iframeExclusionList").src = targeturl ;
-}
+////////////////////////////document.getElementById("iframeExclusionList").src = targeturl ;
+////////////////////////////}
 
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
