@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 17" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 18" ;
 
 
 //manage exclusion list
@@ -65,44 +65,7 @@ document.getElementById("info_reactive_skin").classList.add("option_selectedSkin
 document.getElementById("skin_normal").classList.remove("option_selectedSkinType");
 document.getElementById("skin_normally_sensitive").classList.remove("option_selectedSkinType");
 };
-//manage select product options
-///////////////////////////if (e.classList.contains("selectProduct")) {
-//reset all borders to default
-///////////////////////////let selectProduct = document.getElementsByClassName("selectProduct");
-///////////////////////////var i;
-///////////////////////////for (i = 0; i < selectProduct.length; i++) {
-//selectProduct[i].style.border = "1px solid #1895E2";
-///////////////////////////selectProduct[i].style.border = "0px solid #1895E2";
-///////////////////////////document.getElementById("anyList").classList.remove("option_selected1") ;
-///////////////////////////document.getElementById("anyList_text").style.display = "block" ;
-///////////////////////////document.getElementById("anyList_icon").style.display = "none" ;
-///////////////////////////}
-///////////////////////////let selectedProduct = e.id ;
-///////////////////////////e.style.border = "5px solid #1895E2" ;
-//get the ingredient list
-///////////////////////////let selectedIngredientList ;
 
-///////////////////////////if (selectedIngredientList) {
-///////////////////////////document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
-///////////////////////////document.getElementById("selectedIngredientListprofile").innerHTML = selectedIngredientList ;
-///////////////////////////document.getElementById("selectedIngredientListdiag").innerHTML = selectedIngredientList ;
-///////////////////////////document.getElementById("selectedIngredientListreco").innerHTML = selectedIngredientList ;
-///////////////////////////document.getElementById("selectedIngredientList").style.color = "#00b6e2" ;
-///////////////////////////document.getElementById("selectedIngredientListprofile").style.color = "#00b6e2" ;
-///////////////////////////document.getElementById("selectedIngredientListdiag").style.color = "#00b6e2" ;
-///////////////////////////document.getElementById("selectedIngredientListreco").style.color = "#00b6e2" ;
-///////////////////////////} else {
-///////////////////////////document.getElementById("selectedIngredientList").innerHTML = "There is no ingredient !"
-///////////////////////////document.getElementById("selectedIngredientListprofile").innerHTML = "There is no ingredient !"
-///////////////////////////document.getElementById("selectedIngredientListdiag").innerHTML = "There is no ingredient !"
-///////////////////////////document.getElementById("selectedIngredientListreco").innerHTML = "There is no ingredient !"
-///////////////////////////document.getElementById("selectedIngredientList").style.color = "red" ;
-///////////////////////////document.getElementById("selectedIngredientListprofile").style.color = "red" ;
-///////////////////////////document.getElementById("selectedIngredientListdiag").style.color = "red" ;
-///////////////////////////document.getElementById("selectedIngredientListreco").style.color = "red" ;
-///////////////////////////}
-///////////////////////////startCleanIngrList(selectedIngredientList) ;
-///////////////////////////}
 //script to select options
 let selectedOption = e.id ;
 let selectedOption_class = e.classList ;
@@ -198,9 +161,7 @@ let accordionSolution = document.getElementsByClassName("accordionSolution") ;
 let diag_solution = document.getElementsByClassName("diag_solution") ;
  let diag_moisturizer = document.getElementsByClassName("diag_moisturizer") ;
  let diag_cleanser = document.getElementsByClassName("diag_cleanser") ;
-//////////////////////////////switch (selectedOption) {
-/////////////////////////////
-///////////////////////////// }
+
 //select condition_nickel if user is reactive to pollution, shoes, jewelry etc
 let allergicToFactor_pollution_classList = document.getElementById("allergicToFactor_pollution").classList ;
 let allergicToFactor_jewelry_classList = document.getElementById("allergicToFactor_jewelry").classList ;
@@ -317,163 +278,163 @@ document.getElementById("selectedIngredientList").innerText = selectedIngr_corr2
 }
 
 //actions when button openMILArecoSKproduct is clicked
-document.getElementById("openMILArecoSKproduct").addEventListener("click", openMILArecoSKproduct) ;
-function openMILArecoSKproduct() {
+////////////////////document.getElementById("openMILArecoSKproduct").addEventListener("click", openMILArecoSKproduct) ;
+////////////////////function openMILArecoSKproduct() {
 //display the appropriate accordions
-let accordionRecoResults = document.getElementsByClassName("accordionRecoResults") ;
-var m ;
-for (m = 0; m < accordionRecoResults.length; m++) {
-accordionRecoResults[m].style.display = "block" ;
-}
-let selectedProductType = document.getElementById("selectedProductType").innerText ;
-let selectedSolution = document.getElementById("selectedSolution").innerText ;
-let selectedSearch = selectedProductType + "-" + selectedSolution ;
-document.getElementById("selectedSearch").innerText = selectedSearch ;
-let recoProduct1 ;
-let recoProduct2 ;
-let recoProduct3 ;
+////////////////////let accordionRecoResults = document.getElementsByClassName("accordionRecoResults") ;
+////////////////////var m ;
+////////////////////for (m = 0; m < accordionRecoResults.length; m++) {
+////////////////////accordionRecoResults[m].style.display = "block" ;
+////////////////////}
+////////////////////let selectedProductType = document.getElementById("selectedProductType").innerText ;
+////////////////////let selectedSolution = document.getElementById("selectedSolution").innerText ;
+////////////////////let selectedSearch = selectedProductType + "-" + selectedSolution ;
+////////////////////document.getElementById("selectedSearch").innerText = selectedSearch ;
+////////////////////let recoProduct1 ;
+////////////////////let recoProduct2 ;
+////////////////////let recoProduct3 ;
 //select the appropriate products based on user input
-switch (selectedSearch) {
-case "moisturizer-none" :
-recoProduct1 = "HG150x1";
-recoProduct2 = "ML200x1";
-recoProduct3 = "HG150x3";
-break ;
-}
+////////////////////switch (selectedSearch) {
+////////////////////case "moisturizer-none" :
+////////////////////recoProduct1 = "HG150x1";
+////////////////////recoProduct2 = "ML200x1";
+////////////////////recoProduct3 = "HG150x3";
+////////////////////break ;
+////////////////////}
 //END select the appropriate products based on user input
 //store the recoProductX for later use (eg when a recoProduct is later clicked and selected)
-document.getElementById("recoProduct1or").innerText = recoProduct1 ;
-document.getElementById("recoProduct2or").innerText = recoProduct2 ;
-document.getElementById("recoProduct3or").innerText = recoProduct3 ;
+////////////////////document.getElementById("recoProduct1or").innerText = recoProduct1 ;
+////////////////////document.getElementById("recoProduct2or").innerText = recoProduct2 ;
+////////////////////document.getElementById("recoProduct3or").innerText = recoProduct3 ;
 //select appropriate names, images, urls etc for the recommended products
-let lang2 ;
-if (current_url.includes("/en/")) {
-lang2 = "en-us" ;
-} else if (current_url.includes("/fr/")) {
-lang2 = "fr-fr" ;
-} else {
-lang2 = "en-us" ;
-}
+////////////////////let lang2 ;
+////////////////////if (current_url.includes("/en/")) {
+////////////////////lang2 = "en-us" ;
+////////////////////} else if (current_url.includes("/fr/")) {
+////////////////////lang2 = "fr-fr" ;
+////////////////////} else {
+////////////////////lang2 = "en-us" ;
+////////////////////}
 //get the correspondance data from the front
 //get the product names
-let productName_us_from_front = document.getElementById("productName_us").innerText ;
-const productName_us = JSON.parse(productName_us_from_front) ;
-let productName_fr_from_front = document.getElementById("productName_fr").innerText ;
-const productName_fr = JSON.parse(productName_fr_from_front) ;
-let recoProduct1_name ;
-let recoProduct2_name ;
-let recoProduct3_name ;
-if (lang2 === "fr-fr") {
-recoProduct1_name = productName_fr[recoProduct1];
-recoProduct2_name = productName_fr[recoProduct2];
-recoProduct3_name = productName_fr[recoProduct3];
-} else {
-recoProduct1_name = productName_us[recoProduct1];
-recoProduct2_name = productName_us[recoProduct2];
-recoProduct3_name = productName_us[recoProduct3];
-}
-document.getElementById("recoProduct1_name").innerText = recoProduct1_name;
-document.getElementById("recoProduct2_name").innerText = recoProduct2_name;
-document.getElementById("recoProduct3_name").innerText = recoProduct3_name;
+////////////////////let productName_us_from_front = document.getElementById("productName_us").innerText ;
+////////////////////const productName_us = JSON.parse(productName_us_from_front) ;
+////////////////////let productName_fr_from_front = document.getElementById("productName_fr").innerText ;
+////////////////////const productName_fr = JSON.parse(productName_fr_from_front) ;
+////////////////////let recoProduct1_name ;
+////////////////////let recoProduct2_name ;
+////////////////////let recoProduct3_name ;
+////////////////////if (lang2 === "fr-fr") {
+////////////////////recoProduct1_name = productName_fr[recoProduct1];
+////////////////////recoProduct2_name = productName_fr[recoProduct2];
+////////////////////recoProduct3_name = productName_fr[recoProduct3];
+////////////////////} else {
+////////////////////recoProduct1_name = productName_us[recoProduct1];
+////////////////////recoProduct2_name = productName_us[recoProduct2];
+////////////////////recoProduct3_name = productName_us[recoProduct3];
+////////////////////}
+////////////////////document.getElementById("recoProduct1_name").innerText = recoProduct1_name;
+////////////////////document.getElementById("recoProduct2_name").innerText = recoProduct2_name;
+////////////////////document.getElementById("recoProduct3_name").innerText = recoProduct3_name;
 //get the product images
-let productImg_from_front = document.getElementById("productImg").innerText ;
-const productImg = JSON.parse(productImg_from_front) ;
-let recoProduct1_img = productImg[recoProduct1];
-let recoProduct2_img = productImg[recoProduct2];
-let recoProduct3_img = productImg[recoProduct3];
-document.getElementById("recoProduct1_img").src = recoProduct1_img ;
-document.getElementById("recoProduct2_img").src = recoProduct2_img ;
-document.getElementById("recoProduct3_img").src = recoProduct3_img ;
+////////////////////let productImg_from_front = document.getElementById("productImg").innerText ;
+////////////////////const productImg = JSON.parse(productImg_from_front) ;
+////////////////////let recoProduct1_img = productImg[recoProduct1];
+////////////////////let recoProduct2_img = productImg[recoProduct2];
+////////////////////let recoProduct3_img = productImg[recoProduct3];
+////////////////////document.getElementById("recoProduct1_img").src = recoProduct1_img ;
+////////////////////document.getElementById("recoProduct2_img").src = recoProduct2_img ;
+////////////////////document.getElementById("recoProduct3_img").src = recoProduct3_img ;
 //get the product ps id
-let productPSID_from_front = document.getElementById("productPSID").innerText ;
-const productPSID = JSON.parse(productPSID_from_front) ;
-let recoProduct1_psid = productPSID[recoProduct1];
-let recoProduct2_psid = productPSID[recoProduct2];
-let recoProduct3_psid = productPSID[recoProduct3];
-document.getElementsByName("id_product")[0].value = recoProduct1_psid ;
-document.getElementsByName("id_product")[1].value = recoProduct2_psid ;
-document.getElementsByName("id_product")[2].value = recoProduct3_psid ;
+////////////////////let productPSID_from_front = document.getElementById("productPSID").innerText ;
+////////////////////const productPSID = JSON.parse(productPSID_from_front) ;
+////////////////////let recoProduct1_psid = productPSID[recoProduct1];
+////////////////////let recoProduct2_psid = productPSID[recoProduct2];
+////////////////////let recoProduct3_psid = productPSID[recoProduct3];
+////////////////////document.getElementsByName("id_product")[0].value = recoProduct1_psid ;
+////////////////////document.getElementsByName("id_product")[1].value = recoProduct2_psid ;
+////////////////////document.getElementsByName("id_product")[2].value = recoProduct3_psid ;
 //get the product url
-let recoProduct1_url ;
-let recoProduct2_url ;
-let recoProduct3_url ;
-if (lang2 === "fr-fr") {
-let productUrl_fr_from_front = document.getElementById("productUrl_fr").innerText ;
-const productUrl_fr = JSON.parse(productUrl_fr_from_front) ;
-recoProduct1_url = productUrl_fr[recoProduct1];
-recoProduct2_url = productUrl_fr[recoProduct2];
-recoProduct3_url = productUrl_fr[recoProduct3];
-} else {
-let productUrl_us_from_front = document.getElementById("productUrl_us").innerText ;
-const productUrl_us = JSON.parse(productUrl_us_from_front) ;
-recoProduct1_url = productUrl_us[recoProduct1];
-recoProduct2_url = productUrl_us[recoProduct2];
-recoProduct3_url = productUrl_us[recoProduct3];
-} 
-document.getElementById("recoProduct1_url").href = recoProduct1_url ;
-document.getElementById("recoProduct2_url").href = recoProduct2_url ;
-document.getElementById("recoProduct3_url").href = recoProduct3_url ;
+////////////////////let recoProduct1_url ;
+////////////////////let recoProduct2_url ;
+////////////////////let recoProduct3_url ;
+////////////////////if (lang2 === "fr-fr") {
+////////////////////let productUrl_fr_from_front = document.getElementById("productUrl_fr").innerText ;
+////////////////////const productUrl_fr = JSON.parse(productUrl_fr_from_front) ;
+////////////////////recoProduct1_url = productUrl_fr[recoProduct1];
+////////////////////recoProduct2_url = productUrl_fr[recoProduct2];
+////////////////////recoProduct3_url = productUrl_fr[recoProduct3];
+////////////////////} else {
+////////////////////let productUrl_us_from_front = document.getElementById("productUrl_us").innerText ;
+////////////////////const productUrl_us = JSON.parse(productUrl_us_from_front) ;
+////////////////////recoProduct1_url = productUrl_us[recoProduct1];
+////////////////////recoProduct2_url = productUrl_us[recoProduct2];
+////////////////////recoProduct3_url = productUrl_us[recoProduct3];
+////////////////////} 
+////////////////////document.getElementById("recoProduct1_url").href = recoProduct1_url ;
+////////////////////document.getElementById("recoProduct2_url").href = recoProduct2_url ;
+////////////////////document.getElementById("recoProduct3_url").href = recoProduct3_url ;
 // publish specific messages to user NOTE: NEED TO MAKE SURE selectedSKINTYPE is stored before this process!
-let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
-if (selectedSkinType === "reactive") {
-if (lang2 === "fr-fr") {
-document.getElementById("recoProducts_message1").innerHTML = "Nos produits sont certainement parmi les plus sûrs au monde, mais puisque votre peau est réactive, nous vous recommandons de faire un test sur une petite partie de votre peau. S'il n'y pas de réaction après 10-15 minutes, alors ce produit devrait être sûr pour vous, et vous pouvez l'utiliser autant que vous le souhaitez!"
-} else {
-document.getElementById("recoProducts_message1").innerHTML = "Our products are certainly among the safest in the world. Yet, as you have reactive skin, we recommend you test on a small part of your body. If there is no reaction after 10-15 minutes, then this product should be safe for you and you can use it as much as you please!"
-}
-} else {
-document.getElementById("recoProducts_message1").innerHTML = "" ;
-}
+////////////////////let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
+////////////////////if (selectedSkinType === "reactive") {
+////////////////////if (lang2 === "fr-fr") {
+////////////////////document.getElementById("recoProducts_message1").innerHTML = "Nos produits sont certainement parmi les plus sûrs au monde, mais puisque votre peau est réactive, nous vous recommandons de faire un test sur une petite partie de votre peau. S'il n'y pas de réaction après 10-15 minutes, alors ce produit devrait être sûr pour vous, et vous pouvez l'utiliser autant que vous le souhaitez!"
+////////////////////} else {
+////////////////////document.getElementById("recoProducts_message1").innerHTML = "Our products are certainly among the safest in the world. Yet, as you have reactive skin, we recommend you test on a small part of your body. If there is no reaction after 10-15 minutes, then this product should be safe for you and you can use it as much as you please!"
+////////////////////}
+////////////////////} else {
+////////////////////document.getElementById("recoProducts_message1").innerHTML = "" ;
+////////////////////}
 //check that and signal if product contains ingredients that user is allergic to
-let ingredientsToExclude_innerText = document.getElementById("ingredientsToExclude").innerText ;
-const ingredientsToExclude = ingredientsToExclude_innerText.split(",") ;
+////////////////////let ingredientsToExclude_innerText = document.getElementById("ingredientsToExclude").innerText ;
+////////////////////const ingredientsToExclude = ingredientsToExclude_innerText.split(",") ;
 // for recoProduct1
-const recoProduct1_bad_ing = [] ;
-document.getElementById("recoProduct1Allergic").style.display = "none" ;
-let recoProduct1_ing = recoProduct1.concat("_ingredients");
-let recoProduct1_ingredients = document.getElementById(recoProduct1_ing).innerText ;
-const recoProduct1_ingredients_arrayed = recoProduct1_ingredients.split(", ");
-var ingred ;
-for (ingred = 0; ingred < recoProduct1_ingredients_arrayed.length; ingred++) {
-if (ingredientsToExclude.indexOf(recoProduct1_ingredients_arrayed[ingred]) > -1) {
-recoProduct1_bad_ing.push(recoProduct1_ingredients_arrayed[ingred]) ;
-document.getElementById("recoProduct1Allergic").style.display = "block" ;
-}
-document.getElementById("recoProduct1Allergic").innerText = "⚠️ " + recoProduct1_bad_ing ;
-document.getElementById("recoProduct1Allergic").style.color = "red" ;
-}
+////////////////////const recoProduct1_bad_ing = [] ;
+////////////////////document.getElementById("recoProduct1Allergic").style.display = "none" ;
+////////////////////let recoProduct1_ing = recoProduct1.concat("_ingredients");
+////////////////////let recoProduct1_ingredients = document.getElementById(recoProduct1_ing).innerText ;
+////////////////////const recoProduct1_ingredients_arrayed = recoProduct1_ingredients.split(", ");
+////////////////////var ingred ;
+////////////////////for (ingred = 0; ingred < recoProduct1_ingredients_arrayed.length; ingred++) {
+////////////////////if (ingredientsToExclude.indexOf(recoProduct1_ingredients_arrayed[ingred]) > -1) {
+////////////////////recoProduct1_bad_ing.push(recoProduct1_ingredients_arrayed[ingred]) ;
+////////////////////document.getElementById("recoProduct1Allergic").style.display = "block" ;
+////////////////////}
+////////////////////document.getElementById("recoProduct1Allergic").innerText = "⚠️ " + recoProduct1_bad_ing ;
+////////////////////document.getElementById("recoProduct1Allergic").style.color = "red" ;
+////////////////////}
 // for recoProduct2
-const recoProduct2_bad_ing = [] ;
-document.getElementById("recoProduct2Allergic").style.display = "none" ;
-let recoProduct2_ing = recoProduct2.concat("_ingredients");
-let recoProduct2_ingredients = document.getElementById(recoProduct2_ing).innerText ;
-const recoProduct2_ingredients_arrayed = recoProduct2_ingredients.split(", ");
-var ingred2 ;
-for (ingred2 = 0; ingred2 < recoProduct2_ingredients_arrayed.length; ingred2++) {
-if (ingredientsToExclude.indexOf(recoProduct2_ingredients_arrayed[ingred2]) > -1) {
-recoProduct2_bad_ing.push(recoProduct2_ingredients_arrayed[ingred2]) ;
-document.getElementById("recoProduct2Allergic").style.display = "block" ;
-}
-document.getElementById("recoProduct2Allergic").innerText = "⚠️ " + recoProduct2_bad_ing ;
-document.getElementById("recoProduct2Allergic").style.color = "red" ;
-}
+////////////////////const recoProduct2_bad_ing = [] ;
+////////////////////document.getElementById("recoProduct2Allergic").style.display = "none" ;
+////////////////////let recoProduct2_ing = recoProduct2.concat("_ingredients");
+////////////////////let recoProduct2_ingredients = document.getElementById(recoProduct2_ing).innerText ;
+////////////////////const recoProduct2_ingredients_arrayed = recoProduct2_ingredients.split(", ");
+////////////////////var ingred2 ;
+////////////////////for (ingred2 = 0; ingred2 < recoProduct2_ingredients_arrayed.length; ingred2++) {
+////////////////////if (ingredientsToExclude.indexOf(recoProduct2_ingredients_arrayed[ingred2]) > -1) {
+////////////////////recoProduct2_bad_ing.push(recoProduct2_ingredients_arrayed[ingred2]) ;
+////////////////////document.getElementById("recoProduct2Allergic").style.display = "block" ;
+////////////////////}
+////////////////////document.getElementById("recoProduct2Allergic").innerText = "⚠️ " + recoProduct2_bad_ing ;
+////////////////////document.getElementById("recoProduct2Allergic").style.color = "red" ;
+////////////////////}
 // for recoProduct3
-const recoProduct3_bad_ing = [] ;
-document.getElementById("recoProduct3Allergic").style.display = "none" ;
-let recoProduct3_ing = recoProduct3.concat("_ingredients");
-let recoProduct3_ingredients = document.getElementById(recoProduct3_ing).innerText ;
-const recoProduct3_ingredients_arrayed = recoProduct3_ingredients.split(", ");
-var ingred3 ;
-for (ingred3 = 0; ingred3 < recoProduct3_ingredients_arrayed.length; ingred3++) {
-if (ingredientsToExclude.indexOf(recoProduct3_ingredients_arrayed[ingred3]) > -1) {
-recoProduct3_bad_ing.push(recoProduct3_ingredients_arrayed[ingred3]) ;
-document.getElementById("recoProduct3Allergic").style.display = "block" ;
-}
-document.getElementById("recoProduct3Allergic").innerText = "⚠️ " + recoProduct3_bad_ing ;
-document.getElementById("recoProduct3Allergic").style.color = "red" ;
-}
+////////////////////const recoProduct3_bad_ing = [] ;
+////////////////////document.getElementById("recoProduct3Allergic").style.display = "none" ;
+////////////////////let recoProduct3_ing = recoProduct3.concat("_ingredients");
+////////////////////let recoProduct3_ingredients = document.getElementById(recoProduct3_ing).innerText ;
+////////////////////const recoProduct3_ingredients_arrayed = recoProduct3_ingredients.split(", ");
+////////////////////var ingred3 ;
+////////////////////for (ingred3 = 0; ingred3 < recoProduct3_ingredients_arrayed.length; ingred3++) {
+////////////////////if (ingredientsToExclude.indexOf(recoProduct3_ingredients_arrayed[ingred3]) > -1) {
+////////////////////recoProduct3_bad_ing.push(recoProduct3_ingredients_arrayed[ingred3]) ;
+////////////////////document.getElementById("recoProduct3Allergic").style.display = "block" ;
+////////////////////}
+////////////////////document.getElementById("recoProduct3Allergic").innerText = "⚠️ " + recoProduct3_bad_ing ;
+////////////////////document.getElementById("recoProduct3Allergic").style.color = "red" ;
+////////////////////}
 //END check that and signal if product contains ingredients that user is allergic to
-}
+////////////////////}
 //END actions when button openMILArecoSKproduct is clicked
 // -
 //START function to open iframeMILA with appropriate url and parameters for selectedTopOption
