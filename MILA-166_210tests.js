@@ -2105,7 +2105,7 @@ let str = "new_product_composition2=" + selectedIngredientList_cleaned ;
 let ingredients_encoded = window.btoa(str);
 if (selectedTopOption === "profileOption") {
 document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "block" ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
+iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang3 + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
 } else if ((selectedTopOption === "recoOption") || (selectedTopOption === "diagOption")) {
 if (selectedTopOption === "diagOption") {
 document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "block" ;
@@ -2129,7 +2129,7 @@ const ingredientsToExclude_arr = ingredientsToExclude.split(",");
 let ingredientsToExclude_arr_str = JSON.stringify(ingredientsToExclude_arr) ;
 const riskgroupsExclusionList_arr = riskgroupsExclusionList.split(",");
 let riskgroupsExclusionList_arr_str = JSON.stringify(riskgroupsExclusionList_arr) ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
+iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang3 + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
 //the 2 lines of code below are expected to set the height of the iframe to the content inside. The inline style of the iframe may need to be removed + the height of the inside content may need to be adapted
 iframeMILA.onload = function(){
 iframeMILA.style.height = iframeMILA.contentWindow.document.body.scrollHeight + 'px';
