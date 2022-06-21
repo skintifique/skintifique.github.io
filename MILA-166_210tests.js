@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 5" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 6" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
@@ -2144,44 +2144,44 @@ let riskgroupsExclusionList_arr_str = JSON.stringify(riskgroupsExclusionList_arr
 }
 // script to manage the bad ingredients lists
 // Add a "checked" symbol when clicking on a list item
-let list = document.querySelector("#bad_ingredient_list");
-list.addEventListener("click", function(ev) {
-if (ev.target.tagName === "LI") {
-ev.target.classList.toggle("checked");
-document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-}
-}, false);
-let list2 = document.querySelector("#bad_ingredient_list2");
-list2.addEventListener("click", function(ev) {
-if (ev.target.tagName === "LI") {
-ev.target.classList.toggle('checked');
-document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-}
-}, false);
-let list3 = document.querySelector("#bad_ingredient_list3");
-list3.addEventListener("click", function(ev) {
-if (ev.target.tagName === "LI") {
-ev.target.classList.toggle("checked");
-document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-}
-}, false);
-let list4 = document.querySelector("#bad_ingredient_list4");
-list4.addEventListener("click", function(ev) {
-if (ev.target.tagName === "LI") {
-ev.target.classList.toggle("checked");
-document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
-}
-}, false);
-let span = document.createElement("SPAN");
-let txt = document.createTextNode("\u00D7");
-span.className = "close";
-span.appendChild(txt);
-li.appendChild(span);
-for (i = 0; i < close.length; i++) {
-close[i].onclick = function() {
-let div = this.parentElement;
-div.style.display = "none";
-}
-}
+///////////////////////////let list = document.querySelector("#bad_ingredient_list");
+///////////////////////////list.addEventListener("click", function(ev) {
+///////////////////////////if (ev.target.tagName === "LI") {
+///////////////////////////ev.target.classList.toggle("checked");
+///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
+///////////////////////////}
+///////////////////////////}, false);
+///////////////////////////let list2 = document.querySelector("#bad_ingredient_list2");
+///////////////////////////list2.addEventListener("click", function(ev) {
+///////////////////////////if (ev.target.tagName === "LI") {
+///////////////////////////ev.target.classList.toggle('checked');
+///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
+///////////////////////////}
+///////////////////////////}, false);
+///////////////////////////let list3 = document.querySelector("#bad_ingredient_list3");
+///////////////////////////list3.addEventListener("click", function(ev) {
+///////////////////////////if (ev.target.tagName === "LI") {
+///////////////////////////ev.target.classList.toggle("checked");
+///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
+///////////////////////////}
+///////////////////////////}, false);
+///////////////////////////let list4 = document.querySelector("#bad_ingredient_list4");
+///////////////////////////list4.addEventListener("click", function(ev) {
+///////////////////////////if (ev.target.tagName === "LI") {
+///////////////////////////ev.target.classList.toggle("checked");
+///////////////////////////document.getElementById("allergicTo_no_SK_ingredient").style.border = "1px solid grey" ;
+///////////////////////////}
+///////////////////////////}, false);
+///////////////////////////let span = document.createElement("SPAN");
+///////////////////////////let txt = document.createTextNode("\u00D7");
+///////////////////////////span.className = "close";
+///////////////////////////span.appendChild(txt);
+///////////////////////////li.appendChild(span);
+///////////////////////////for (i = 0; i < close.length; i++) {
+///////////////////////////close[i].onclick = function() {
+///////////////////////////let div = this.parentElement;
+///////////////////////////div.style.display = "none";
+///////////////////////////}
+///////////////////////////}
 }
 // END OF SCRIPT FOR MILA PAGE
