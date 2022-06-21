@@ -412,7 +412,7 @@ localStorage.setItem("MILA_riskgroupsExclusionListValues",excluded_riskgroups_va
 }
 window.addEventListener("message", getMessage, false);
  ////////////////////////// test close this function
- }
+  ////////////////////////// }
 //
 //decrypt and store excluded ingredients and riskgroups form Exclusion List
 //END decrypt and store excluded ingredients and riskgroups form Exclusion List
