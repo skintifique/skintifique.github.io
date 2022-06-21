@@ -4,30 +4,8 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 20" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 21" ;
 
-
-//manage exclusion list
-//
-/////////////////////let ingredientsToExcludeValues = document.getElementById("ingredientsToExcludeValues").innerText ;
-/////////////////////let riskgroupsExclusionListValues = document.getElementById("riskgroupsExclusionListValues").innerText ;
-/////////////////////if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")){
-/////////////////////ingredientsToExcludeValues = "9999999" ;
-/////////////////////}
-/////////////////////if ((riskgroupsExclusionListValues.length === 0) || (riskgroupsExclusionListValues === "riskgroupsExclusionListValues") || (riskgroupsExclusionListValues === "0")){
-/////////////////////riskgroupsExclusionListValues = "9999999" ;
-/////////////////////}
-/////////////////////const ingredientsToExcludeValues_arr = ingredientsToExcludeValues.split(",");
-/////////////////////let ingredientsToExcludeValues_arr_str = JSON.stringify(ingredientsToExcludeValues_arr) ;
-/////////////////////const riskgroupsExclusionListValues_arr = riskgroupsExclusionListValues.split(",");
-/////////////////////let riskgroupsExclusionListValues_arr_str = JSON.stringify(riskgroupsExclusionListValues_arr) ;
-/////////////////////let windowwidth = window.innerWidth;
-/////////////////////let lang ;
-/////////////////////if (current_url.includes('/fr/')) {
-/////////////////////lang = "fr-fr";
-/////////////////////} else {
-/////////////////////lang = "en-us" ;
-/////////////////////}
 
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
@@ -35,36 +13,29 @@ let e = selectProduct.target ;
 //let e_class = e.className ;
 //if (e_class === "selectProduct") {
 // actions when clicks on a various buttons inside the slider
-if (e.id === "noneOfTheseFactors") {
+//////////////////////if (e.id === "noneOfTheseFactors") {
 // unselect any allergicToFactor that has been selected
-let selectDiag_allergicToFactor = document.getElementsByClassName("selectDiag_allergicToFactor") ;
-var sD1 ;
-for (sD1 = 0; sD1 < selectDiag_allergicToFactor.length; sD1++) {
-selectDiag_allergicToFactor[sD1].classList.remove("option_selectedAllergicToFactor") ;
-}
+//////////////////////let selectDiag_allergicToFactor = document.getElementsByClassName("selectDiag_allergicToFactor") ;
+//////////////////////var sD1 ;
+//////////////////////for (sD1 = 0; sD1 < selectDiag_allergicToFactor.length; sD1++) {
+//////////////////////selectDiag_allergicToFactor[sD1].classList.remove("option_selectedAllergicToFactor") ;
+//////////////////////}
 //move to next slide
-plusSlides() ;
-}
-if (e.classList.contains("confirm_slide_btn")) {
-plusSlides() ;
-}
+//////////////////////plusSlides() ;
+//////////////////////}
+//////////////////////if (e.classList.contains("confirm_slide_btn")) {
+//////////////////////plusSlides() ;
+//////////////////////}
 
 //actions when user selects various options
-if (e.classList.contains("accordion_info")) {
-let info_elmt_class = "accordion_" + e.id ;
-let info_elmts = document.getElementsByClassName(info_elmt_class) ;
-var info_elmts0 ;
-for (info_elmts0 = 0; info_elmts0 < info_elmts.length; info_elmts0++) {
-info_elmts[info_elmts0].classList.toggle("showElement") ;
-}
-}
-//manage style of reactive skin button on SkinType slide
-/////////////////////if (e.id == "info_reactive_skin") {
-/////////////////////document.getElementById("info_reactive_skin").href = "#textIntroReactiveSkin" ;
-/////////////////////document.getElementById("info_reactive_skin").classList.add("option_selectedSkinType");
-/////////////////////document.getElementById("skin_normal").classList.remove("option_selectedSkinType");
-/////////////////////document.getElementById("skin_normally_sensitive").classList.remove("option_selectedSkinType");
-/////////////////////};
+//////////////////////if (e.classList.contains("accordion_info")) {
+//////////////////////let info_elmt_class = "accordion_" + e.id ;
+//////////////////////let info_elmts = document.getElementsByClassName(info_elmt_class) ;
+//////////////////////var info_elmts0 ;
+//////////////////////for (info_elmts0 = 0; info_elmts0 < info_elmts.length; info_elmts0++) {
+//////////////////////info_elmts[info_elmts0].classList.toggle("showElement") ;
+//////////////////////}
+//////////////////////}
 
 //script to select options
 let selectedOption = e.id ;
@@ -189,40 +160,40 @@ document.getElementById("selectedAllergicToFactors").innerHTML = selectedAllergi
 }
 //END get all the selected conditions
 // START script to get all the selected SK ingredients to avoid
-let ingredientsToAvoidOption = document.getElementById("ingredientsToAvoidOption").innerText ;
-if (ingredientsToAvoidOption === "skIngredients") {
-const ingredientsToExclude = [] ;
-let displayedIngredientsList = document.getElementsByClassName("displayedIngredientsList") ;
-var ing1;
-for (ing1 = 0; ing1 < displayedIngredientsList.length; ing1++) {
-let displayedIngredientsNodes = displayedIngredientsList[ing1].childNodes ;
-var ing2 ;
-for (ing2 = 0; ing2 < displayedIngredientsNodes.length; ing2++) {
-let displayedIngredient = displayedIngredientsNodes[ing2] ;
-let displayedIngredient_name = displayedIngredient.innerText ;
-let displayedIngredientClass = displayedIngredient.className ;
-if (displayedIngredientClass == "checked") {
-ingredientsToExclude.push(displayedIngredient_name) ;
-}
-}
-}
-document.getElementById("ingredientsToExclude").innerHTML = ingredientsToExclude;
-localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude) ;
+//////////////////////let ingredientsToAvoidOption = document.getElementById("ingredientsToAvoidOption").innerText ;
+//////////////////////if (ingredientsToAvoidOption === "skIngredients") {
+//////////////////////const ingredientsToExclude = [] ;
+//////////////////////let displayedIngredientsList = document.getElementsByClassName("displayedIngredientsList") ;
+//////////////////////var ing1;
+//////////////////////for (ing1 = 0; ing1 < displayedIngredientsList.length; ing1++) {
+//////////////////////let displayedIngredientsNodes = displayedIngredientsList[ing1].childNodes ;
+//////////////////////var ing2 ;
+//////////////////////for (ing2 = 0; ing2 < displayedIngredientsNodes.length; ing2++) {
+//////////////////////let displayedIngredient = displayedIngredientsNodes[ing2] ;
+//////////////////////let displayedIngredient_name = displayedIngredient.innerText ;
+//////////////////////let displayedIngredientClass = displayedIngredient.className ;
+//////////////////////if (displayedIngredientClass == "checked") {
+//////////////////////ingredientsToExclude.push(displayedIngredient_name) ;
+//////////////////////}
+//////////////////////}
+//////////////////////}
+//////////////////////document.getElementById("ingredientsToExclude").innerHTML = ingredientsToExclude;
+//////////////////////localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude) ;
 // get the values of the ingredients
-const ingredientsToExcludeValues = [];
-let skIngredientsReferences_from_front = document.getElementById("skIngredientsReferences").innerText ;
-const skIngredientsReferences = JSON.parse(skIngredientsReferences_from_front) ;
-let ing99 ;
-for (ing99 = 0; ing99 < ingredientsToExclude.length; ing99++) {
-let ingToExclude = ingredientsToExclude[ing99] ;
-let ingValue = skIngredientsReferences[ingToExclude] ;
-ingredientsToExcludeValues.push(ingValue) ;
-}
-document.getElementById("ingredientsToExcludeValues").innerText = ingredientsToExcludeValues ;
-localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues) ;
+//////////////////////const ingredientsToExcludeValues = [];
+//////////////////////let skIngredientsReferences_from_front = document.getElementById("skIngredientsReferences").innerText ;
+//////////////////////const skIngredientsReferences = JSON.parse(skIngredientsReferences_from_front) ;
+//////////////////////let ing99 ;
+//////////////////////for (ing99 = 0; ing99 < ingredientsToExclude.length; ing99++) {
+//////////////////////let ingToExclude = ingredientsToExclude[ing99] ;
+//////////////////////let ingValue = skIngredientsReferences[ingToExclude] ;
+//////////////////////ingredientsToExcludeValues.push(ingValue) ;
+//////////////////////}
+//////////////////////document.getElementById("ingredientsToExcludeValues").innerText = ingredientsToExcludeValues ;
+//////////////////////localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues) ;
 // END get the values of the ingredients
-}
+//////////////////////}
 // END script to get all the selected ingredients to avoid
-});
+//////////////////////});
 }
 // END OF SCRIPT FOR MILA PAGE
