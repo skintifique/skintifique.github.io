@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "beta4" ;
+ document.getElementById("milaJsVs").innerHTML = "beta5" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
@@ -380,6 +380,9 @@ function getMessage(e) {
 if (e.origin !== 'https://flamingo.skintifique.me') return;
 let msg = e.data ;
 document.getElementById("fromIframeExclusionList").innerText = msg ;
+  ////////////////////////// test close this function
+  }
+
 let ing_labels_start = msg.search("excluded_ingredients_labels=");
 let ing_values_start = msg.search("excluded_ingredients_values=") ;
 let riskgroups_labels_start = msg.search("excluded_riskgroups_labels=") ;
@@ -411,7 +414,7 @@ document.getElementById("riskgroupsExclusionListValues").innerText = excluded_ri
 localStorage.setItem("MILA_riskgroupsExclusionListValues",excluded_riskgroups_values) ;
 }
  ////////////////////////// test close this function
-  }
+//////////////////////////  }
 window.addEventListener("message", getMessage, false);
 
 //
