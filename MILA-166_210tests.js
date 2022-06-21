@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "beta2" ;
+ document.getElementById("milaJsVs").innerHTML = "beta3" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
