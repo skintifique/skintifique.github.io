@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 21" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 22" ;
 
 
 //function to select product and other options
@@ -194,6 +194,6 @@ document.getElementById("selectedAllergicToFactors").innerHTML = selectedAllergi
 // END get the values of the ingredients
 //////////////////////}
 // END script to get all the selected ingredients to avoid
-//////////////////////});
+});
 }
 // END OF SCRIPT FOR MILA PAGE
