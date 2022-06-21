@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 12" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 13" ;
 ///////////////////////////
 //END get the stored profile parameters and set up all the options
 //////////////////////////////////
@@ -27,7 +27,7 @@ minusSlides();
 ////////////////////////////document.getElementById("anyList_text").style.display = "block" ;
 ////////////////////////////document.getElementById("anyList_icon").style.display = "none" ;
 ////////////////////////////document.getElementById("ingredients_textarea").style.border = "1px solid #1895E2" ;
-});
+////////////////////////////});
 // END if click inside ingredient textarea, then unselect this ingredient list
 //manage button goToExcludedIngredients
 //let thereAreExcludedIngredients = document.getElementById("ingredientsToExclude").innerText ;
