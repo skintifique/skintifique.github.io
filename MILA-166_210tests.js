@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 26" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 27" ;
 
 
 //function to select product and other options
@@ -15,11 +15,11 @@ let e = selectProduct.target ;
 let selectedOption = e.id ;
 let selectedOption_class = e.classList ;
 //manage situations when user clicks on text below the top optoin images
-//////////////////if ((selectedOption === "recoOptionText00") || (selectedOption === "recoOptionText01") || (selectedOption === "recoOptionText02")){
-//////////////////selectedOption = "recoOption" ;
-//////////////////} else if ((selectedOption === "profileOptionText0") || (selectedOption === "profileOptionText01") || (selectedOption === "profileOptionText02")){
-//////////////////selectedOption = "profileOption" ;
-//////////////////}
+if ((selectedOption === "recoOptionText00") || (selectedOption === "recoOptionText01") || (selectedOption === "recoOptionText02")){
+selectedOption = "recoOption" ;
+} else if ((selectedOption === "profileOptionText0") || (selectedOption === "profileOptionText01") || (selectedOption === "profileOptionText02")){
+selectedOption = "profileOption" ;
+}
 //END manage situations when user clicks on text below the top optoin images
 //manage situations when user clicks on element that is a 1st child of an option
 
@@ -28,7 +28,7 @@ if (selectedOption_class.contains("inside_option")) {
 let selectedOption_parent = e.parentElement.id ;
 selectedOption = selectedOption_parent ;
 }
-//manage situations when user clicks on element that is a 1st child of an option
+
 // control the display of top options
 if ((selectedOption === "recoOption") || (selectedOption === "profileOption") || (selectedOption === "diagOption")) {
 
@@ -64,7 +64,7 @@ document.getElementById(selectedOption).classList.add("topOption_selected") ;
 document.getElementById("recoOption_button").style.opacity = "1" ;
 document.getElementById("profileOption_button").style.opacity = "0.3" ;
 //hide the text under the GoAnalyse btn and hide the MILA analysis
-//iframeMILA.style.display = "none" ;
+
 //////////////////document.getElementById("textUnderMILArecoBtn").style.display = "none" ;
 
 //show the top of the sliderfor the selectedOption class
