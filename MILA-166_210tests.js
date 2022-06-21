@@ -4,61 +4,8 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 16" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 17" ;
 
-////////////////////document.getElementById("goToExcludedIngredients").addEventListener("click",goToExcludedIngredients) ;
-////////////////////function goToExcludedIngredients () {
-////////////////////plusSlides() ;
-////////////////////}
-////////////////////document.getElementById("notAllergicToAnyIngredient").addEventListener("click",notAllergicToAnyIngredient) ;
-////////////////////function notAllergicToAnyIngredient() {
-////////////////////document.getElementById("ingredientsToExclude").innerText = "Vous n'avez indiqué aucun ingrédient à exclure" ;
-////////////////////document.getElementById("ingredientsToExcludeValues").innerText = "9999999" ;
-////////////////////document.getElementById("riskgroupsExclusionListLabels").innerText = "Vous n'avez indiqué aucun groupe d'ingrédients à exclure" ;
-////////////////////document.getElementById("riskgroupsExclusionListValues").innerText = "9999999" ;
-////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
-////////////////////plusSlides() ;
-////////////////////}
-////////////////////document.getElementById("confirmSKingredients").addEventListener("click",confirmSKingredients) ;
-////////////////////function confirmSKingredients() {
-////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
-////////////////////plusSlides() ;
-////////////////////}
-//show-hide accordionSKingredients
-////////////////////document.getElementById("showHideSKingredients").addEventListener("click",showHideSKingredients) ;
-////////////////////function showHideSKingredients () {
-////////////////////document.getElementById("showHideSKingredients").href = "#anchorAboveShowHideSkIng";
-//hide accordion_notAllergicToAnyIng if it has been opened
-//document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].style.display = "none" ;
-////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[0].classList.remove("showElement");
-////////////////////document.getElementsByClassName("accordion_notAllergicToAnyIng")[1].classList.remove("showElement");
-//other stuff to do
-////////////////////document.getElementById("showHideiframeExclusionList").classList.remove("option_selected1") ;
-////////////////////document.getElementById("iframeExclusionList").style.display = "none" ;
-////////////////////document.getElementsByClassName("accordionExclusionList")[0].style.display = "none" ;
-////////////////////let accordionSKingredients = document.getElementsByClassName("accordionSKingredients") ;
-////////////////////let accordionSKingredients_situation = accordionSKingredients[0].style.display ;
-////////////////////if (accordionSKingredients_situation == "none") {
-////////////////////accordionSKingredients[0].style.display = "block" ;
-////////////////////accordionSKingredients[1].style.display = "block" ;
-////////////////////document.getElementById("showHideSKingredients").classList.add("option_selected1") ;
-//the code below should be triggered only when user clicks on confirmSKingredients
-//document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
-////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-////////////////////} else if (accordionSKingredients_situation == "block") {
-////////////////////accordionSKingredients[0].style.display = "none" ;
-////////////////////accordionSKingredients[1].style.display = "none" ;
-////////////////////document.getElementById("showHideSKingredients").classList.remove("option_selected1");
-////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-////////////////////} else {
-////////////////////accordionSKingredients[0].style.display = "block" ;
-////////////////////accordionSKingredients[1].style.display = "block" ;
-////////////////////document.getElementById("showHideSKingredients").classList.add("option_selected1") ;
-//the code below should be triggered only when user clicks on confirmSKingredients
-//document.getElementById("ingredientsToAvoidOption").innerText = "skIngredients" ;
-////////////////////document.getElementById("ingredientsToAvoidOption").innerText = "none" ;
-////////////////////}
-////////////////////}
 
 //manage exclusion list
 //
@@ -119,43 +66,43 @@ document.getElementById("skin_normal").classList.remove("option_selectedSkinType
 document.getElementById("skin_normally_sensitive").classList.remove("option_selectedSkinType");
 };
 //manage select product options
-if (e.classList.contains("selectProduct")) {
+///////////////////////////if (e.classList.contains("selectProduct")) {
 //reset all borders to default
-let selectProduct = document.getElementsByClassName("selectProduct");
-var i;
-for (i = 0; i < selectProduct.length; i++) {
+///////////////////////////let selectProduct = document.getElementsByClassName("selectProduct");
+///////////////////////////var i;
+///////////////////////////for (i = 0; i < selectProduct.length; i++) {
 //selectProduct[i].style.border = "1px solid #1895E2";
-selectProduct[i].style.border = "0px solid #1895E2";
-document.getElementById("anyList").classList.remove("option_selected1") ;
-document.getElementById("anyList_text").style.display = "block" ;
-document.getElementById("anyList_icon").style.display = "none" ;
-}
-let selectedProduct = e.id ;
-e.style.border = "5px solid #1895E2" ;
+///////////////////////////selectProduct[i].style.border = "0px solid #1895E2";
+///////////////////////////document.getElementById("anyList").classList.remove("option_selected1") ;
+///////////////////////////document.getElementById("anyList_text").style.display = "block" ;
+///////////////////////////document.getElementById("anyList_icon").style.display = "none" ;
+///////////////////////////}
+///////////////////////////let selectedProduct = e.id ;
+///////////////////////////e.style.border = "5px solid #1895E2" ;
 //get the ingredient list
-let selectedIngredientList ;
+///////////////////////////let selectedIngredientList ;
 
-if (selectedIngredientList) {
-document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientListprofile").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientListdiag").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientListreco").innerHTML = selectedIngredientList ;
-document.getElementById("selectedIngredientList").style.color = "#00b6e2" ;
-document.getElementById("selectedIngredientListprofile").style.color = "#00b6e2" ;
-document.getElementById("selectedIngredientListdiag").style.color = "#00b6e2" ;
-document.getElementById("selectedIngredientListreco").style.color = "#00b6e2" ;
-} else {
-document.getElementById("selectedIngredientList").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientListprofile").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientListdiag").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientListreco").innerHTML = "There is no ingredient !"
-document.getElementById("selectedIngredientList").style.color = "red" ;
-document.getElementById("selectedIngredientListprofile").style.color = "red" ;
-document.getElementById("selectedIngredientListdiag").style.color = "red" ;
-document.getElementById("selectedIngredientListreco").style.color = "red" ;
-}
-startCleanIngrList(selectedIngredientList) ;
-}
+///////////////////////////if (selectedIngredientList) {
+///////////////////////////document.getElementById("selectedIngredientList").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientListprofile").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientListdiag").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientListreco").innerHTML = selectedIngredientList ;
+///////////////////////////document.getElementById("selectedIngredientList").style.color = "#00b6e2" ;
+///////////////////////////document.getElementById("selectedIngredientListprofile").style.color = "#00b6e2" ;
+///////////////////////////document.getElementById("selectedIngredientListdiag").style.color = "#00b6e2" ;
+///////////////////////////document.getElementById("selectedIngredientListreco").style.color = "#00b6e2" ;
+///////////////////////////} else {
+///////////////////////////document.getElementById("selectedIngredientList").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientListprofile").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientListdiag").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientListreco").innerHTML = "There is no ingredient !"
+///////////////////////////document.getElementById("selectedIngredientList").style.color = "red" ;
+///////////////////////////document.getElementById("selectedIngredientListprofile").style.color = "red" ;
+///////////////////////////document.getElementById("selectedIngredientListdiag").style.color = "red" ;
+///////////////////////////document.getElementById("selectedIngredientListreco").style.color = "red" ;
+///////////////////////////}
+///////////////////////////startCleanIngrList(selectedIngredientList) ;
+///////////////////////////}
 //script to select options
 let selectedOption = e.id ;
 let selectedOption_class = e.classList ;
