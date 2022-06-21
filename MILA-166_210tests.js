@@ -4,7 +4,7 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 27" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 29" ;
 
 
 //function to select product and other options
@@ -50,40 +50,33 @@ document.getElementById("profileOptionText2").style.display = "none";
 document.getElementById("textUnderMILAprofileBtn").style.display = "none";
 document.getElementById("textUnderMILAdiagBtn").style.display = "none";
 document.getElementById("textUnderMILArecoBtn").style.display = "none";
-//hide all accordion elements
-//////////////////let accordionElmt = document.getElementsByClassName("accordionElmt") ;
-//////////////////var j;
-//////////////////for (j = 0; j < accordionElmt.length; j++) {
-//////////////////accordionElmt[j].style.display = "none";
-//////////////////}
 
 //highlight selectedOption and do the other stuff
-switch (selectedOption) {
-case "recoOption" :
-document.getElementById(selectedOption).classList.add("topOption_selected") ;
-document.getElementById("recoOption_button").style.opacity = "1" ;
-document.getElementById("profileOption_button").style.opacity = "0.3" ;
+////////////////////switch (selectedOption) {
+////////////////////case "recoOption" :
+////////////////////document.getElementById(selectedOption).classList.add("topOption_selected") ;
+////////////////////document.getElementById("recoOption_button").style.opacity = "1" ;
+////////////////////document.getElementById("profileOption_button").style.opacity = "0.3" ;
 //hide the text under the GoAnalyse btn and hide the MILA analysis
 
-//////////////////document.getElementById("textUnderMILArecoBtn").style.display = "none" ;
 
 //show the top of the sliderfor the selectedOption class
-document.getElementsByClassName("accordionReco")[0].style.display = "block" ;
-document.getElementsByClassName("accordionReco")[1].style.display = "block" ;
-document.getElementsByClassName("accordionReco")[2].style.display = "block" ;
-document.getElementsByClassName("accordionReco")[3].style.display = "block" ;
+////////////////////document.getElementsByClassName("accordionReco")[0].style.display = "block" ;
+////////////////////document.getElementsByClassName("accordionReco")[1].style.display = "block" ;
+////////////////////document.getElementsByClassName("accordionReco")[2].style.display = "block" ;
+////////////////////document.getElementsByClassName("accordionReco")[3].style.display = "block" ;
 //show the first slide for the selectedOption class and reset the slideIndex
-//////////////////var slideIndex = 1;
-document.getElementsByClassName("slideReco")[0].style.display = "block" ;
+
+////////////////////document.getElementsByClassName("slideReco")[0].style.display = "block" ;
 //replace recoOptionText1 by recoOptionText2
-document.getElementById("recoOptionText1").style.display = "none" ;
-document.getElementById("recoOptionText2").style.display = "block" ;
+////////////////////document.getElementById("recoOptionText1").style.display = "none" ;
+////////////////////document.getElementById("recoOptionText2").style.display = "block" ;
 //store the selectedTopOption
-document.getElementById("selectedTopOption").innerHTML = "recoOption" ;
-break;
+////////////////////document.getElementById("selectedTopOption").innerHTML = "recoOption" ;
+////////////////////break;
+////////////////////}
 }
-}
-//ENDoptions in ingredient slide
+
 });
 }
 // END OF SCRIPT FOR MILA PAGE
