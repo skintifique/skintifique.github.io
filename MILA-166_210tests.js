@@ -4,30 +4,30 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 19" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 20" ;
 
 
 //manage exclusion list
 //
-let ingredientsToExcludeValues = document.getElementById("ingredientsToExcludeValues").innerText ;
-let riskgroupsExclusionListValues = document.getElementById("riskgroupsExclusionListValues").innerText ;
-if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")){
-ingredientsToExcludeValues = "9999999" ;
-}
-if ((riskgroupsExclusionListValues.length === 0) || (riskgroupsExclusionListValues === "riskgroupsExclusionListValues") || (riskgroupsExclusionListValues === "0")){
-riskgroupsExclusionListValues = "9999999" ;
-}
-const ingredientsToExcludeValues_arr = ingredientsToExcludeValues.split(",");
-let ingredientsToExcludeValues_arr_str = JSON.stringify(ingredientsToExcludeValues_arr) ;
-const riskgroupsExclusionListValues_arr = riskgroupsExclusionListValues.split(",");
-let riskgroupsExclusionListValues_arr_str = JSON.stringify(riskgroupsExclusionListValues_arr) ;
-let windowwidth = window.innerWidth;
-let lang ;
-if (current_url.includes('/fr/')) {
-lang = "fr-fr";
-} else {
-lang = "en-us" ;
-}
+/////////////////////let ingredientsToExcludeValues = document.getElementById("ingredientsToExcludeValues").innerText ;
+/////////////////////let riskgroupsExclusionListValues = document.getElementById("riskgroupsExclusionListValues").innerText ;
+/////////////////////if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")){
+/////////////////////ingredientsToExcludeValues = "9999999" ;
+/////////////////////}
+/////////////////////if ((riskgroupsExclusionListValues.length === 0) || (riskgroupsExclusionListValues === "riskgroupsExclusionListValues") || (riskgroupsExclusionListValues === "0")){
+/////////////////////riskgroupsExclusionListValues = "9999999" ;
+/////////////////////}
+/////////////////////const ingredientsToExcludeValues_arr = ingredientsToExcludeValues.split(",");
+/////////////////////let ingredientsToExcludeValues_arr_str = JSON.stringify(ingredientsToExcludeValues_arr) ;
+/////////////////////const riskgroupsExclusionListValues_arr = riskgroupsExclusionListValues.split(",");
+/////////////////////let riskgroupsExclusionListValues_arr_str = JSON.stringify(riskgroupsExclusionListValues_arr) ;
+/////////////////////let windowwidth = window.innerWidth;
+/////////////////////let lang ;
+/////////////////////if (current_url.includes('/fr/')) {
+/////////////////////lang = "fr-fr";
+/////////////////////} else {
+/////////////////////lang = "en-us" ;
+/////////////////////}
 
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
@@ -59,12 +59,12 @@ info_elmts[info_elmts0].classList.toggle("showElement") ;
 }
 }
 //manage style of reactive skin button on SkinType slide
-if (e.id == "info_reactive_skin") {
-document.getElementById("info_reactive_skin").href = "#textIntroReactiveSkin" ;
-document.getElementById("info_reactive_skin").classList.add("option_selectedSkinType");
-document.getElementById("skin_normal").classList.remove("option_selectedSkinType");
-document.getElementById("skin_normally_sensitive").classList.remove("option_selectedSkinType");
-};
+/////////////////////if (e.id == "info_reactive_skin") {
+/////////////////////document.getElementById("info_reactive_skin").href = "#textIntroReactiveSkin" ;
+/////////////////////document.getElementById("info_reactive_skin").classList.add("option_selectedSkinType");
+/////////////////////document.getElementById("skin_normal").classList.remove("option_selectedSkinType");
+/////////////////////document.getElementById("skin_normally_sensitive").classList.remove("option_selectedSkinType");
+/////////////////////};
 
 //script to select options
 let selectedOption = e.id ;
@@ -132,12 +132,7 @@ document.getElementById("profileOption_button").style.opacity = "0.3" ;
 //hide the text under the GoAnalyse btn and hide the MILA analysis
 //iframeMILA.style.display = "none" ;
 document.getElementById("textUnderMILArecoBtn").style.display = "none" ;
-//show all the accordion elements with the selectedOption class
-//let accordionReco = document.getElementsByClassName("accordionReco") ;
-//let c;
-//for (c = 0; c < accordionReco.length; c++) {
-//accordionReco[c].style.display = "block" ;
-//}
+
 //show the top of the sliderfor the selectedOption class
 document.getElementsByClassName("accordionReco")[0].style.display = "block" ;
 document.getElementsByClassName("accordionReco")[1].style.display = "block" ;
@@ -229,127 +224,5 @@ localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValue
 }
 // END script to get all the selected ingredients to avoid
 });
-
-//script to validate and start cleaning the ingredient list
-////////////////////////function startCleanIngrList(x) {
-// 1- remove the special characters
-////////////////////////let selectedIngredients_toclean = document.getElementById("selectedIngredientList").innerText;
-////////////////////////let remove1 = selectedIngredients_toclean.replace(/§/g, "");
-////////////////////////let remove2 = remove1.replace(/#/g, "");
-////////////////////////let remove3 = remove2.replace(/\+/g, "");
-////////////////////////let remove4 = remove3.replace(/\*/g, ""); ;
-////////////////////////let selectedIngredients_tosplit = remove4 ;
-// 2- create array using appropriate selector
-////////////////////////const array_comma_space = selectedIngredients_tosplit.split(", ");
-////////////////////////let count_comma_space = array_comma_space.length ;
-//document.getElementById("comma_space").innerHTML = array_comma_space ;
-//document.getElementById("count_comma_space").innerHTML = count_comma_space ;
-////////////////////////const array_space_dash_space = selectedIngredients_tosplit.split(" - ");
-////////////////////////let count_space_dash_space = array_space_dash_space.length ;
-//document.getElementById("space_dash_space").innerHTML = array_space_dash_space ;
-//document.getElementById("countength ;
-//_space_dash_space").innerHTML = count_space_dash_space ;
-////////////////////////const array_space_slash_space = selectedIngredients_tosplit.split(" / ");
-////////////////////////let count_space_slash_space = array_space_slash_space.length ;
-////////////////////////const array_space_bigdot_space = selectedIngredients_tosplit.split(" • ");
-////////////////////////let count_space_bigdot_space = array_space_bigdot_space.length ;
-////////////////////////let max = Math.max(count_comma_space, count_space_dash_space, count_space_slash_space, count_space_bigdot_space);
-//document.getElementById("max").innerText = max ;
-////////////////////////let selectedIngr_corr1 ;
-////////////////////////if (max === count_comma_space) {
-////////////////////////selectedIngr_corr1 = array_comma_space ;
-////////////////////////} else if (max === count_space_dash_space) {
-////////////////////////selectedIngr_corr1 = array_space_dash_space ;
-////////////////////////} else if (max === count_space_slash_space) {
-////////////////////////selectedIngr_corr1 = array_space_slash_space;
-////////////////////////} else if (max === count_space_bigdot_space) {
-////////////////////////selectedIngr_corr1 = array_space_bigdot_space;
-////////////////////////}
-//3 - trim the ingredients
-////////////////////////const selectedIngr_corr2 = [] ;
-////////////////////////var w;
-////////////////////////for (w = 0; w < selectedIngr_corr1.length; w++) {
-////////////////////////let ingr_corr1 = selectedIngr_corr1[w].trim() ;
-////////////////////////selectedIngr_corr2.push(ingr_corr1) ;
-////////////////////////}
-//document.getElementById("selectedIngr_corr1").innerText = selectedIngr_corr2 ;
-////////////////////////document.getElementById("selectedIngredientList").innerText = selectedIngr_corr2.join(", ") ;
-//END script to validate ingredient list
-////////////////////////}
-
-//START function to open iframeMILA with appropriate url and parameters for selectedTopOption
-////////////////////////document.getElementById("openMILAprofile").addEventListener("click", function () {setTimeout(openMILAprofile, 500)});
-////////////////////////function openMILAprofile () {
-////////////////////////document.getElementById("openMILAprofile").href = "#topMILA" ;
-////////////////////////document.getElementById("selectedTopOption").innerText = "profileOption" ;
-//hide iframeMILA and other elements
-////////////////////////document.getElementsByClassName("iframeMILA")[0].style.display = "none" ;
-//END hide all the elements that have been shown previously if user has used diagOption
-////////////////////////document.getElementById("openMILAprofile").classList.add("option_selected1") ;
-////////////////////////document.getElementById("diagOption").classList.remove("option_selected1") ;
-//document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "block" ;
-////////////////////////openMILA ();
-////////////////////////}
- 
-////////////////////////document.getElementById("openMILAdiag").addEventListener("click", function () {setTimeout(openMILA, 500)}) ;
- 
-////////////////////////function openMILA() {
-////////////////////////let lang3 ;
-////////////////////////if (current_url.includes("/en/")) {
-////////////////////////lang3 = "en-us" ;
-////////////////////////} else if (current_url.includes("/fr/")) {
-////////////////////////lang3 = "fr-fr" ;
-////////////////////////} else {
-////////////////////////lang3 = "en-us" ;
-////////////////////////}
-////////////////////////let textAboveMILAiFrame ;
-////////////////////////if (lang3 === "fr-fr") {
-////////////////////////textAboveMILAiFrame = "Merci de patienter quelques secondes, le temps d'afficher le profil de sûreté" ;
-////////////////////////} else {
-////////////////////////textAboveMILAiFrame = "Please wait a few seconds for the safety profile to be displayed below" ;
-////////////////////////}
-////////////////////////document.getElementById("textAboveMILAiFrame").innerText = textAboveMILAiFrame ;
-////////////////////////document.getElementById("textAboveMILAiFrame").style.display = "block" ;
-////////////////////////let selectedTopOption = document.getElementById("selectedTopOption").innerText ;
-////////////////////////let iframeMILA = document.getElementById("iframeMILA") ;
-////////////////////////document.getElementsByClassName("iframeMILA")[0].style.display = "block" ;
-////////////////////////document.getElementsByClassName("iframeMILA")[1].style.display = "block" ;
-////////////////////////document.getElementsByClassName("iframeMILA")[2].style.display = "block" ;
-////////////////////////let selectedProductName = document.getElementById("selectedProduct").innerText ;
-////////////////////////let selectedIngredientList = document.getElementById("selectedIngredientList").innerText ;
-//remove accents before encoding
-////////////////////////let selectedIngredientList_cleaned = selectedIngredientList.normalize('NFD').replace(/[\u0300-\u036f]/g, "") ;
-////////////////////////let str = "new_product_composition2=" + selectedIngredientList_cleaned ;
-////////////////////////let ingredients_encoded = window.btoa(str);
-////////////////////////if (selectedTopOption === "profileOption") {
-////////////////////////document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "block" ;
-///////////////////////////iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang3 + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
-////////////////////////} else if ((selectedTopOption === "recoOption") || (selectedTopOption === "diagOption")) {
-////////////////////////if (selectedTopOption === "diagOption") {
-////////////////////////document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "block" ;
-////////////////////////} else if (selectedTopOption === "recoOption") {
-////////////////////////document.getElementsByClassName("accordionRecoGoMila")[0].style.display = "block" ;
-////////////////////////}
-////////////////////////let selectedGender = document.getElementById("selectedGender").innerText ;
-////////////////////////let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
-////////////////////////let selectedFrequency = document.getElementById("selectedFrequency").innerText ;
-////////////////////////let selectedSkinArea = document.getElementById("selectedSkinArea").innerText ;
-////////////////////////let selectedConditions = document.getElementById("selectedConditions").innerText ;
-////////////////////////let ingredientsToExclude = document.getElementById("ingredientsToExcludeValues").innerText ;
-////////////////////////let riskgroupsExclusionList = document.getElementById("riskgroupsExclusionListValues").innerText ;
-////////////////////////if ((ingredientsToExclude.length === 0) || (ingredientsToExclude === "ingredientsToExcludeValues") || (ingredientsToExclude === "0")) {
-////////////////////////ingredientsToExclude = "9999999" ;
-////////////////////////}
-////////////////////////if ((riskgroupsExclusionList.length === 0) || (riskgroupsExclusionList === "riskgroupsExclusionListValues") || (riskgroupsExclusionList === "0")) {
-////////////////////////riskgroupsExclusionList = "9999999" ;
-////////////////////////}
-////////////////////////const ingredientsToExclude_arr = ingredientsToExclude.split(",");
-////////////////////////let ingredientsToExclude_arr_str = JSON.stringify(ingredientsToExclude_arr) ;
-////////////////////////const riskgroupsExclusionList_arr = riskgroupsExclusionList.split(",");
-////////////////////////let riskgroupsExclusionList_arr_str = JSON.stringify(riskgroupsExclusionList_arr) ;
-///////////////////////////iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang3 + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
-
-////////////////////////}
-////////////////////////}
 }
 // END OF SCRIPT FOR MILA PAGE
