@@ -368,7 +368,8 @@ lang = "en-us" ;
 //let fromcdiframe = localStorage.getItem("fromcdiframe"); code from iflam3, not in use here
 let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
 let targeturl ;
-if (windowwidth < 900) {
+/////////////////////////// if (windowwidth < 900) {
+ if (windowwidth < 9) {
 targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
 } else {
 targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
