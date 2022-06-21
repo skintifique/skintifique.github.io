@@ -1,10 +1,10 @@
 let current_urlMILA = window.location.href ;
-
+//////this vs: clean lang (several variables in the code)
 //functions for MILA page
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "210tests" ;
+ document.getElementById("milaJsVs").innerHTML = "beta2" ;
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
 //get the profile parameters, if user comes with flamclip=0 (email) or not
 let selectedGender ;
@@ -411,6 +411,8 @@ document.getElementById("riskgroupsExclusionListValues").innerText = excluded_ri
 localStorage.setItem("MILA_riskgroupsExclusionListValues",excluded_riskgroups_values) ;
 }
 window.addEventListener("message", getMessage, false);
+ ////////////////////////// test close this function
+ }
 //
 //decrypt and store excluded ingredients and riskgroups form Exclusion List
 //END decrypt and store excluded ingredients and riskgroups form Exclusion List
