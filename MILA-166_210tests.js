@@ -8,10 +8,12 @@ if (current_urlMILA.includes("/166-mila")) {
 
 
 //function to select product and other options
-////////////document.body.addEventListener("click", function(selectProduct) {
-document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
+document.body.addEventListener("click", function(selectProduct) {
+////////////document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
 let e = selectProduct.target ;
-
+/+++
+if (e.style.cursor === "pointer") {
+/+++
 //script to select options
 let selectedOption = e.id ;
 let selectedOption_class = e.classList ;
@@ -29,7 +31,9 @@ let selectedOption_class = e.classList ;
 //////////////////let selectedOption_parent = e.parentElement.id ;
 //////////////////selectedOption = selectedOption_parent ;
 //////////////////}
-
+/+++
+}
+/+++
 });
 }
 // END OF SCRIPT FOR MILA PAGE
