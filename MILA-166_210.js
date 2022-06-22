@@ -459,8 +459,13 @@ document.getElementById("selectedIngredientListdiag").style.color = "red" ;
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
 let e = selectProduct.target ;
-//let e_class = e.className ;
-//if (e_class === "selectProduct") {
+//if code added below to prevent ontouch to be interpreted as click and relaunching this script on iOS
+let e_style = getComputedStyle(e) ;
+let e_cursor = e_style.cursor;
+ 
+if (e_cursor === "pointer") {
+//END if code added below to prevent ontouch to be interpreted as click and relaunching this script on iOS (the closing } is around line 1661, juste before the closing of the function) 
+ 
 // actions when clicks on a various buttons inside the slider
 if (e.id === "noneOfTheseFactors") {
 // unselect any allergicToFactor that has been selected
@@ -1658,6 +1663,8 @@ localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValue
 // END get the values of the ingredients
 }
 // END script to get all the selected ingredients to avoid
+// below is the closing of the "if" script at beginning of the eventListener, to deal with ontouch on body on iOS
+} 
 });
 //START script to do stuff when user comes in with flamclip or inputProduct urlparameter
 let urlParamsCurrentUrl = new URLSearchParams(current_url);
