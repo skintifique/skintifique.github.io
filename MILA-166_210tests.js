@@ -6,14 +6,15 @@ if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
  document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 34" ;
 
-
 //function to select product and other options
 document.body.addEventListener("click", function(selectProduct) {
 ////////////document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
 let e = selectProduct.target ;
-/+++
-if (e.style.cursor === "pointer") {
-/+++
+let e_style = getComputedStyle(e) ;
+let e_cursor = e_style.cursor;
+
+if (e_cursor === "pointer") {
+
 //script to select options
 let selectedOption = e.id ;
 let selectedOption_class = e.classList ;
