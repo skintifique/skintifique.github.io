@@ -5,7 +5,7 @@ let current_urlMILA = window.location.href ;
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
  document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 34" ;
-
+}
 //function to select product and other options
 ///////document.body.addEventListener("click", function(selectProduct) {
 ////////////document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
@@ -36,5 +36,5 @@ if (current_urlMILA.includes("/166-mila")) {
 ///////}
 /+++
 ///////});
-}
+///////}
 // END OF SCRIPT FOR MILA PAGE
