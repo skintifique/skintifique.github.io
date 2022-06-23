@@ -2,7 +2,7 @@ let current_urlMILA = window.location.href ;
 
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 8" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 9" ;
  let current_url = window.location.href ;
  document.getElementById("milaJsVs2").innerHTML = current_url ;
 
@@ -16,6 +16,7 @@ for (let item of anchorlinks) { // relitere
             behavior: 'smooth',
             block: 'start'
         })
+      document.getElementById("milaJsVs2").innerHTML = "current_url" ;
         history.pushState(null, null, hashval)
         e.preventDefault()
     })
