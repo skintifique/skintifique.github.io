@@ -2,7 +2,7 @@ let current_urlMILA = window.location.href ;
 
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 37" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 38" ;
 
 document.getElementById("recoOption").addEventListener("click", selectOptionOrProduct(selectProduct)) ;
  }
@@ -13,7 +13,7 @@ function selectOptionOrProduct(selectProduct) {
 //////let e = selectProduct.target ;
 //////let e_style = getComputedStyle(e) ;
 //////let e_cursor = e_style.cursor;
-document.getElementById("milaJsVs").innerHTML = "selectOptionProduct" ;
+document.getElementById("milaJsVs2").innerHTML = "selectOptionProduct" ;
 }
 /////////if (e_cursor === "pointer") {
 
