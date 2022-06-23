@@ -458,7 +458,8 @@ document.getElementById("selectedIngredientListdiag").style.color = "red" ;
 };
 //END script to select text input in textarea box
 //function to select product and other options
-document.body.addEventListener("click", function(selectProduct) {
+///////////////document.body.addEventListener("click", function(selectProduct) {
+document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
 let e = selectProduct.target ;
 //if code added below to prevent ontouch to be interpreted as click and relaunching this script on iOS
 let e_style = getComputedStyle(e) ;
