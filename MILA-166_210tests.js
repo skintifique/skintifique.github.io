@@ -2,10 +2,10 @@ let current_urlMILA = window.location.href ;
 
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 44" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 45" ;
 
-document.body.addEventListener("touchstart", event => {event.preventDefault(); event.stopImmediatePropagation(); event.stopPropagation();});
-document.body.addEventListener("touchend", event => {event.preventDefault(); event.stopImmediatePropagation(); event.stopPropagation();});
+document.addEventListener("touchstart", function(event) {event.preventDefault(); event.stopImmediatePropagation(); event.stopPropagation();});
+document.addEventListener("touchend", function(event) {event.preventDefault(); event.stopImmediatePropagation(); event.stopPropagation();});
 document.getElementById("recoOption").addEventListener("click", function() {selectOptionOrProduct(this);});
  }
 //function to select product and other options
