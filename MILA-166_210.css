@@ -241,9 +241,11 @@ height:100px;
 }
 .btn_condition_selected {
 border:5px solid #1895E2;
+cursor:pointer;
 }
 .btn_allergicToFactor_selected {
 border:5px solid #1895E2;
+cursor:pointer;
 }
 i.icon_diag {
 font-size:34px;
