@@ -2,9 +2,9 @@ let current_urlMILA = window.location.href ;
 
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 38" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 39" ;
 
-document.getElementById("recoOption").addEventListener("click", selectOptionOrProduct(selectProduct)) ;
+document.getElementById("recoOption").addEventListener("click", function() {selectOptionOrProduct(this);});
  }
 //function to select product and other options
 ///////document.body.addEventListener("click", function(selectProduct) {
