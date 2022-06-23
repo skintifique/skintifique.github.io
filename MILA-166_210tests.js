@@ -4,16 +4,19 @@ let current_urlMILA = window.location.href ;
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
 //////show mila-166 version
- document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 35" ;
+ document.getElementById("milaJsVs").innerHTML = "THIS PAGE IS IN DEVELOPMENT / CETTE PAGE EST EN DEVELOPPEMENT 36" ;
 
+document.getElementById("recoOption").addEventListener("click", selectOptionOrProduct(selectProduct)) ;
 //function to select product and other options
 ///////document.body.addEventListener("click", function(selectProduct) {
+function selectOptionOrProduct(selectProduct) {
 ////////////document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
-///////let e = selectProduct.target ;
-///////let e_style = getComputedStyle(e) ;
-///////let e_cursor = e_style.cursor;
-
-///////if (e_cursor === "pointer") {
+//////let e = selectProduct.target ;
+//////let e_style = getComputedStyle(e) ;
+//////let e_cursor = e_style.cursor;
+document.getElementById("milaJsVs").innerHTML = "selectOptionProduct" ;
+}
+/////////if (e_cursor === "pointer") {
 
 //script to select options
 ///////let selectedOption = e.id ;
@@ -36,5 +39,5 @@ if (current_urlMILA.includes("/166-mila")) {
 ///////}
 //+++
 ///////});
-}
+////////}
 // END OF SCRIPT FOR MILA PAGE
