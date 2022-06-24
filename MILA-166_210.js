@@ -5,7 +5,7 @@ let current_urlMILA = window.location.href ;
 if (current_urlMILA.includes("/166-mila")) {
  // message about development stage
  if (current_urlMILA.includes("/fr/")) {
- document.getElementById("milaJsVs").innerHTML = "MILA EST EN COURS DE DÉVELOPPEMENT, MERCI POUR VOTRE COMPRÉHENSION 1" ;
+ document.getElementById("milaJsVs").innerHTML = "MILA EST EN COURS DE DÉVELOPPEMENT, MERCI POUR VOTRE COMPRÉHENSION" ;
  } else {
  document.getElementById("milaJsVs").innerHTML = "MILA IS IN DEVELOPMENT, PLEASE BEAR WITH US" ;
  }
@@ -468,10 +468,10 @@ document.body.addEventListener("click", function(selectProduct) {
 ///////////////document.getElementById("recoOption").addEventListener("click", function(selectProduct) {
 let e = selectProduct.target ;
 //if code added below to prevent ontouch to be interpreted as click and relaunching this script on iOS NOTE: NOT SURE THIS IS WORKING AS INTENDED, CONSIDER REMOVING
-let e_style = getComputedStyle(e) ;
-let e_cursor = e_style.cursor;
+//let e_style = getComputedStyle(e) ;
+//let e_cursor = e_style.cursor;
  
-if (e_cursor === "pointer") {
+//if (e_cursor === "pointer") {
 //END if code added below to prevent ontouch to be interpreted as click and relaunching this script on iOS (the closing } is around line 1661, juste before the closing of the function) 
  
 // actions when clicks on a various buttons inside the slider
@@ -1672,7 +1672,8 @@ localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValue
 }
 // END script to get all the selected ingredients to avoid
 // below is the closing of the "if" script at beginning of the eventListener, to deal with ontouch on body on iOS
-} 
+//} 
+// below is the closing of the body.addEventListener("click"...) function to deal with the user clicks on the options
 });
 //START script to do stuff when user comes in with flamclip or inputProduct urlparameter
 let urlParamsCurrentUrl = new URLSearchParams(current_url);
