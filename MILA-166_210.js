@@ -5,7 +5,7 @@ let current_urlMILA = window.location.href ;
 if (current_urlMILA.includes("/166-mila")) {
  // message about development stage
  if (current_urlMILA.includes("/fr/")) {
- document.getElementById("milaJsVs").innerHTML = "MILA EST EN COURS DE DÉVELOPPEMENT, MERCI POUR VOTRE COMPRÉHENSION" ;
+ document.getElementById("milaJsVs").innerHTML = "MILA EST EN COURS DE DÉVELOPPEMENT, MERCI POUR VOTRE COMPRÉHENSION." ;
  } else {
  document.getElementById("milaJsVs").innerHTML = "MILA IS IN DEVELOPMENT, PLEASE BEAR WITH US" ;
  }
@@ -272,9 +272,17 @@ plusSlides() ;
 }
 document.getElementById("notAllergicToAnyIngredient").addEventListener("click",notAllergicToAnyIngredient) ;
 function notAllergicToAnyIngredient() {
+ 
+if (current_urlMILA.includes("/fr/")) {
 document.getElementById("ingredientsToExclude").innerText = "Vous n'avez indiqué aucun ingrédient à exclure" ;
-document.getElementById("ingredientsToExcludeValues").innerText = "9999999" ;
 document.getElementById("riskgroupsExclusionListLabels").innerText = "Vous n'avez indiqué aucun groupe d'ingrédients à exclure" ;
+} else {
+document.getElementById("ingredientsToExclude").innerText = "You indicated that there are no ingredients to exclude" ;
+document.getElementById("riskgroupsExclusionListLabels").innerText = "You indicated that there are no ingredient groups to exclude" ;
+}
+//document.getElementById("ingredientsToExclude").innerText = "Vous n'avez indiqué aucun ingrédient à exclure" ;
+document.getElementById("ingredientsToExcludeValues").innerText = "9999999" ;
+//document.getElementById("riskgroupsExclusionListLabels").innerText = "Vous n'avez indiqué aucun groupe d'ingrédients à exclure" ;
 document.getElementById("riskgroupsExclusionListValues").innerText = "9999999" ;
 document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients" ;
 plusSlides() ;
