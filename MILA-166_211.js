@@ -430,6 +430,7 @@ window.addEventListener("message", getMessage, false);
 //end manage exclusion list
 //show-hide SK products below the textarea
 document.getElementById("showHideSKproducts").addEventListener("click",showHideSKproducts) ;
+ document.getElementById("showHideSKproductsIMG").addEventListener("click",showHideSKproducts) ;
 function showHideSKproducts () {
 let accordionSKproducts = document.getElementsByClassName("accordionSKproducts")[0] ;
 let accordionSKproducts_situation = accordionSKproducts.style.display ;
