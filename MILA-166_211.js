@@ -572,7 +572,7 @@ product_designation = "Protective Cream" ;
 product_designation = "La Crème" ;
   } else if (selectedProduct === "LSx1") {
 product_designation = "Le Sérum" ;
-   } else if (selectedProduct === MBx1") {
+   } else if (selectedProduct === "MBx1") {
 product_designation = "Moisturizing Balm" ;
 //break ;
 //default:
