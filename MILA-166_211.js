@@ -169,6 +169,10 @@ case "profileOption" :
 accordionTopOption = "accordionProfile" ;
 mySlides = "slideProfile" ;
 break ;
+case "skProductOption" :
+accordionTopOption = "accordionProfile" ;
+mySlides = "slideProfile" ;
+break ;
 case "diagOption" :
 accordionTopOption = "accordionDiag" ;
 mySlides = "slideDiag" ;
@@ -705,6 +709,9 @@ if ((selectedOption === "recoOptionText00") || (selectedOption === "recoOptionTe
 selectedOption = "recoOption" ;
 } else if ((selectedOption === "profileOptionText0") || (selectedOption === "profileOptionText01") || (selectedOption === "profileOptionText02")){
 selectedOption = "profileOption" ;
+//}
+} else if ((selectedOption === "skProductOptionText0") || (selectedOption === "skProductOptionText01") || (selectedOption === "skProductOptionText02")){
+selectedOption = "skProductOption" ;
 }
 //END manage situations when user clicks on text below the top optoin images
 //manage situations when user clicks on element that is a 1st child of an option
@@ -716,7 +723,7 @@ selectedOption = selectedOption_parent ;
 }
 //manage situations when user clicks on element that is a 1st child of an option
 // control the display of top options
-if ((selectedOption === "recoOption") || (selectedOption === "profileOption") || (selectedOption === "diagOption")) {
+if ((selectedOption === "recoOption") || (selectedOption === "profileOption") || (selectedOption === "diagOption") || (selectedOption === "skProductOption")) {
 //rest the slideIndex
 //slideIndex = 1;
 //hide the text line under the topOptions as it is now not useful to the user
