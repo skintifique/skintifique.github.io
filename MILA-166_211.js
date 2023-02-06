@@ -808,8 +808,8 @@ for (i = 0; i < accordionSKProfile.length; i++) {
 accordionSKProfile[i].style.display = "block" ;
 }
 //replace profileOptionText1 by profileOptionText2
-document.getElementById("SKProductOptionText1").style.display = "none" ;
-document.getElementById("SKProductOptionText2").style.display = "block" ;
+document.getElementById("skProductOptionText1").style.display = "none" ;
+document.getElementById("skProductOptionText2").style.display = "block" ;
 //store the selectedTopOption
 document.getElementById("selectedTopOption").innerHTML = "skProductOption" ;
 //reset slideIndex
