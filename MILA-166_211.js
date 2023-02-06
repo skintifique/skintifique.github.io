@@ -363,18 +363,18 @@ document.getElementById("ingredientsToAvoidOption").innerText = "allIngredients"
 }
 //manage exclusion list
 //
-let ingredientsToExcludeValues = document.getElementById("ingredientsToExcludeValues").innerText ;
-let riskgroupsExclusionListValues = document.getElementById("riskgroupsExclusionListValues").innerText ;
-if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")){
-ingredientsToExcludeValues = "9999999" ;
+let ingredientsToExcludeValues2 = document.getElementById("ingredientsToExcludeValues").innerText ;
+let riskgroupsExclusionListValues2 = document.getElementById("riskgroupsExclusionListValues").innerText ;
+if ((ingredientsToExcludeValues2.length === 0) || (ingredientsToExcludeValues2 === "ingredientsToExcludeValues") || (ingredientsToExcludeValues2 === "0")){
+ingredientsToExcludeValues2 = "9999999" ;
 }
-if ((riskgroupsExclusionListValues.length === 0) || (riskgroupsExclusionListValues === "riskgroupsExclusionListValues") || (riskgroupsExclusionListValues === "0")){
-riskgroupsExclusionListValues = "9999999" ;
+if ((riskgroupsExclusionListValues2.length === 0) || (riskgroupsExclusionListValues2 === "riskgroupsExclusionListValues") || (riskgroupsExclusionListValues2 === "0")){
+riskgroupsExclusionListValues2 = "9999999" ;
 }
-const ingredientsToExcludeValues_arr = ingredientsToExcludeValues.split(",");
-let ingredientsToExcludeValues_arr_str = JSON.stringify(ingredientsToExcludeValues_arr) ;
-const riskgroupsExclusionListValues_arr = riskgroupsExclusionListValues.split(",");
-let riskgroupsExclusionListValues_arr_str = JSON.stringify(riskgroupsExclusionListValues_arr) ;
+const ingredientsToExcludeValues2_arr = ingredientsToExcludeValues2.split(",");
+let ingredientsToExcludeValues2_arr_str = JSON.stringify(ingredientsToExcludeValues2_arr) ;
+const riskgroupsExclusionListValues2_arr = riskgroupsExclusionListValues2.split(",");
+let riskgroupsExclusionListValues2_arr_str = JSON.stringify(riskgroupsExclusionListValues2_arr) ;
 let windowwidth = window.innerWidth;
 let lang ;
 if (current_url.includes('/fr/')) {
@@ -386,9 +386,9 @@ lang = "en-us" ;
 let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
 let targeturl ;
 if (windowwidth < 900) {
-targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
+targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues2_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues2_arr_str ;
 } else {
-targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues_arr_str ;
+targeturl = refurl + "?display=default&size=width&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues2_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues2_arr_str ;
 }
 document.getElementById("iframeExclusionList").src = targeturl ;
 }
@@ -412,7 +412,12 @@ excluded_ingredients_labels = "Vous n'avez indiqué aucun ingrédient à exclure
 document.getElementById("ingredientsToExclude").innerText = excluded_ingredients_labels ;
 localStorage.setItem("MILA_ingredientsToExclude",excluded_ingredients_labels) ;
 let excluded_ingredients_values = msg.slice(excluded_ingredients_values_start,riskgroups_labels_start) ;
-if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")) {
+//the lines below include wrong ingredientsToExcludeValues parameter
+//if ((ingredientsToExcludeValues.length === 0) || (ingredientsToExcludeValues === "ingredientsToExcludeValues") || (ingredientsToExcludeValues === "0")) {
+//excluded_ingredients_values = "9999999" ;
+//}
+//end correction (see correct code just below
+if ((excluded_ingredients_values.length === 0) || (excluded_ingredients_values === "ingredientsToExcludeValues") || (excluded_ingredients_values === "0")) {
 excluded_ingredients_values = "9999999" ;
 }
 document.getElementById("ingredientsToExcludeValues").innerText = excluded_ingredients_values ;
@@ -1695,35 +1700,35 @@ document.getElementById("selectedAllergicToFactors").innerHTML = selectedAllergi
 // START script to get all the selected SK ingredients to avoid
 let ingredientsToAvoidOption = document.getElementById("ingredientsToAvoidOption").innerText ;
 if (ingredientsToAvoidOption === "skIngredients") {
-const ingredientsToExclude = [] ;
-let displayedIngredientsList = document.getElementsByClassName("displayedIngredientsList") ;
+const ingredientsToExclude3 = [] ;
+let displayedIngredientsList3 = document.getElementsByClassName("displayedIngredientsList") ;
 var ing1;
-for (ing1 = 0; ing1 < displayedIngredientsList.length; ing1++) {
-let displayedIngredientsNodes = displayedIngredientsList[ing1].childNodes ;
+for (ing1 = 0; ing1 < displayedIngredientsList3.length; ing1++) {
+let displayedIngredientsNodes3 = displayedIngredientsList3[ing1].childNodes ;
 var ing2 ;
-for (ing2 = 0; ing2 < displayedIngredientsNodes.length; ing2++) {
-let displayedIngredient = displayedIngredientsNodes[ing2] ;
-let displayedIngredient_name = displayedIngredient.innerText ;
-let displayedIngredientClass = displayedIngredient.className ;
-if (displayedIngredientClass == "checked") {
-ingredientsToExclude.push(displayedIngredient_name) ;
+for (ing2 = 0; ing2 < displayedIngredientsNodes3.length; ing2++) {
+let displayedIngredient3 = displayedIngredientsNodes3[ing2] ;
+let displayedIngredient3_name = displayedIngredient3.innerText ;
+let displayedIngredientClass3 = displayedIngredient3.className ;
+if (displayedIngredientClass3 == "checked") {
+ingredientsToExclude3.push(displayedIngredient3_name) ;
 }
 }
 }
-document.getElementById("ingredientsToExclude").innerHTML = ingredientsToExclude;
-localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude) ;
+document.getElementById("ingredientsToExclude").innerHTML = ingredientsToExclude3;
+localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude3) ;
 // get the values of the ingredients
-const ingredientsToExcludeValues = [];
-let skIngredientsReferences_from_front = document.getElementById("skIngredientsReferences").innerText ;
-const skIngredientsReferences = JSON.parse(skIngredientsReferences_from_front) ;
+const ingredientsToExcludeValues3 = [];
+let skIngredientsReferences_from_front3 = document.getElementById("skIngredientsReferences").innerText ;
+const skIngredientsReferences3 = JSON.parse(skIngredientsReferences_from_front3) ;
 let ing99 ;
-for (ing99 = 0; ing99 < ingredientsToExclude.length; ing99++) {
-let ingToExclude = ingredientsToExclude[ing99] ;
-let ingValue = skIngredientsReferences[ingToExclude] ;
-ingredientsToExcludeValues.push(ingValue) ;
+for (ing99 = 0; ing99 < ingredientsToExclude3.length; ing99++) {
+let ingToExclude = ingredientsToExclude3[ing99] ;
+let ingValue = skIngredientsReferences3[ingToExclude] ;
+ingredientsToExcludeValues3.push(ingValue) ;
 }
-document.getElementById("ingredientsToExcludeValues").innerText = ingredientsToExcludeValues ;
-localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues) ;
+document.getElementById("ingredientsToExcludeValues").innerText = ingredientsToExcludeValues3 ;
+localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues3) ;
 // END get the values of the ingredients
 }
 // END script to get all the selected ingredients to avoid
@@ -2081,8 +2086,8 @@ document.getElementById("recoProducts_message1").innerHTML = "Our products are c
 document.getElementById("recoProducts_message1").innerHTML = "" ;
 }
 //check that and signal if product contains ingredients that user is allergic to
-let ingredientsToExclude_innerText = document.getElementById("ingredientsToExclude").innerText ;
-const ingredientsToExclude = ingredientsToExclude_innerText.split(",") ;
+let ingredientsToExclude4_innerText = document.getElementById("ingredientsToExclude").innerText ;
+const ingredientsToExclude4 = ingredientsToExclude4_innerText.split(",") ;
 // for recoProduct1
 const recoProduct1_bad_ing = [] ;
 document.getElementById("recoProduct1Allergic").style.display = "none" ;
@@ -2091,7 +2096,7 @@ let recoProduct1_ingredients = document.getElementById(recoProduct1_ing).innerTe
 const recoProduct1_ingredients_arrayed = recoProduct1_ingredients.split(", ");
 var ingred ;
 for (ingred = 0; ingred < recoProduct1_ingredients_arrayed.length; ingred++) {
-if (ingredientsToExclude.indexOf(recoProduct1_ingredients_arrayed[ingred]) > -1) {
+if (ingredientsToExclude4.indexOf(recoProduct1_ingredients_arrayed[ingred]) > -1) {
 recoProduct1_bad_ing.push(recoProduct1_ingredients_arrayed[ingred]) ;
 document.getElementById("recoProduct1Allergic").style.display = "block" ;
 }
@@ -2106,7 +2111,7 @@ let recoProduct2_ingredients = document.getElementById(recoProduct2_ing).innerTe
 const recoProduct2_ingredients_arrayed = recoProduct2_ingredients.split(", ");
 var ingred2 ;
 for (ingred2 = 0; ingred2 < recoProduct2_ingredients_arrayed.length; ingred2++) {
-if (ingredientsToExclude.indexOf(recoProduct2_ingredients_arrayed[ingred2]) > -1) {
+if (ingredientsToExclude4.indexOf(recoProduct2_ingredients_arrayed[ingred2]) > -1) {
 recoProduct2_bad_ing.push(recoProduct2_ingredients_arrayed[ingred2]) ;
 document.getElementById("recoProduct2Allergic").style.display = "block" ;
 }
@@ -2121,7 +2126,7 @@ let recoProduct3_ingredients = document.getElementById(recoProduct3_ing).innerTe
 const recoProduct3_ingredients_arrayed = recoProduct3_ingredients.split(", ");
 var ingred3 ;
 for (ingred3 = 0; ingred3 < recoProduct3_ingredients_arrayed.length; ingred3++) {
-if (ingredientsToExclude.indexOf(recoProduct3_ingredients_arrayed[ingred3]) > -1) {
+if (ingredientsToExclude4.indexOf(recoProduct3_ingredients_arrayed[ingred3]) > -1) {
 recoProduct3_bad_ing.push(recoProduct3_ingredients_arrayed[ingred3]) ;
 document.getElementById("recoProduct3Allergic").style.display = "block" ;
 }
@@ -2189,19 +2194,19 @@ let selectedSkinType = document.getElementById("selectedSkinType").innerText ;
 let selectedFrequency = document.getElementById("selectedFrequency").innerText ;
 let selectedSkinArea = document.getElementById("selectedSkinArea").innerText ;
 let selectedConditions = document.getElementById("selectedConditions").innerText ;
-let ingredientsToExclude = document.getElementById("ingredientsToExcludeValues").innerText ;
-let riskgroupsExclusionList = document.getElementById("riskgroupsExclusionListValues").innerText ;
-if ((ingredientsToExclude.length === 0) || (ingredientsToExclude === "ingredientsToExcludeValues") || (ingredientsToExclude === "0")) {
-ingredientsToExclude = "9999999" ;
+let ingredientsToExclude5 = document.getElementById("ingredientsToExcludeValues").innerText ;
+let riskgroupsExclusionList5 = document.getElementById("riskgroupsExclusionListValues").innerText ;
+if ((ingredientsToExclude5.length === 0) || (ingredientsToExclude5 === "ingredientsToExcludeValues") || (ingredientsToExclude5 === "0")) {
+ingredientsToExclude5 = "9999999" ;
 }
-if ((riskgroupsExclusionList.length === 0) || (riskgroupsExclusionList === "riskgroupsExclusionListValues") || (riskgroupsExclusionList === "0")) {
-riskgroupsExclusionList = "9999999" ;
+if ((riskgroupsExclusionList5.length === 0) || (riskgroupsExclusionList5 === "riskgroupsExclusionListValues") || (riskgroupsExclusionList5 === "0")) {
+riskgroupsExclusionList5 = "9999999" ;
 }
-const ingredientsToExclude_arr = ingredientsToExclude.split(",");
-let ingredientsToExclude_arr_str = JSON.stringify(ingredientsToExclude_arr) ;
-const riskgroupsExclusionList_arr = riskgroupsExclusionList.split(",");
-let riskgroupsExclusionList_arr_str = JSON.stringify(riskgroupsExclusionList_arr) ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExclude_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList_arr_str + "&urlcode=" + ingredients_encoded ;
+const ingredientsToExclude5_arr = ingredientsToExclude5.split(",");
+let ingredientsToExclude5_arr_str = JSON.stringify(ingredientsToExclude5_arr) ;
+const riskgroupsExclusionList5_arr = riskgroupsExclusionList5.split(",");
+let riskgroupsExclusionList5_arr_str = JSON.stringify(riskgroupsExclusionList5_arr) ;
+iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExclude5_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList5_arr_str + "&urlcode=" + ingredients_encoded ;
 //the 2 lines of code below are expected to set the height of the iframe to the content inside. The inline style of the iframe may need to be removed + the height of the inside content may need to be adapted
 iframeMILA.onload = function(){
 iframeMILA.style.height = iframeMILA.contentWindow.document.body.scrollHeight + 'px';
