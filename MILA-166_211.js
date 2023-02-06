@@ -568,6 +568,12 @@ product_designation = "Cleanser Lotion" ;
 //case "PC40x1" :
 } else if (selectedProduct === "PC20x1") {
 product_designation = "Protective Cream" ;
+ } else if (selectedProduct === "LC0x1") {
+product_designation = "La Crème" ;
+  } else if (selectedProduct === "LSx1") {
+product_designation = "Le Sérum" ;
+   } else if (selectedProduct === MBx1") {
+product_designation = "Moisturizing Balm" ;
 //break ;
 //default:
 //} else if (selectedProduct === "recoProduct1_img") {
@@ -1831,9 +1837,9 @@ let recoProduct3 ;
 //select the appropriate products based on user input
 switch (selectedSearch) {
 case "moisturizer-none" :
-recoProduct1 = "HG150x1";
+recoProduct1 = "MBx1";
 recoProduct2 = "ML200x1";
-recoProduct3 = "HG150x3";
+recoProduct3 = "MBx3";
 break ;
 case "cleanser-none" :
 recoProduct1 = "CL200x1";
@@ -1841,45 +1847,45 @@ recoProduct2 = "CL200x3";
 recoProduct3 = "ML200x1";
 break ;
 case "moisturizer_face_intense-none" :
-recoProduct1 = "HG40x1";
-recoProduct2 = "HG40x3";
-recoProduct3 = "CL200x1";
+recoProduct1 = "LCx1";
+recoProduct2 = "MBx1";
+recoProduct3 = "HG400x1";
 break ;
 case "moisturizer_body_intense-none" :
-recoProduct1 = "HG150x1";
-recoProduct2 = "HG150x3";
+recoProduct1 = "MBx1";
+recoProduct2 = "MBx3";
 recoProduct3 = "ML200x1";
 break ;
 case "moisturizer_body_default-none" :
 recoProduct1 = "ML200x1";
 recoProduct2 = "ML200x3";
-recoProduct3 = "HG150x1";
+recoProduct3 = "MBx3";
 break ;
 case "moisturizer_deal-none" :
-recoProduct1 = "HG40x3";
-recoProduct2 = "HG150x3";
+recoProduct1 = "MBx3";
+recoProduct2 = "HG40x3";
 recoProduct3 = "ML200x3";
 break ;
 case "solution-eczema" :
 recoProduct1 = "ECZE_body_pack";
 recoProduct2 = "ECZE_face_pack";
-recoProduct3 = "ML200x1";
+recoProduct3 = "MBx1";
 break ;
 // new situations
 case "solution-eczema_dermatitis" :
 recoProduct1 = "ECZE_body_pack";
 recoProduct2 = "ECZE_face_pack";
-recoProduct3 = "ML200x1";
+recoProduct3 = "MBx1";
 break ;
 case "solution-dyshidrosis" :
 recoProduct1 = "DYSH_pack";
 recoProduct2 = "HG150x1";
-recoProduct3 = "ML200x1";
+recoProduct3 = "MBx1";
 break ;
 case "solution-seborrheic" :
 recoProduct1 = "SEB_pack";
 recoProduct2 = "CL200x1";
-recoProduct3 = "ML200x1";
+recoProduct3 = "MBx1";
 break ;
 case "solution-contact_eczema_nickel" :
 recoProduct1 = "NAL_pack";
@@ -1887,15 +1893,15 @@ recoProduct2 = "PC20x1";
 recoProduct3 = "ML200x1";
 break ;
 case "solution-burn" :
-recoProduct1 = "HG150x1";
+recoProduct1 = "MBx1";
 recoProduct2 = "HG40x1";
-recoProduct3 = "HG150x3";
+recoProduct3 = "MBx3";
 break ;
 // END new situations
 case "solution-psoriasis" :
 recoProduct1 = "PSO_body_pack";
 recoProduct2 = "PSO_face_pack";
-recoProduct3 = "HG150x1";
+recoProduct3 = "MBx3";
 break ;
 case "solution-acne" :
 recoProduct1 = "ACNE_pack";
@@ -1904,8 +1910,8 @@ recoProduct3 = "ML200x1";
 break ;
 case "solution-pregnancy" :
 recoProduct1 = "MATE_pack";
-recoProduct2 = "HG150x1";
-recoProduct3 = "ML200x1";
+recoProduct2 = "MBx1";
+recoProduct3 = "MBx3";
 break ;
 case "solution-pollution" :
 recoProduct1 = "ML200x1";
@@ -1943,9 +1949,9 @@ recoProduct2 = "PC20x3";
 recoProduct3 = "NAL_pack";
 break ;
 case "solution-aging" :
-recoProduct1 = "HG40x1";
-recoProduct2 = "HG150x1";
-recoProduct3 = "HG40x3";
+recoProduct1 = "FCR_packx1";
+recoProduct2 = "MBx1";
+recoProduct3 = "LSx1";
 break ;
 }
 //END select the appropriate products based on user input
