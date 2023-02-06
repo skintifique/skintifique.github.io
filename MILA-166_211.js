@@ -1849,7 +1849,7 @@ break ;
 case "moisturizer_face_intense-none" :
 recoProduct1 = "LCx1";
 recoProduct2 = "MBx1";
-recoProduct3 = "HG400x1";
+recoProduct3 = "HG40x1";
 break ;
 case "moisturizer_body_intense-none" :
 recoProduct1 = "MBx1";
