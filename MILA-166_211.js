@@ -170,8 +170,8 @@ accordionTopOption = "accordionProfile" ;
 mySlides = "slideProfile" ;
 break ;
 case "skProductOption" :
-accordionTopOption = "accordionProfile" ;
-mySlides = "slideProfile" ;
+accordionTopOption = "accordionSKProfile" ;
+mySlides = "slideSKProfile" ;
 break ;
 case "diagOption" :
 accordionTopOption = "accordionDiag" ;
@@ -731,17 +731,21 @@ document.getElementById("textUnderTopOptions").style.display = "none" ;
 //remove borders for all the top option buttons
 document.getElementById("recoOption").classList.remove("topOption_selected") ;
 document.getElementById("profileOption").classList.remove("topOption_selected") ;
+ document.getElementById("skProductOption").classList.remove("topOption_selected") ;
 document.getElementById("diagOption").classList.remove("option_selected1") ;
 //reset all the OptionText1 to display block
 document.getElementById("recoOptionText1").style.display = "block";
 document.getElementById("diagOptionText1").style.display = "block";
 document.getElementById("profileOptionText1").style.display = "block";
+ document.getElementById("skProductOptionText1").style.display = "block";
 //reset all the OptionText2 to display none
 document.getElementById("recoOptionText2").style.display = "none";
 document.getElementById("diagOptionText2").style.display = "none";
 document.getElementById("profileOptionText2").style.display = "none";
+ document.getElementById("skProductOptionText2").style.display = "none";
 //reset all the textUnderMILAxxxBtn to display none
 document.getElementById("textUnderMILAprofileBtn").style.display = "none";
+// NOT SURE THIS IS USEFUL document.getElementById("textUnderMILASKprofileBtn").style.display = "none";
 document.getElementById("textUnderMILAdiagBtn").style.display = "none";
 document.getElementById("textUnderMILArecoBtn").style.display = "none";
 //hide all accordion elements
@@ -767,6 +771,7 @@ case "profileOption" :
 document.getElementById(selectedOption).classList.add("topOption_selected") ;
 document.getElementById("profileOption_button").style.opacity = "1" ;
 document.getElementById("recoOption_button").style.opacity = "0.3" ;
+  document.getElementById("skProductOption_button").style.opacity = "0.3" ;
 //hide the text under the GoAnalyse btn and hide the MILA analysis
 //iframeMILA.style.display = "none" ;
 document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
@@ -784,6 +789,33 @@ document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 //reset slideIndex
 var slideIndex = 1 ;
 break;
+  case "skProductOption" :
+//reset slideIndex
+//slideIndex = 1;
+//
+//document.getElementById(selectedOption).style.border = "5px solid #1895E2" ;
+document.getElementById(selectedOption).classList.add("topOption_selected") ;
+document.getElementById("profileOption_button").style.opacity = "0.3" ;
+document.getElementById("recoOption_button").style.opacity = "0.3" ;
+  document.getElementById("skProductOption_button").style.opacity = "1" ;
+//hide the text under the GoAnalyse btn and hide the MILA analysis
+//iframeMILA.style.display = "none" ;
+document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
+//show all the accordion elements with the selectedOption class
+let accordionSKProfile = document.getElementsByClassName("accordionSKProfile") ;
+let i;
+for (i = 0; i < accordionSKProfile.length; i++) {
+accordionSKProfile[i].style.display = "block" ;
+}
+//replace profileOptionText1 by profileOptionText2
+document.getElementById("SKProductOptionText1").style.display = "none" ;
+document.getElementById("SKProductOptionText2").style.display = "block" ;
+//store the selectedTopOption
+document.getElementById("selectedTopOption").innerHTML = "skProductOption" ;
+//reset slideIndex
+var slideIndex = 1 ;
+break;
+  
 case "diagOption" :
 //reset slideIndex
 //slideIndex = 1;
