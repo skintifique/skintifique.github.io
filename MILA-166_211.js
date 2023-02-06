@@ -1856,14 +1856,14 @@ document.getElementById("selectedIngredientList").innerText = selectedIngr_corr2
 //actions when button confirm_excludedIngredients is clicked
 document.getElementById("confirm_excludedIngredients").addEventListener("click", confirmExcludedIngredients) ;
 function confirmExcludedIngredients() {
-let ingredientsToExclude3 = document.getElementById("ingredientsToExclude").innerText ;
-let ingredientsToExcludeValues3 = document.getElementById("ingredientsToExcludeValues").innerText ;
-let riskgroupsExclusionListLabels3 = document.getElementById("riskgroupsExclusionListLabels").innerText ;
-let riskgroupsExclusionListValues3 = document.getElementById("riskgroupsExclusionListValues").innerText ;
-localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude3) ;
-localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues3) ;
-localStorage.setItem("MILA_riskgroupsExclusionListLabels",riskgroupsExclusionListLabels3) ;
-localStorage.setItem("MILA_riskgroupsExclusionListValues",riskgroupsExclusionListValues3) ;
+let ingredientsToExclude6 = document.getElementById("ingredientsToExclude").innerText ;
+let ingredientsToExcludeValues6 = document.getElementById("ingredientsToExcludeValues").innerText ;
+let riskgroupsExclusionListLabels6 = document.getElementById("riskgroupsExclusionListLabels").innerText ;
+let riskgroupsExclusionListValues6 = document.getElementById("riskgroupsExclusionListValues").innerText ;
+localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude6) ;
+localStorage.setItem("MILA_ingredientsToExcludeValues",ingredientsToExcludeValues6) ;
+localStorage.setItem("MILA_riskgroupsExclusionListLabels",riskgroupsExclusionListLabels6) ;
+localStorage.setItem("MILA_riskgroupsExclusionListValues",riskgroupsExclusionListValues6) ;
 }
 //actions when button openMILArecoSKproduct is clicked
 document.getElementById("openMILArecoSKproduct").addEventListener("click", openMILArecoSKproduct) ;
