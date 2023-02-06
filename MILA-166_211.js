@@ -1949,7 +1949,7 @@ recoProduct2 = "PC20x3";
 recoProduct3 = "NAL_pack";
 break ;
 case "solution-aging" :
-recoProduct1 = "FCR_packx1";
+recoProduct1 = "FCR_pack";
 recoProduct2 = "MBx1";
 recoProduct3 = "LSx1";
 break ;
