@@ -1902,7 +1902,7 @@ recoProduct3 = "MBx3";
 break ;
 // END new situations
 case "solution-psoriasis" :
-recoProduct1 = "PSO_body_pack";
+recoProduct1 = "PSO_balm_pack";
 recoProduct2 = "PSO_face_pack";
 recoProduct3 = "MBx3";
 break ;
