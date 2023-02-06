@@ -436,12 +436,15 @@ let accordionSKproducts_situation = accordionSKproducts.style.display ;
 if (accordionSKproducts_situation == "none") {
 accordionSKproducts.style.display = "block" ;
 document.getElementsByClassName("accordionSKproducts")[1].style.display = "block" ;
+ document.getElementsByClassName("accordionSKproducts")[2].style.display = "block" ;
 } else if (accordionSKproducts_situation == "block") {
 accordionSKproducts.style.display = "none" ;
 document.getElementsByClassName("accordionSKproducts")[1].style.display = "none" ;
+ document.getElementsByClassName("accordionSKproducts")[2].style.display = "none" ;
 } else {
 accordionSKproducts.style.display = "block" ;
 document.getElementsByClassName("accordionSKproducts")[1].style.display = "block" ;
+ document.getElementsByClassName("accordionSKproducts")[2].style.display = "block" ;
 }
 }
 //ENDshow-hide SK products below the textarea
