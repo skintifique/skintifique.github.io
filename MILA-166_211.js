@@ -803,9 +803,9 @@ document.getElementById("recoOption_button").style.opacity = "0.3" ;
 document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
 //show all the accordion elements with the selectedOption class
 let accordionSKProfile = document.getElementsByClassName("accordionSKProfile") ;
-let i;
-for (i = 0; i < accordionSKProfile.length; i++) {
-accordionSKProfile[i].style.display = "block" ;
+let ipr;
+for (ipr = 0; ipr < accordionSKProfile.length; ipr++) {
+accordionSKProfile[ipr].style.display = "block" ;
 }
 //replace profileOptionText1 by profileOptionText2
 document.getElementById("skProductOptionText1").style.display = "none" ;
