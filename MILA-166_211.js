@@ -568,7 +568,7 @@ product_designation = "Cleanser Lotion" ;
 //case "PC40x1" :
 } else if (selectedProduct === "PC20x1") {
 product_designation = "Protective Cream" ;
- } else if (selectedProduct === "LC0x1") {
+ } else if (selectedProduct === "LCx1") {
 product_designation = "La Crème" ;
   } else if (selectedProduct === "LSx1") {
 product_designation = "Le Sérum" ;
