@@ -789,7 +789,7 @@ document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 //reset slideIndex
 var slideIndex = 1 ;
 break;
-  case "skProductOption" :
+case "skProductOption" :
 //reset slideIndex
 //slideIndex = 1;
 //
@@ -803,9 +803,9 @@ document.getElementById("recoOption_button").style.opacity = "0.3" ;
 document.getElementById("textUnderMILAprofileBtn").style.display = "none" ;
 //show all the accordion elements with the selectedOption class
 let accordionSKProfile = document.getElementsByClassName("accordionSKProfile") ;
-let ipr;
-for (ipr = 0; ipr < accordionSKProfile.length; ipr++) {
-accordionSKProfile[ipr].style.display = "block" ;
+let iz;
+for (iz = 0; iz < accordionSKProfile.length; iz++) {
+accordionSKProfile[iz].style.display = "block" ;
 }
 //replace profileOptionText1 by profileOptionText2
 document.getElementById("skProductOptionText1").style.display = "none" ;
@@ -815,7 +815,6 @@ document.getElementById("selectedTopOption").innerHTML = "skProductOption" ;
 //reset slideIndex
 var slideIndex = 1 ;
 break;
-  
 case "diagOption" :
 //reset slideIndex
 //slideIndex = 1;
