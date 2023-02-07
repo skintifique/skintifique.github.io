@@ -818,7 +818,7 @@ document.getElementById("skProductOptionText2").style.display = "block" ;
 //store the selectedTopOption
 document.getElementById("selectedTopOption").innerHTML = "skProductOption" ;
 //reset slideIndex
-var slideIndex = 1 ;
+var slideIndex = 3 ;
 break;
 case "diagOption" :
 //reset slideIndex
