@@ -5,9 +5,9 @@ let current_urlMILA = window.location.href ;
 if (current_urlMILA.includes("/166-mila")) {
  // message about development stage
  if (current_urlMILA.includes("/fr/")) {
- document.getElementById("milaJsVs").innerHTML = "MILA EST EN COURS DE DÉVELOPPEMENT, MERCI POUR VOTRE COMPRÉHENSION." ;
+ document.getElementById("milaJsVs").innerHTML = "MILA EST EN DÉVELOPPEMENT, N'HÉSITEZ PAS À NOUS ENVOYER DES SUGGESTIONS!" ;
  } else {
- document.getElementById("milaJsVs").innerHTML = "MILA IS IN DEVELOPMENT, PLEASE BEAR WITH US" ;
+ document.getElementById("milaJsVs").innerHTML = "MILA IS IN DEVELOPMENT, WE WELCOME YOUR FEEDBACKS!" ;
  }
 // END message about development stage
 //if ((current_url.includes("https://www.skintifique.me/shop/en/166-mila")) || (current_url.includes("https://www.skintifique.me/shop/fr/166-mila"))) {
