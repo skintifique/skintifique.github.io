@@ -106,7 +106,7 @@ display: inline-block;
 }
 .selectDiag_allergicToFactor {
 border: 1px solid orange;
-background-color: white;
+background-color: orange;
 color: black;
 cursor:pointer;
 border-radius:30px;
@@ -115,6 +115,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height: 120px ;
 }
 .option_selectedAllergicToFactor {
 border: 5px solid orange;
