@@ -140,6 +140,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height:120px;
 }
 .option_selectedFrequency {
 border: 5px solid green;
@@ -164,6 +165,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height:120px;
 }
 .option_selectedArea {
 border: 5px solid purple;
@@ -176,7 +178,6 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
-min-height: 120px ;
 }
 .selectDiag_condition {
 border: 1px solid orange;
@@ -189,6 +190,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height:120px;
 }
 .option_selectedCondition {
 border: 5px solid orange;
