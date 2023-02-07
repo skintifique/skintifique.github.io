@@ -67,6 +67,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height:120px;
 }
 .option_selectedGender {
 border: 5px solid indigo;
@@ -79,6 +80,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height:120px;
 }
 .selectDiag_skinType {
 border: 1px solid blue;
@@ -128,6 +130,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+height: 130px;
 }
 .selectDiag_frequency {
 border: 1px solid green;
@@ -153,6 +156,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+  height: 120px ;
 }
 .selectDiag_area {
 border: 1px solid purple;
@@ -178,6 +182,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+  height: 120px ;
 }
 .selectDiag_condition {
 border: 1px solid orange;
@@ -203,6 +208,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
+  height: 120px ;
 }
 .selectBtn_lookingFor {
 border: 1px solid #1895E2;
@@ -229,6 +235,7 @@ margin-top:20px;
 font-size:18px;
 display: inline-block;
 height:100px;
+  height:120px;
 }
 .option_selectedLookingForAcc {
 border: 5px solid #1895E2;
@@ -241,7 +248,7 @@ margin-bottom:20px;
 margin-top:20px;
 font-size:18px;
 display: inline-block;
-height:100px;
+height:120px;
 }
 .btn_condition_selected {
 border:5px solid #1895E2;
