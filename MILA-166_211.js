@@ -1720,11 +1720,12 @@ localStorage.setItem("MILA_ingredientsToExclude",ingredientsToExclude3) ;
 // get the values of the ingredients
 const ingredientsToExcludeValues3 = [];
 let ingredientsToExclude3b = document.getElementById("ingredientsToExclude").innerHTML ;
+const ingredientsToExclude3b_parsed = JSON.parse(ingredientsToExclude3b) ;
 let skIngredientsReferences_from_front3 = document.getElementById("skIngredientsReferences").innerText ;
 const skIngredientsReferences3 = JSON.parse(skIngredientsReferences_from_front3) ;
 let ing99 ;
-for (ing99 = 0; ing99 < ingredientsToExclude3b.length; ing99++) {
-let ingToExclude = ingredientsToExclude3b[ing99] ;
+for (ing99 = 0; ing99 < ingredientsToExclude3b_parsed.length; ing99++) {
+let ingToExclude = ingredientsToExclude3b_parsed[ing99] ;
 let ingValue = skIngredientsReferences3[ingToExclude] ;
 ingredientsToExcludeValues3.push(ingValue) ;
 }
