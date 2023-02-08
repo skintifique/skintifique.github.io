@@ -184,16 +184,23 @@ break ;
 let slides = document.getElementsByClassName(mySlides);
 if (n == "1") {
 document.getElementById("prev").style.display = "none" ;
-} else {
+document.getElementById("next").style.display = "block" ;
+} else if (n === slides.length) {
 document.getElementById("prev").style.display = "block" ;
-}
-if (n === slides.length) {
 document.getElementById("next").style.display = "none" ;
+} elso if (n > slides.length) {
+ slideIndex = 1 ;
+document.getElementById("prev").style.display = "none" ;
+document.getElementById("next").style.display = "block" ;
+} else if (n < 1) {
+ slideIndex = slides.length ;
+document.getElementById("prev").style.display = "none" ;
+document.getElementById("next").style.display = "block" ;
 } else {
 document.getElementById("next").style.display = "block" ;
+document.getElementById("prev").style.display = "block" ;
 }
-if (n > slides.length) {slideIndex = 1}
-if (n < 1) {slideIndex = slides.length}
+
 var i;
 for (i = 0; i < slides.length; i++) {
 slides[i].style.display = "none";
