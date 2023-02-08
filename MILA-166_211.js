@@ -675,7 +675,11 @@ product_designation = document.getElementById("inputProduct_code").innerText ;
 //reset selectedProduct
 selectedProduct = product_designation ;
 // reset slideIndex and show first appropriate slide
-var slideIndex = 0 ;
+//var slideIndex = 0 ;
+ slideIndex = 0 ;
+  //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 plusSlides() ;
 //show elements for the personal diag questions
 document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
@@ -872,7 +876,11 @@ document.getElementById("selectedTopOption").innerHTML = "diagOption" ;
 //document.getElementsByClassName("slideDiag")[2].style.display = "block" ;
 //var slideIndex = 4 ;
 //showSlides(slideIndex += 3) ;
-var slideIndex = 2 ;
+//var slideIndex = 2 ;
+  slideIndex = 2 ;
+  //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 plusSlides();
 // show prevnextbuttons
 document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
@@ -899,7 +907,11 @@ document.getElementsByClassName("accordionReco")[1].style.display = "block" ;
 document.getElementsByClassName("accordionReco")[2].style.display = "block" ;
 document.getElementsByClassName("accordionReco")[3].style.display = "block" ;
 //show the first slide for the selectedOption class and reset the slideIndex
-var slideIndex = 1;
+//var slideIndex = 1;
+  slideIndex = 1 ;
+  //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 document.getElementsByClassName("slideReco")[0].style.display = "block" ;
 //replace recoOptionText1 by recoOptionText2
 document.getElementById("recoOptionText1").style.display = "none" ;
@@ -1792,7 +1804,11 @@ accordionProfile[i].style.display = "block" ;
 //store the selectedTopOption
 document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 // reset slideIndex and show first appropriate slide
-var slideIndex = 0 ;
+//var slideIndex = 0 ;
+ slideIndex = 0 ;
+  //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 plusSlides() ;
 //show elements for the personal diag questions
 document.getElementsByClassName("prevnextbuttons")[0].style.display = "block" ;
