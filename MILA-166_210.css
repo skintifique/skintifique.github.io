@@ -107,8 +107,8 @@ font-size:18px;
 display: inline-block;
 }
 .selectDiag_allergicToFactor {
-border: 1px solid orange;
-background-color: orange;
+border: 2px solid orange;
+background-color: white;
 color: black;
 cursor:pointer;
 border-radius:30px;
