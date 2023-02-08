@@ -157,6 +157,9 @@ function currentSlide(n) {
 showSlides(slideIndex = n);
 }
 function showSlides(n) {
+ //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 let selectedTopOption0 = document.getElementById("selectedTopOption").innerText ;
 let accordionTopOption ;
 let mySlides ;
