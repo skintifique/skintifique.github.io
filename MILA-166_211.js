@@ -190,10 +190,14 @@ document.getElementById("prev").style.display = "block" ;
 document.getElementById("next").style.display = "none" ;
 } elso if (n > slides.length) {
  slideIndex = 1 ;
+ // the line below if for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
 document.getElementById("prev").style.display = "none" ;
 document.getElementById("next").style.display = "block" ;
 } else if (n < 1) {
  slideIndex = slides.length ;
+// the line below if for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
 document.getElementById("prev").style.display = "none" ;
 document.getElementById("next").style.display = "block" ;
 } else {
