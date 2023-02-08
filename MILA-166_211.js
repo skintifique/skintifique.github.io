@@ -564,7 +564,7 @@ document.getElementById("ingredients_textarea").style.border = "5px solid #1895E
 document.getElementById("anyList").classList.add("option_selected1") ;
 document.getElementById("anyList_text").style.display = "none" ;
 document.getElementById("anyList_icon").style.display = "block" ;
-var slideIndex = 1 ;
+slideIndex = 1 ;
 plusSlides() ;
 //break ;
 } else {
@@ -821,7 +821,7 @@ document.getElementById("skProductOptionText2").style.display = "block" ;
 //store the selectedTopOption
 document.getElementById("selectedTopOption").innerHTML = "skProductOption" ;
 //reset slideIndex
-var slideIndex = 3 ;
+slideIndex = 1 ;
 break;
 case "diagOption" :
 //reset slideIndex
