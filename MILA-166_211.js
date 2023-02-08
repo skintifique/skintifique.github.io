@@ -565,6 +565,9 @@ document.getElementById("anyList").classList.add("option_selected1") ;
 document.getElementById("anyList_text").style.display = "none" ;
 document.getElementById("anyList_icon").style.display = "block" ;
 slideIndex = 1 ;
+ //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 plusSlides() ;
 //break ;
 } else {
@@ -795,7 +798,10 @@ document.getElementById("profileOptionText2").style.display = "block" ;
 //store the selectedTopOption
 document.getElementById("selectedTopOption").innerHTML = "profileOption" ;
 //reset slideIndex
-var slideIndex = 1 ;
+slideIndex = 1 ;
+  //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 break;
 case "skProductOption" :
 //reset slideIndex
@@ -822,6 +828,9 @@ document.getElementById("skProductOptionText2").style.display = "block" ;
 document.getElementById("selectedTopOption").innerHTML = "skProductOption" ;
 //reset slideIndex
 slideIndex = 1 ;
+  //1 line code below is to check slideIndex for dev
+ document.getElementById("showSlideIndex").innerHTML = slideIndex ;
+ //end test 1 line code to check slideIndex for dev
 break;
 case "diagOption" :
 //reset slideIndex
