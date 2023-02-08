@@ -188,7 +188,7 @@ document.getElementById("next").style.display = "block" ;
 } else if (n === slides.length) {
 document.getElementById("prev").style.display = "block" ;
 document.getElementById("next").style.display = "none" ;
-} elso if (n > slides.length) {
+} else if (n > slides.length) {
  slideIndex = 1 ;
  // the line below if for dev
  document.getElementById("showSlideIndex").innerHTML = slideIndex ;
