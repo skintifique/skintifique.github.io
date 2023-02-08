@@ -195,7 +195,8 @@ document.getElementById("next").style.display = "none" ;
 document.getElementById("prev").style.display = "none" ;
 document.getElementById("next").style.display = "block" ;
 } else if (n < 1) {
- slideIndex = slides.length ;
+// slideIndex = slides.length ; corrected below on 20230207
+ slideIndex = 1 ;
 // the line below if for dev
  document.getElementById("showSlideIndex").innerHTML = slideIndex ;
 document.getElementById("prev").style.display = "none" ;
