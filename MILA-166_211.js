@@ -1,6 +1,6 @@
 let current_urlMILA = window.location.href ;
 
-//functions for MILA page
+//functions for MILA page - THIS FILE IS MODIFIED ON 20230831 TO REFLECT NEW CD LINKS
 //the lines of code above and below are just for when the script is called externally. they need to be removed if plugged into the js theme again
 if (current_urlMILA.includes("/166-mila")) {
  // message about development stage
@@ -398,7 +398,8 @@ lang = "fr-fr";
 lang = "en-us" ;
 }
 //let fromcdiframe = localStorage.getItem("fromcdiframe"); code from iflam3, not in use here
-let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ;
+//let refurl = "https://flamingo.skintifique.me/v/hncRwLrN6P1n" ; MODIFIED BELOW ON 20230831
+let refurl = "https://skintifique.clicdata.com/v/hncRwLrN6P1n" ;
 let targeturl ;
 if (windowwidth < 900) {
 targeturl = refurl + "?display=mobile&size=stacked&source_trigger=ext&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExcludeValues2_arr_str + "&riskgroupsToExclude=" + riskgroupsExclusionListValues2_arr_str ;
@@ -409,7 +410,8 @@ document.getElementById("iframeExclusionList").src = targeturl ;
 }
 //
 function getMessage(e) {
-if (e.origin !== 'https://flamingo.skintifique.me') return;
+//if (e.origin !== 'https://flamingo.skintifique.me') return; MODIFIED BELOW ON 20230831
+if (e.origin !== 'https://skintifique.clicdata.com') return;
 let msg = e.data ;
 document.getElementById("fromIframeExclusionList").innerText = msg ;
 let ing_labels_start = msg.search("excluded_ingredients_labels=");
@@ -2224,7 +2226,8 @@ let str = "new_product_composition2=" + selectedIngredientList_cleaned ;
 let ingredients_encoded = window.btoa(str);
 if (selectedTopOption === "profileOption") {
 document.getElementsByClassName("accordionProfileGoMila")[0].style.display = "block" ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
+// iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
+iframeMILA.src = "https://skintifique.clicdata.com/v/RiU4fevditvb?dtype=profile&source_trigger=ext&lang=" + lang + "&product_name=" + selectedProductName + "&urlcode=" + ingredients_encoded ;
 } else if ((selectedTopOption === "recoOption") || (selectedTopOption === "diagOption")) {
 if (selectedTopOption === "diagOption") {
 document.getElementsByClassName("accordionDiagGoMila")[0].style.display = "block" ;
@@ -2248,8 +2251,9 @@ const ingredientsToExclude5_arr = ingredientsToExclude5.split(",");
 let ingredientsToExclude5_arr_str = JSON.stringify(ingredientsToExclude5_arr) ;
 const riskgroupsExclusionList5_arr = riskgroupsExclusionList5.split(",");
 let riskgroupsExclusionList5_arr_str = JSON.stringify(riskgroupsExclusionList5_arr) ;
-iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExclude5_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList5_arr_str + "&urlcode=" + ingredients_encoded ;
-//the 2 lines of code below are expected to set the height of the iframe to the content inside. The inline style of the iframe may need to be removed + the height of the inside content may need to be adapted
+// iframeMILA.src = "https://flamingo.skintifique.me/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExclude5_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList5_arr_str + "&urlcode=" + ingredients_encoded ;
+iframeMILA.src = "https://skintifique.clicdata.com/v/RiU4fevditvb?dtype=diag&source_trigger=ext&product_name=" + selectedProductName + "&gender=" + selectedGender + "&skin_type=" + selectedSkinType + "&frequency=" + selectedFrequency + "&skin_area=" + selectedSkinArea + "&conditions=" + selectedConditions + "&lang=" + lang + "&ingredientsToExclude=" + ingredientsToExclude5_arr_str + "&riskGroupsToExclude=" + riskgroupsExclusionList5_arr_str + "&urlcode=" + ingredients_encoded ;
+ //the 2 lines of code below are expected to set the height of the iframe to the content inside. The inline style of the iframe may need to be removed + the height of the inside content may need to be adapted
 iframeMILA.onload = function(){
 iframeMILA.style.height = iframeMILA.contentWindow.document.body.scrollHeight + 'px';
 }
